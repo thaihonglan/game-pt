@@ -32,11 +32,12 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		'home'
+		'home',
+		'admin'
 	),
 
 	// THEME
-	'theme' => THEME,
+// 	'theme' => THEME,
 
 	// APPLICATION COMPONENTS
 	'components'=>array(
@@ -71,16 +72,16 @@ return array(
 // 		),
 
 		// DATABASE settings
-// 		'db' => array(
-// 			'class'            => 'DbConnection',
-// 			'connectionString' => 'mysql:host=127.0.0.1;dbname=kmremind',
-// 			'emulatePrepare'   => true,
-// 			'username'         => 'root',
-// 			'password'         => 'root',
-// 			'charset'          => 'utf8',
-// 			'enableProfiling' => true,
-// 			'enableParamLogging' => true,
-// 		),
+		'db' => array(
+			'class'            => 'CDbConnection',
+			'connectionString' => 'mysql:host=127.0.0.1;dbname=gamept',
+			'emulatePrepare'   => true,
+			'username'         => 'root',
+			'password'         => '',
+			'charset'          => 'utf8',
+			'enableProfiling' => true,
+			'enableParamLogging' => true,
+		),
 
 		// ERROR and LOG settings
 		'errorHandler'=>array(
