@@ -1,5 +1,6 @@
 <?php
 
+define('DS', DIRECTORY_SEPARATOR);
 define('YII_VERSION', '1.1.15');
 
 // change the following paths if necessary
