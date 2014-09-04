@@ -26,21 +26,9 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'description'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'product_type_id'); ?>
 		<?php echo $form->textField($model,'product_type_id'); ?>
 		<?php echo $form->error($model,'product_type_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'video'); ?>
-		<?php echo $form->textArea($model,'video',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'video'); ?>
 	</div>
 
 	<div class="row">
@@ -53,24 +41,6 @@
 		<?php echo $form->labelEx($model,'author'); ?>
 		<?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>128)); ?>
 		<?php echo $form->error($model,'author'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'download'); ?>
-		<?php echo $form->textField($model,'download',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'download'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'rating'); ?>
-		<?php echo $form->textField($model,'rating'); ?>
-		<?php echo $form->error($model,'rating'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'rate_count'); ?>
-		<?php echo $form->textField($model,'rate_count',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'rate_count'); ?>
 	</div>
 
 	<div class="row">
@@ -96,19 +66,19 @@
 		<?php echo $form->textField($model,'tag',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'tag'); ?>
 	</div>
-
+	
 	<div class="row">
-		<?php echo $form->labelEx($model,'create_date'); ?>
-		<?php echo $form->textField($model,'create_date'); ?>
-		<?php echo $form->error($model,'create_date'); ?>
+		<?php echo $form->labelEx($model,'video'); ?>
+		<?php echo $form->textArea($model,'video',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'video'); ?>
 	</div>
-
+	
 	<div class="row">
-		<?php echo $form->labelEx($model,'lastup_date'); ?>
-		<?php echo $form->textField($model,'lastup_date'); ?>
-		<?php echo $form->error($model,'lastup_date'); ?>
+		<?php echo $form->labelEx($model,'description'); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->error($model,'description'); ?>
 	</div>
-
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'disable'); ?>
 		<?php echo $form->textField($model,'disable'); ?>
