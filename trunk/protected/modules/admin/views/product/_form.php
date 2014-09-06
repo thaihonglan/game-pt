@@ -8,7 +8,7 @@
 <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
-	mode : "textareas",
+	mode : "textArea",
         plugins: [
                 "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
@@ -62,7 +62,7 @@ tinymce.init({
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'avatar'); ?>
-		<?php echo $form->textField($model,'avatar',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->fileField($model,'avatar'); ?>
 		<?php echo $form->error($model,'avatar'); ?>
 	</div>
 
@@ -98,13 +98,13 @@ tinymce.init({
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'video'); ?>
-		<?php echo $form->textArea($model,'video',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'video',array('rows'=>3, 'cols'=>80)); ?>
 		<?php echo $form->error($model,'video'); ?>
 	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'description',array('rows'=>10, 'cols'=>80)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 	
