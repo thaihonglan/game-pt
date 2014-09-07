@@ -63,14 +63,15 @@ class ProductController extends Controller
 	public function actionCreate()
 	{
 		$model=new Product;
-
+		$model->create_date = date('Y-m-d H:i:s');
+		
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 		
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-			
+				
 			$path = Yii::app()->basePath.'/../resource/'.$model->id;
 			if (!is_dir($path)) {
 				mkdir($path);
@@ -85,7 +86,7 @@ class ProductController extends Controller
 				}
 				$model->avatar->saveAs($path.'/'.$model->id.$model->avatar);
 			}
-			$model->avatar = $path.'/'.$model->id.$model->avatar;
+//			$model->avatar = $path.'/'.$model->id.$model->avatar;
 			
 			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
@@ -105,6 +106,7 @@ class ProductController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		$model->lastup_date = date('Y-m-d H:i:s');
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -112,20 +114,24 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
+			
+			$path = Yii::app()->basePath.'/../resource';
+			if (@!empty($_FILES['Product']['name']['avatar'])) 
+			{
+				$model->avatar = $_POST['Product']['avatar'];
+				if ($model->validate(array('avatar'))) 
+				{
+					$model->avatar = CUploadedFile::getInstance($model, 'avatar');
+				} else {
+					$model->avatar = '';
+				}
+				$model->avatar->saveAs($path.'/'.$model->avatar);
+			}
+//			$model->avatar = $path.'/'.$model->avatar;
+			
 			if($model->save())
 			{
 				$this->redirect(array('view','id'=>$model->id));
-				
-				$dir = 'resource/'.$model->id.'/';
-				$_POST['Product']['avatar'] = $model->avatar;
-			
-				$uploadedFile=CUploadedFile::getInstance($model,'avatar');
-		
-				if(!empty($uploadedFile))  // check if uploaded file is set or not
-				{
-					$uploadedFile->saveAs(Yii::app()->basePath.$dir.$model->avatar);
-				}
-				$this->redirect(array('admin'));
 			}
 		}
 		
