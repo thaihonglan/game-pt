@@ -66,52 +66,30 @@ class ProductController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
 			
+			$path = Yii::app()->basePath.'/../resource/'.$model->id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+			
+			if (@!empty($_FILES['Product']['name']['avatar'])) {
+				$model->avatar = $_POST['Product']['avatar'];
+				if ($model->validate(array('avatar'))) {
+					$model->avatar = CUploadedFile::getInstance($model, 'avatar');
+				} else {
+					$model->avatar = '';
+				}
+				$model->avatar->saveAs($path.'/'.$model->id.$model->avatar);
+			}
+			$model->avatar = $path.'/'.$model->id.$model->avatar;
+			
 			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
-
-		// ----- Make folder & Upload
-            
-            $dir = 'resource/'.$model->id.'/';
-            mkdir($dir, 0777, true);
-            
-            $file = $model->avatar;
-                        
-            if($_FILES['file']['name'] != NULL){
-            	if($_FILES['file']['type'] == "image/jpeg"
-            			|| $_FILES['file']['type'] == "image/png"
-            			|| $_FILES['file']['type'] == "image/gif"){
-            		if($_FILES['file']['size'] > 1048576){
-            			echo "File không được lớn hơn 1mb";
-            		}else{
-            			if($_FILES['file']['type'] == "image/jpeg"){
-            				$ext = ".jpg";
-            			}else{
-            				if($_FILES['file']['type'] == "image/png"){
-            					$ext = ".png";
-            				}else{
-            					if($_FILES['file']['type'] == "image/gif"){
-            						$ext = ".gif";
-            					}
-            				}
-            			}
-            			$tmp_name = $_FILES['file']['tmp_name'];
-            			$name = $_FILES['file']['name'];
-            			$type = $_FILES['file']['type'];
-            			$size = $_FILES['file']['size'];
-            			move_uploaded_file($tmp_name,$dir.$model->id.$ext);
-            		}
-            	}else{
-            		echo "Kiểu file không hợp lệ";
-            	}
-            }else{
-            	echo "Vui lòng chọn Avatar";
-            }
-        }
+			}
 		}
 		
 		$this->render('create',array(
