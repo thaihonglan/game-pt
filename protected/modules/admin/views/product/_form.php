@@ -66,6 +66,13 @@ tinymce.init({
 		<?php echo $form->error($model,'avatar'); ?>
 	</div>
 
+<?php if($model->isNewRecord!='1') ?>
+<div class="row">
+     <?php echo CHtml::image(Yii::app()->request->baseUrl.'/banner/'.$model->avatar,"avatar",
+     		array("width"=>200)); ?>
+</div>
+	
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>
 		<?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>128)); ?>
@@ -113,7 +120,7 @@ tinymce.init({
 		<?php echo $form->textField($model,'disable'); ?>
 		<?php echo $form->error($model,'disable'); ?>
 	</div>
-
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

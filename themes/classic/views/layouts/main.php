@@ -26,19 +26,19 @@
     <div class="topbar">
         <div class="wrap clearfix">
             <div id="userLogin" class="login fl">
-                <a href="https://u.25pp.com/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="登录">登录</a> |
-                <a href="https://u.25pp.com/user/regist/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="注册">注册</a>
+                <a href="https://u.25pp.com/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="Login">Login</a> |
+                <a href="https://u.25pp.com/user/regist/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="Register">Register</a>
             </div>
             <span id="topNav" class="webMenu fr">网站导航</span>
             <ul class="topMenu">
-                <li><a href="http://www.25pp.com/" target="_blank">首页</a>|</li>
-                <li><a href="http://ios.25pp.com/" target="_blank">苹果资源</a>|</li>
-                <li><a href="http://android.25pp.com/" target="_blank">安卓资源</a>|</li>
-                <li><a href="http://www.25pp.com/news/" target="_blank">业内资讯</a>|</li>
-                <li><a href="http://bbs.25pp.com/" target="_blank">PP论坛</a>|</li>
-                <li><a href="http://pro.25pp.com/" target="_blank">产品中心</a>|</li>
-                <li><a href="http://jailbreak.25pp.com/" target="_blank">苹果越狱</a>|</li>
-                <li><a href="http://pay.25pp.com/" target="_blank">充值平台</a>|</li>
+                <li><a href="http://www.25pp.com/" target="_blank">Home</a>|</li>
+                <li><a href="http://ios.25pp.com/" target="_blank">iOS</a>|</li>
+                <li><a href="http://android.25pp.com/" target="_blank">Android</a>|</li>
+                <li><a href="http://www.25pp.com/news/" target="_blank">News</a>|</li>
+                <li><a href="http://bbs.25pp.com/" target="_blank">Forum</a>|</li>
+                <li><a href="http://pro.25pp.com/" target="_blank">Product</a>|</li>
+                <li><a href="http://jailbreak.25pp.com/" target="_blank">iOS Jailbreak</a>|</li>
+                <li><a href="http://pay.25pp.com/" target="_blank">Payment</a>|</li>
             </ul>
         </div>
         <!--网站导航 begin-->
@@ -56,54 +56,54 @@
                     <a href="http://pro.25pp.com/" target="_blank">手机助手</a>
                 </li>
                 <li>
-                    <h2>苹果资源</h2>
-                    <a href="http://ios.25pp.com/software/" target="_blank">软件</a>
-                    <a href="http://ios.25pp.com/wallpaper/" target="_blank">壁纸</a>
-                    <a href="http://ios.25pp.com/game/" target="_blank">游戏</a>
-                    <a href="http://ios.25pp.com/lingsheng/" target="_blank">铃声</a>
-                    <a href="http://ios.25pp.com/special/iphone/" target="_blank">专题</a>
-                    <a href="http://www.25pp.com/news/list_133.html" target="_blank">资讯</a>
+                    <h2>Tin iOS</h2>
+                    <a href="http://ios.25pp.com/software/" target="_blank">Phần mềm</a>
+                    <a href="http://ios.25pp.com/wallpaper/" target="_blank">Ảnh nền</a>
+                    <a href="http://ios.25pp.com/game/" target="_blank">Trò chơi</a>
+                    <a href="http://ios.25pp.com/lingsheng/" target="_blank">Nhạc chuông</a>
+                    <a href="http://ios.25pp.com/special/iphone/" target="_blank">Chuyên đề</a>
+                    <a href="http://www.25pp.com/news/list_133.html" target="_blank">Tin tức</a>
                     <a href="http://www.25pp.com/ipad/" target="_blank">iPad</a>
                 </li>
                 <li>
-                    <h2>安卓资源</h2>
-                    <a href="http://android.25pp.com/software/" target="_blank">软件</a>
-                    <a href="http://android.25pp.com/bizhi/" target="_blank">壁纸</a>
-                    <a href="http://android.25pp.com/game/" target="_blank">游戏</a>
-                    <a href="http://android.25pp.com/lingsheng/" target="_blank">铃声</a>
-                    <a href="http://android.25pp.com/special/" target="_blank">专题</a>
-                    <a href="http://www.25pp.com/news/list_139.html" target="_blank">资讯</a>
+                    <h2>Tin Android</h2>
+                    <a href="http://android.25pp.com/software/" target="_blank">Phần mềm</a>
+                    <a href="http://android.25pp.com/bizhi/" target="_blank">Ảnh nền</a>
+                    <a href="http://android.25pp.com/game/" target="_blank">Trò chơi</a>
+                    <a href="http://android.25pp.com/lingsheng/" target="_blank">Nhạc chuông</a>
+                    <a href="http://android.25pp.com/special/" target="_blank">Chuyên đề</a>
+                    <a href="http://www.25pp.com/news/list_139.html" target="_blank">Tin tức</a>
                 </li>
                 <li>
-                    <h2>苹果越狱</h2>
-                    <a href="http://jailbreak.25pp.com/yueyu/" target="_blank">越狱教程</a>
-                    <a href="http://jailbreak.25pp.com/news/" target="_blank">越狱资讯</a>
-                    <a href="http://jailbreak.25pp.com/gujian/" target="_blank">固件下载</a>
-                    <a href="http://jailbreak.25pp.com/ios/" target="_blank">越狱版本</a>
-                    <a href="http://jailbreak.25pp.com/jiesuo/" target="_blank">解锁教程</a>
-                    <a href="http://jailbreak.25pp.com/jiaocheng/" target="_blank">越狱相关</a>
-                    <a href="http://www.25pp.com/jailbreak/" target="_blank">iPhone越狱</a>
+                    <h2>Jailbreak</h2>
+                    <a href="http://jailbreak.25pp.com/yueyu/" target="_blank">Hướng dẫn</a>
+                    <a href="http://jailbreak.25pp.com/news/" target="_blank">Tin tức</a>
+                    <a href="http://jailbreak.25pp.com/gujian/" target="_blank">Firmware</a>
+                    <a href="http://jailbreak.25pp.com/ios/" target="_blank">Phiên bản</a>
+                    <a href="http://jailbreak.25pp.com/jiesuo/" target="_blank">Mở khoá</a>
+                    <a href="http://jailbreak.25pp.com/jiaocheng/" target="_blank">Liên quan</a>
+                    <a href="http://www.25pp.com/jailbreak/" target="_blank">iPhone Jailbreak</a>
                 </li>
                 <li>
-                    <h2>资讯中心</h2>
-                    <a href="http://www.25pp.com/news/list_133.html" target="_blank">苹果新闻</a>
-                    <a href="http://www.25pp.com/news/list_139.html" target="_blank">安卓新闻</a>
-                    <a href="http://www.25pp.com/news/list_135.html" target="_blank">玩机教程</a>
-                    <a href="http://www.25pp.com/news/list_191.html" target="_blank">玩机问答</a>
-                    <a href="http://www.25pp.com/games/" target="_blank">游戏新闻</a>
-                    <a href="http://www.25pp.com/bagua/" target="_blank">娱乐八卦</a>
-                    <a href="http://www.25pp.com/special/" target="_blank">独家专题</a>
+                    <h2>Tin tức</h2>
+                    <a href="http://www.25pp.com/news/list_133.html" target="_blank">Tin iOS</a>
+                    <a href="http://www.25pp.com/news/list_139.html" target="_blank">Tin Android</a>
+                    <a href="http://www.25pp.com/news/list_135.html" target="_blank">Thủ thuật</a>
+                    <a href="http://www.25pp.com/news/list_191.html" target="_blank">Hỏi & Đáp</a>
+                    <a href="http://www.25pp.com/games/" target="_blank">Tin trò chơi</a>
+                    <a href="http://www.25pp.com/bagua/" target="_blank">Giải trí</a>
+                    <a href="http://www.25pp.com/special/" target="_blank">Chuyên đề</a>
                 </li>
                 <li>
-                    <h2>PP论坛</h2>
+                    <h2>Diễn đàn</h2>
                     <a href="http://bbs.25pp.com/forum-163-1.html" target="_blank">iPhone5S</a>
                     <a href="http://bbs.25pp.com/forum-96-1.html" target="_blank">iPhone5/5C</a>
                     <a href="http://bbs.25pp.com/forum-55-1.html" target="_blank">iPhone4S</a>
                     <a href="http://bbs.25pp.com/forum-181-1.html" target="_blank">iPad Air</a>
                     <a href="http://bbs.25pp.com/forum-108-1.html" target="_blank">iPad Mini</a>
-                    <a href="http://bbs.25pp.com/forum.php?gid=149" target="_blank">安卓论坛</a>
-                    <a href="http://bbs.25pp.com/forum-180-1.html" target="_blank">插件内购</a>
-                    <a href="http://bbs.25pp.com/forum-184-1.html" target="_blank">活动专区</a>
+                    <a href="http://bbs.25pp.com/forum.php?gid=149" target="_blank">Android</a>
+                    <a href="http://bbs.25pp.com/forum-180-1.html" target="_blank">Plug-in</a>
+                    <a href="http://bbs.25pp.com/forum-184-1.html" target="_blank">Hoạt động</a>
                 </li>
             </ul>
         </div>

@@ -70,10 +70,50 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-			if($model->save())
+			
+			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
-		}
 
+		// ----- Make folder & Upload
+            
+            $dir = 'resource/'.$model->id.'/';
+            mkdir($dir, 0777, true);
+            
+            $file = $model->avatar;
+                        
+            if($_FILES['file']['name'] != NULL){
+            	if($_FILES['file']['type'] == "image/jpeg"
+            			|| $_FILES['file']['type'] == "image/png"
+            			|| $_FILES['file']['type'] == "image/gif"){
+            		if($_FILES['file']['size'] > 1048576){
+            			echo "File không được lớn hơn 1mb";
+            		}else{
+            			if($_FILES['file']['type'] == "image/jpeg"){
+            				$ext = ".jpg";
+            			}else{
+            				if($_FILES['file']['type'] == "image/png"){
+            					$ext = ".png";
+            				}else{
+            					if($_FILES['file']['type'] == "image/gif"){
+            						$ext = ".gif";
+            					}
+            				}
+            			}
+            			$tmp_name = $_FILES['file']['tmp_name'];
+            			$name = $_FILES['file']['name'];
+            			$type = $_FILES['file']['type'];
+            			$size = $_FILES['file']['size'];
+            			move_uploaded_file($tmp_name,$dir.$model->id.$ext);
+            		}
+            	}else{
+            		echo "Kiểu file không hợp lệ";
+            	}
+            }else{
+            	echo "Vui lòng chọn Avatar";
+            }
+        }
+		}
+		
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -95,9 +135,22 @@ class ProductController extends Controller
 		{
 			$model->attributes=$_POST['Product'];
 			if($model->save())
+			{
 				$this->redirect(array('view','id'=>$model->id));
+				
+				$dir = 'resource/'.$model->id.'/';
+				$_POST['Product']['avatar'] = $model->avatar;
+			
+				$uploadedFile=CUploadedFile::getInstance($model,'avatar');
+		
+				if(!empty($uploadedFile))  // check if uploaded file is set or not
+				{
+					$uploadedFile->saveAs(Yii::app()->basePath.$dir.$model->avatar);
+				}
+				$this->redirect(array('admin'));
+			}
 		}
-
+		
 		$this->render('update',array(
 			'model'=>$model,
 		));
