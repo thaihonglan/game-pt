@@ -29,8 +29,9 @@ $('.search-form form').submit(function(){
 <h1>Manage Products</h1>
 
 <p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
+Sử dụng các dấu so sánh (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
+or <b>=</b>) ở đầu giá trị tìm kiếm để khoanh vùng các giá trị cần tìm.<br />
+VD: >20, >=21, <>22, ...
 </p>
 
 <?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
@@ -47,13 +48,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'id',
 		'name',
-		'description',
 		'product_type_id',
-		'video',
 		'avatar',
-		/*
-		'author',
+		'disable',
+		'create_date',
+		'lastup_date',
 		'download',
+
+		/*
+		'description',
+		'video',
+		'author',
 		'rating',
 		'rate_count',
 		'from_source',
@@ -61,7 +66,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'package_name',
 		'tag',
 		'create_date',
-		'lastup_date',
 		'disable',
 		*/
 		array(
