@@ -67,9 +67,9 @@ tinymce.init({
 		<?php echo $form->error($model,'avatar'); ?>
 	</div>
 
-<?php if($model->isNewRecord!='1')
-     echo CHtml::image(Yii::app()->basePath.'/../resource/'.$model->avatar,
-     		$model->avatar, array("width"=>200)); ?>
+<?php if(!$model->isNewRecord = '1')
+     echo CHtml::image(Yii::app()->basePath.'/../resource/'.$model->id.'/'.$model->avatar,
+     		$model->avatar, array("width"=>80)); ?>
 	
 	
 	<div class="row">

@@ -54,6 +54,11 @@ VD: >20, >=21, <>22, ...
 		'create_date',
 		'lastup_date',
 		'download',
+// 			array(
+// 					'type' => 'raw',
+// 					'value' => 'CHtml::image(Yii::app()->basePath."/../resource/".$model->id."/".$model->avatar)'
+// 					),
+						
 
 		/*
 		'description',

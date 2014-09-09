@@ -47,8 +47,6 @@ class Product extends CActiveRecord
 			array('download, rate_count', 'length', 'max'=>10),
 			array('bundle_id, tag', 'length', 'max'=>255),
 			array('description, video, create_date, lastup_date', 'safe'),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
 			array('id, name, description, product_type_id, video, avatar, author, download, rating, rate_count, from_source, bundle_id, package_name, tag, create_date, lastup_date, disable', 'safe', 'on'=>'search'),
 			);
 	}
