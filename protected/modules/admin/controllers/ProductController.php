@@ -71,8 +71,10 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-				
-			$path = Yii::app()->basePath.'/../resource/'.$model->id;
+			$max_id = Yii::app()->db->createCommand()->select('max(id) as max')->from('product')->queryScalar();
+			// $id = Yii::app()->db->getLastInsertId();
+			$id = $max_id + 1;
+			$path = Yii::app()->basePath.'/../resource/'.$id;
 			if (!is_dir($path)) {
 				mkdir($path);
 			}
@@ -84,9 +86,9 @@ class ProductController extends Controller
 				} else {
 					$model->avatar = '';
 				}
-				$model->avatar->saveAs($path.'/'.$model->id.$model->avatar);
+				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
-//			$model->avatar = $path.'/'.$model->id.$model->avatar;
+			$model->avatar = $model->avatar;
 			
 			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
@@ -115,7 +117,7 @@ class ProductController extends Controller
 		{
 			$model->attributes=$_POST['Product'];
 			
-			$path = Yii::app()->basePath.'/../resource';
+			$path = Yii::app()->basePath.'/../resource/'.$id;
 			if (@!empty($_FILES['Product']['name']['avatar'])) 
 			{
 				$model->avatar = $_POST['Product']['avatar'];
@@ -127,7 +129,7 @@ class ProductController extends Controller
 				}
 				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
-//			$model->avatar = $path.'/'.$model->avatar;
+			$model->avatar = $model->avatar;
 			
 			if($model->save())
 			{
@@ -191,7 +193,7 @@ class ProductController extends Controller
 	{
 		$model=Product::model()->findByPk($id);
 		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');
+			throw new CHttpException(404,'Trang không tồn tại');
 		return $model;
 	}
 
