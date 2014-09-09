@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List Download_1409', 'url'=>array('index')),
 	array('label'=>'Create Download_1409', 'url'=>array('create')),
 	array('label'=>'Update Download_1409', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Download_1409', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Download_1409', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Bạn muốn xoá thật à ?')),
 	array('label'=>'Manage Download_1409', 'url'=>array('admin')),
 );
 ?>

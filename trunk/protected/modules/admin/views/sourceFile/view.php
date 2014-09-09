@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List SourceFile', 'url'=>array('index')),
 	array('label'=>'Create SourceFile', 'url'=>array('create')),
 	array('label'=>'Update SourceFile', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete SourceFile', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete SourceFile', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Bạn muốn xoá thật à ?')),
 	array('label'=>'Manage SourceFile', 'url'=>array('admin')),
 );
 ?>

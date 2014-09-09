@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List Screenshot', 'url'=>array('index')),
 	array('label'=>'Create Screenshot', 'url'=>array('create')),
 	array('label'=>'Update Screenshot', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Screenshot', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Screenshot', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Bạn muốn xoá thật à ?')),
 	array('label'=>'Manage Screenshot', 'url'=>array('admin')),
 );
 ?>
