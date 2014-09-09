@@ -118,6 +118,10 @@ class ProductController extends Controller
 			$model->attributes=$_POST['Product'];
 			
 			$path = Yii::app()->basePath.'/../resource/'.$id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+			
 			if (@!empty($_FILES['Product']['name']['avatar'])) 
 			{
 				$model->avatar = $_POST['Product']['avatar'];

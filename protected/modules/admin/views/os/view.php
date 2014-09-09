@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List Os', 'url'=>array('index')),
 	array('label'=>'Create Os', 'url'=>array('create')),
 	array('label'=>'Update Os', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Os', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Os', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Bạn muốn xoá thật à ?')),
 	array('label'=>'Manage Os', 'url'=>array('admin')),
 );
 ?>

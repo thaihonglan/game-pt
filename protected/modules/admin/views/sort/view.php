@@ -11,7 +11,7 @@ $this->menu=array(
 	array('label'=>'List Sort', 'url'=>array('index')),
 	array('label'=>'Create Sort', 'url'=>array('create')),
 	array('label'=>'Update Sort', 'url'=>array('update', 'id'=>$model->id)),
-	array('label'=>'Delete Sort', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Sort', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->id),'confirm'=>'Bạn muốn xoá thật à ?')),
 	array('label'=>'Manage Sort', 'url'=>array('admin')),
 );
 ?>

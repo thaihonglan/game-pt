@@ -5,17 +5,18 @@
 ?>
 
 <div class="form">
-<script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
-	mode : "textArea",
+	mode : "textareas",
+	editor_deselector : "mceNoEditor",
         plugins: [
                 "advlist autolink autosave link image lists charmap print preview hr anchor pagebreak spellchecker",
                 "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
                 "table contextmenu directionality emoticons template textcolor paste fullpage textcolor colorpicker textpattern"
         ],
-        toolbar1: "newdocument fullpage | fontselect fontsizeselect | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | styleselect formatselect",
-        toolbar2: "cut copy paste | searchreplace | bullist numlist | outdent indent blockquote | undo redo | link unlink anchor image media code | insertdatetime preview",
+        toolbar1: "newdocument fullpage | fontselect fontsizeselect | styleselect formatselect | undo redo | link unlink anchor image media code",
+        toolbar2: "cut copy paste | searchreplace | forecolor backcolor | bold italic underline strikethrough | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | insertdatetime preview",
         toolbar3: "table | hr removeformat | subscript superscript | charmap emoticons | print fullscreen | ltr rtl | spellchecker | visualchars visualblocks nonbreaking template pagebreak restoredraft",
         menubar: false,
         toolbar_items_size: 'small',
@@ -67,10 +68,11 @@ tinymce.init({
 		<?php echo $form->error($model,'avatar'); ?>
 	</div>
 
-<?php if(!$model->isNewRecord = '1')
-     echo CHtml::image(Yii::app()->basePath.'/../resource/'.$model->id.'/'.$model->avatar,
-     		$model->avatar, array("width"=>80)); ?>
-	
+<?php 
+// 		if($model->isNewRecord != '1') 
+//      echo CHtml::image(Yii::app()->basePath.'/../resource/'.$model->id.'/'.$model->avatar,
+//      		$model->avatar, array("width"=>80));
+?> 
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>
@@ -104,13 +106,13 @@ tinymce.init({
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'video'); ?>
-		<?php echo $form->textArea($model,'video',array('rows'=>3, 'cols'=>80)); ?>
+		<?php echo $form->textArea($model,'video',array('rows'=>3, 'cols'=>80, 'class'=>"mceNoEditor")); ?>
 		<?php echo $form->error($model,'video'); ?>
 	</div>
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
-		<?php echo $form->textArea($model,'description',array('rows'=>10, 'cols'=>80)); ?>
+		<?php echo $form->textarea($model,'description',array('rows'=>10, 'cols'=>80)); ?>
 		<?php echo $form->error($model,'description'); ?>
 	</div>
 	
