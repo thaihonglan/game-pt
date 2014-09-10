@@ -10,7 +10,7 @@ define('PLUGIN_URL', 'themes'.DS.'plugins'.DS);
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-return array(
+$configures = array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'Game Portal',
 
@@ -37,7 +37,7 @@ return array(
 	),
 
 	// THEME
-// 	'theme' => THEME,
+	'theme' => THEME,
 
 	// APPLICATION COMPONENTS
 	'components'=>array(
@@ -49,6 +49,7 @@ return array(
 		// ROUTE settings
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+			'showScriptName'=>false,
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
@@ -77,7 +78,7 @@ return array(
 			'connectionString' => 'mysql:host=127.0.0.1;dbname=gamept',
 			'emulatePrepare'   => true,
 			'username'         => 'root',
-			'password'         => '',
+			'password'         => 'root',
 			'charset'          => 'utf8',
 			'enableProfiling' => true,
 			'enableParamLogging' => true,
@@ -112,3 +113,9 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 );
+
+if ((ENVIRONMENT == 'development') && (file_exists(dirname(__FILE__).'/development.php'))) {
+	require(dirname(__FILE__).'/development.php');
+}
+
+return $configures;
