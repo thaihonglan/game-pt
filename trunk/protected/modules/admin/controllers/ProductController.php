@@ -6,7 +6,7 @@ class ProductController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/admin/column2';
 
 	/**
 	 * @return array action filters
@@ -64,10 +64,10 @@ class ProductController extends Controller
 	{
 		$model=new Product;
 		$model->create_date = date('Y-m-d H:i:s');
-		
+
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-		
+
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
@@ -78,7 +78,7 @@ class ProductController extends Controller
 			if (!is_dir($path)) {
 				mkdir($path);
 			}
-			
+
 			if (@!empty($_FILES['Product']['name']['avatar'])) {
 				$model->avatar = $_POST['Product']['avatar'];
 				if ($model->validate(array('avatar'))) {
@@ -89,12 +89,12 @@ class ProductController extends Controller
 				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
 			$model->avatar = $model->avatar;
-			
+
 			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
-		
+
 		$this->render('create',array(
 			'model'=>$model,
 		));
@@ -116,16 +116,16 @@ class ProductController extends Controller
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-			
+
 			$path = Yii::app()->basePath.'/../resource/'.$id;
 			if (!is_dir($path)) {
 				mkdir($path);
 			}
-			
-			if (@!empty($_FILES['Product']['name']['avatar'])) 
+
+			if (@!empty($_FILES['Product']['name']['avatar']))
 			{
 				$model->avatar = $_POST['Product']['avatar'];
-				if ($model->validate(array('avatar'))) 
+				if ($model->validate(array('avatar')))
 				{
 					$model->avatar = CUploadedFile::getInstance($model, 'avatar');
 				} else {
@@ -134,13 +134,13 @@ class ProductController extends Controller
 				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
 			$model->avatar = $model->avatar;
-			
+
 			if($model->save())
 			{
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
-		
+
 		$this->render('update',array(
 			'model'=>$model,
 		));
