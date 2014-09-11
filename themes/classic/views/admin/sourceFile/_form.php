@@ -13,6 +13,7 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
+	'htmlOptions' => array('enctype' => 'multipart/form-data'),
 )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
@@ -39,7 +40,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'path'); ?>
-		<?php echo $form->textField($model,'path',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->fileField($model,'path'); ?>
 		<?php echo $form->error($model,'path'); ?>
 	</div>
 
@@ -51,32 +52,14 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'data_path'); ?>
-		<?php echo $form->textField($model,'data_path',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->fileField($model,'data_path'); ?>
 		<?php echo $form->error($model,'data_path'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'download'); ?>
-		<?php echo $form->textField($model,'download',array('size'=>10,'maxlength'=>10)); ?>
-		<?php echo $form->error($model,'download'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'from_source'); ?>
 		<?php echo $form->textField($model,'from_source',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'from_source'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'create_date'); ?>
-		<?php echo $form->textField($model,'create_date'); ?>
-		<?php echo $form->error($model,'create_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'lastup_date'); ?>
-		<?php echo $form->textField($model,'lastup_date'); ?>
-		<?php echo $form->error($model,'lastup_date'); ?>
 	</div>
 
 	<div class="row">

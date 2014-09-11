@@ -63,6 +63,7 @@ class SourceFileController extends Controller
 	public function actionCreate()
 	{
 		$model=new SourceFile;
+		$model->create_date = date('Y-m-d H:i:s');
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
@@ -70,6 +71,25 @@ class SourceFileController extends Controller
 		if(isset($_POST['SourceFile']))
 		{
 			$model->attributes=$_POST['SourceFile'];
+			
+			$max_id = Yii::app()->db->createCommand()->select('max(id) as max')->from('source_file')->queryScalar();
+			$id = $max_id + 1;
+			$path = Yii::app()->basePath.'/../resource/'.$model->product_id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+				
+			if (@!empty($_FILES['SourceFile']['name']['path'])) {
+				$model->path = $_POST['SourceFile']['path'];
+				if ($model->validate(array('path'))) {
+					$model->path = CUploadedFile::getInstance($model, 'path');
+				} else {
+					$model->path = '';
+				}
+				$model->path->saveAs($path.'/'.$model->path);
+			}
+			$model->path = $model->product_id.'/'.$model->path;
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -94,6 +114,24 @@ class SourceFileController extends Controller
 		if(isset($_POST['SourceFile']))
 		{
 			$model->attributes=$_POST['SourceFile'];
+			$model->lastup_date = date('Y-m-d H:i:s');
+			
+			$path = Yii::app()->basePath.'/../resource/'.$model->product_id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+			
+			if (@!empty($_FILES['SourceFile']['name']['path'])) {
+				$model->path = $_POST['SourceFile']['path'];
+				if ($model->validate(array('path'))) {
+					$model->path = CUploadedFile::getInstance($model, 'path');
+				} else {
+					$model->path = '';
+				}
+				$model->path->saveAs($path.'/'.$model->path);
+			}
+			$model->path = $model->product_id.'/'.$model->path;
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
