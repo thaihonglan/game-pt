@@ -70,6 +70,25 @@ class ScreenshotController extends Controller
 		if(isset($_POST['Screenshot']))
 		{
 			$model->attributes=$_POST['Screenshot'];
+			
+			$max_id = Yii::app()->db->createCommand()->select('max(id) as max')->from('screenshot')->queryScalar();
+			$id = $max_id + 1;
+			$path = Yii::app()->basePath.'/../resource/'.$model->product_id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+			
+			if (@!empty($_FILES['Screenshot']['name']['path'])) {
+				$model->path = $_POST['Screenshot']['path'];
+				if ($model->validate(array('path'))) {
+					$model->path = CUploadedFile::getInstance($model, 'path');
+				} else {
+					$model->path = '';
+				}
+				$model->path->saveAs($path.'/scr_'.$id.'.jpg');
+			}
+			$model->path = $model->product_id.'/scr_'.$id.'.jpg';
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -94,6 +113,23 @@ class ScreenshotController extends Controller
 		if(isset($_POST['Screenshot']))
 		{
 			$model->attributes=$_POST['Screenshot'];
+			
+			$path = Yii::app()->basePath.'/../resource/'.$model->product_id;
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+
+			if (@!empty($_FILES['Screenshot']['name']['path'])) {
+				$model->path = $_POST['Screenshot']['path'];
+				if ($model->validate(array('path'))) {
+					$model->path = CUploadedFile::getInstance($model, 'path');
+				} else {
+					$model->path = '';
+				}
+					$model->path->saveAs($path.'/scr_'.$id.'.jpg');
+				}
+				$model->path = $model->product_id.'/scr_'.$id.'.jpg';
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

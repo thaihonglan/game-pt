@@ -88,7 +88,7 @@ class ProductController extends Controller
 				}
 				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
-			$model->avatar = $model->avatar;
+			$model->avatar = $id.'/'.$model->avatar;
 
 			if($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
@@ -133,7 +133,7 @@ class ProductController extends Controller
 				}
 				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
-			$model->avatar = $model->avatar;
+			$model->avatar = $id.'/'.$model->avatar;
 
 			if($model->save())
 			{
