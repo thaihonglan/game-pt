@@ -107,7 +107,7 @@ class SourceFileController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$oldpath = $model->path;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
@@ -125,12 +125,11 @@ class SourceFileController extends Controller
 				$model->path = $_POST['SourceFile']['path'];
 				if ($model->validate(array('path'))) {
 					$model->path = CUploadedFile::getInstance($model, 'path');
-				} else {
-					$model->path = '';
+					$model->path->saveAs($path.'/'.$model->path);
+					$model->path = $model->product_id.'/'.$model->path;
 				}
-				$model->path->saveAs($path.'/'.$model->path);
-			}
-			$model->path = $model->product_id.'/'.$model->path;
+			} else $model->path = $oldpath;
+			
 			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
