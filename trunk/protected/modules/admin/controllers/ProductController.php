@@ -109,31 +109,31 @@ class ProductController extends Controller
 	{
 		$model=$this->loadModel($id);
 		$model->lastup_date = date('Y-m-d H:i:s');
-
+		$oldavatar = $model->avatar;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Product']))
 		{
 			$model->attributes=$_POST['Product'];
-
-			$path = Yii::app()->basePath.'/../resource/'.$id;
+			$path = Yii::app()->basePath.'/../resource/';
 			if (!is_dir($path)) {
 				mkdir($path);
 			}
-
-			if (@!empty($_FILES['Product']['name']['avatar']))
+		// Upload avatar
+			if (!empty($_FILES['Product']['name']['avatar']))
 			{
 				$model->avatar = $_POST['Product']['avatar'];
 				if ($model->validate(array('avatar')))
 				{
 					$model->avatar = CUploadedFile::getInstance($model, 'avatar');
-				} else {
-					$model->avatar = '';
+					$model->avatar->saveAs($path.'/'.$id.'/'.$model->avatar);
+					$model->avatar = $id.'/'.$model->avatar;
 				}
-				$model->avatar->saveAs($path.'/'.$model->avatar);
 			}
-			$model->avatar = $id.'/'.$model->avatar;
+			else {
+				$model->avatar = $oldavatar;
+			}
 
 			if($model->save())
 			{

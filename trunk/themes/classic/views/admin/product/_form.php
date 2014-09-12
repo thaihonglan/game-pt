@@ -58,9 +58,15 @@ tinymce.init({
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'product_type_id'); ?>
-		<?php echo $form->textField($model,'product_type_id'); ?>
+		<?php $opts = CHtml::listData(ProductType::model()->findAll(),'id','name');
+			  echo $form->dropDownList($model,'product_type_id',$opts,array('empty'=>'')); ?>
 		<?php echo $form->error($model,'product_type_id'); ?>
 	</div>
+
+<?php
+		if($model->isNewRecord != '1')
+		echo CHtml::image('/resource/'.$model->avatar, $model->avatar, array("width"=>120));
+?>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'avatar'); ?>
@@ -68,12 +74,6 @@ tinymce.init({
 		<?php echo $form->error($model,'avatar'); ?>
 	</div>
 
-<?php 
-// 		if($model->isNewRecord != '1') 
-//      echo CHtml::image(Yii::app()->basePath.'/../resource/'.$model->id.'/'.$model->avatar,
-//      		$model->avatar, array("width"=>80));
-?> 
-	
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>
 		<?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>128)); ?>
@@ -118,7 +118,7 @@ tinymce.init({
 	
 	<div class="row">
 		<?php echo $form->labelEx($model,'disable'); ?>
-		<?php echo $form->textField($model,'disable'); ?>
+		<?php echo $form->checkBox($model,'disable',array('checked'=>false,'value'=>0)); ?>
 		<?php echo $form->error($model,'disable'); ?>
 	</div>
 	
