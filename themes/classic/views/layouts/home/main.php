@@ -2574,7 +2574,7 @@
 	<!--壁纸下载 begin	  -->
 	<div class="picDown mt20" id="js-thelist">
 	<div class="wAutoTitle">
-		<h2 class="pic-ico">手机壁纸下载</h2>
+		<h2 class="pic-ico">WallPaper</h2>
 		<a href="http://android.25pp.com/bizhi/" class="more"></a> </div>
 	<ul>
 					<li>
@@ -2620,38 +2620,38 @@
 <div id="footer">
 	<ul class="main">
 		<li>
-			<h5>PP助手产品区</h5>
+			<h5>Sản phẩm</h5>
 			<a href="http://pro.25pp.com/ppwin" target="_blank" rel="nofollow">PP助手(电脑)</a>
 			<a href="http://pro.25pp.com/pp_iphone_zb" target="_blank" rel="nofollow">PP助手(未越狱)</a>
 			<a href="http://pro.25pp.com/ppios" target="_blank" rel="nofollow">PP助手(越狱)</a>
 			<a href="http://pro.25pp.com/pp_android" target="_blank" rel="nofollow">PP助手(安卓)</a>
 		</li>
 		<li>
-			<h5>PP助手资源区</h5>
-			<a href="http://android.25pp.com/game/" rel="nofollow">游戏资源</a><a href="http://android.25pp.com/software/" rel="nofollow">软件资源</a>
-			<a href="http://android.25pp.com/special/" rel="nofollow">应用专题</a><a href="http://android.25pp.com/bizhi/" rel="nofollow">精美壁纸</a>
+			<h5>Download</h5>
+			<a href="http://android.25pp.com/game/" rel="nofollow">Game</a><a href="http://android.25pp.com/software/" rel="nofollow">软件资源</a>
+			<a href="http://android.25pp.com/special/" rel="nofollow">Chuyên đề</a><a href="http://android.25pp.com/bizhi/" rel="nofollow">精美壁纸</a>
 		</li>
 		<li>
-			<h5>越狱专区</h5>
-			<a href="http://www.25pp.com/jailbreak/iphone4syueyu/" rel="nofollow">越狱教程</a><a href="http://www.25pp.com/jailbreak/unlock.html" rel="nofollow">解锁教程</a>
-			<a href="http://jailbreak.25pp.com/gujian/" rel="nofollow">固件下载</a><a href="http://www.25pp.com/jailbreak/errorcode.html" rel="nofollow">常见错误</a>
+			<h5>Khu Jailbreak</h5>
+			<a href="http://www.25pp.com/jailbreak/iphone4syueyu/" rel="nofollow">Hướng dẫn Jailbreak</a><a href="http://www.25pp.com/jailbreak/unlock.html" rel="nofollow">解锁教程</a>
+			<a href="http://jailbreak.25pp.com/gujian/" rel="nofollow">Firmware</a><a href="http://www.25pp.com/jailbreak/errorcode.html" rel="nofollow">常见错误</a>
 		</li>
 		<li class="noPadding">
-			<h5>关于我们</h5>
-			<a href="http://www.25pp.com/aboutus.html" rel="nofollow">公司首页</a><a href="http://www.25pp.com/aboutus.html#zhaopin" rel="nofollow">诚聘英才</a>
-			<a href="http://pro.25pp.com/feedback.html" rel="nofollow">意见反馈</a><a href="http://www.25pp.com/aboutus.html#contact" rel="nofollow">联系我们</a>
+			<h5>About</h5>
+			<a href="http://www.25pp.com/aboutus.html" rel="nofollow">Công ty</a><a href="http://www.25pp.com/aboutus.html#zhaopin" rel="nofollow">诚聘英才</a>
+			<a href="http://pro.25pp.com/feedback.html" rel="nofollow">Feedback</a><a href="http://www.25pp.com/aboutus.html#contact" rel="nofollow">联系我们</a>
 		</li>
 	</ul>
 
 	<!--<div class="friendlink clearfix">-->
-		<!--<h6>友情链接</h6>-->
+		<!--<h6>Liên kết</h6>-->
 		<!--<div class="friendL">-->
 		<!--		<a href=""></a><b>|</b> -->
 				<!--</div>-->
 	<!--</div>-->
 
-	<p>Copyright © 2009 - 2014 Aihe Internet Technology Co., Ltd. All rights reserved.  广州爱禾网络技术有限公司 版权所有
-	<br/>粤ICP备14003765号-2　<!-- ICP经营许可证编号：粤B2-20120599 -->　粤网文[2014]0416-116号  <a href="http://www.25pp.com/sitemap.html" class="sitemap">网站地图</a>
+	<p>Copyright © 2014 by HTLM Group
+	<br/>Giấy phép số xyz - <a href="game-pt.com/home/home" class="sitemap">Sitemap</a>
 	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5855645'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5855645%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 	</p>
 </div>

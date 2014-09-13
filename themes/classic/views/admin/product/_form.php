@@ -122,6 +122,12 @@ tinymce.init({
 		<?php echo $form->error($model,'disable'); ?>
 	</div>
 	
+	<div class="row">
+		<?php echo $form->labelEx($model,'source_file_id'); ?>
+		<?php echo $form->textField($model,'source_file_id',array('size'=>20,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'source_file_id'); ?>
+	</div>
+	
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
