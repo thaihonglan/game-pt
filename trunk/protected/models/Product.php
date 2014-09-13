@@ -139,4 +139,18 @@ class Product extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+	public function scopes()
+	{
+		return array(
+			'hot' => array(
+				'order' => 'download DESC',
+				'limit' => 12,
+			),
+			'recently' => array(
+				'order' => 'create_time DESC',
+				'limit' => 12,
+			),
+		);
+	}
 }

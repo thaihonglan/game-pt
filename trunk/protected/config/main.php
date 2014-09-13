@@ -4,6 +4,7 @@
 define('THEME', 'classic');
 define('THEME_URL', 'themes'.DS.THEME.DS);
 define('PLUGIN_URL', 'themes'.DS.'plugins'.DS);
+define('IMAGE_URL', DS.'resource'.DS);
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
