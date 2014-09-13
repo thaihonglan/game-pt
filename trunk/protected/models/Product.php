@@ -44,7 +44,7 @@ class Product extends CActiveRecord
 			array('product_type_id, disable', 'numerical', 'integerOnly'=>true),
 			array('rating', 'numerical'),
 			array('name, avatar, author, from_source, package_name', 'length', 'max'=>128),
-			array('download, rate_count', 'length', 'max'=>10),
+			array('source_file_id, download, rate_count', 'length', 'max'=>10),
 			array('bundle_id, tag', 'length', 'max'=>255),
 			array('description, video, create_date, lastup_date', 'safe'),
 			array('id, name, description, product_type_id, video, avatar, author, download, rating, rate_count, from_source, bundle_id, package_name, tag, create_date, lastup_date, disable', 'safe', 'on'=>'search'),
