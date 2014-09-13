@@ -15,7 +15,11 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
-		$this->render('index');
+		$hotProducts = Product::model()->hot()->findAll();
+
+		$this->render('index', array(
+			'hotProducts' => $hotProducts
+		));
 	}
 
 	// Uncomment the following methods and override them if needed
