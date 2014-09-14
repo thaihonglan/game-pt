@@ -6,7 +6,7 @@ class HomeController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/home/home';
+	public $layout='//layouts/home/main';
 
 	/**
 	 * @var string the name of the default action. Defaults to 'index'.
@@ -15,10 +15,22 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
-		$hotProducts = Product::model()->hot()->findAll();
+		$hotProducts = Product::model()->homeDislay()->hot()->findAll();
+
+		$recentlyProducts = Product::model()->homeDislay()->recently()->findAll();
+
+		$recommendProducts = Product::model()->homeDislay()->recommend()->findAll();
+
+		$monthlyTopProducts = Product::model()->homeList()->hot()->findAll(); // @todo change conditions
+
+		$productTypes = ProductType::model()->findAll();
 
 		$this->render('index', array(
-			'hotProducts' => $hotProducts
+			'hotProducts' => $hotProducts,
+			'recentlyProducts' => $recentlyProducts,
+			'recommendProducts' => $recommendProducts,
+			'monthlyTopProducts' => $monthlyTopProducts,
+			'productTypes' => $productTypes,
 		));
 	}
 

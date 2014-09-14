@@ -143,13 +143,20 @@ class Product extends CActiveRecord
 	public function scopes()
 	{
 		return array(
-			'hot' => array(
-				'order' => 'download DESC',
+			'homeDislay' => array(
 				'limit' => 12,
 			),
+			'homeList' => array(
+				'limit' => 10,
+			),
+			'hot' => array(
+				'order' => '`download` DESC',
+			),
 			'recently' => array(
-				'order' => 'create_time DESC',
-				'limit' => 12,
+				'order' => '`create_date` DESC',
+			),
+			'recommend' => array(
+				'order' => '`like` DESC',
 			),
 		);
 	}
