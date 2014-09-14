@@ -9,7 +9,10 @@
 <base href="/themes/classic/" />
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/base.css?<?php echo time() ?>" />
+<link type="text/css" rel="stylesheet" href="css/appDetail.css?<?php echo time() ?>" />
 <script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-comment.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript">
 	var currentPageImagesPath = "/static/";
 	currentPageImagesPath = location.protocol == "http:" ? currentPageImagesPath : "";
