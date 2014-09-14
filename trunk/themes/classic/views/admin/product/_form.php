@@ -111,6 +111,12 @@ tinymce.init({
 	</div>
 	
 	<div class="row">
+		<?php echo $form->labelEx($model,'short_des'); ?>
+		<?php echo $form->textArea($model,'short_des',array('rows'=>3, 'cols'=>80, 'class'=>"mceNoEditor")); ?>
+		<?php echo $form->error($model,'short_des'); ?>
+	</div>
+	
+	<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>
 		<?php echo $form->textarea($model,'description',array('rows'=>10, 'cols'=>80)); ?>
 		<?php echo $form->error($model,'description'); ?>
