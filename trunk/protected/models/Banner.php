@@ -29,7 +29,7 @@ class Banner extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('product_id, position', 'required'),
+			array('position', 'required'),
 			array('product_id, position, disable', 'numerical', 'integerOnly'=>true),
 			array('image, hotlink', 'length', 'max'=>128),
 			// The following rule is used by search().

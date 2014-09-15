@@ -70,6 +70,23 @@ class BannerController extends Controller
 		if(isset($_POST['Banner']))
 		{
 			$model->attributes=$_POST['Banner'];
+			
+			$path = Yii::app()->basePath.'/../resource/banner/';
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+				
+			if (@!empty($_FILES['Banner']['name']['image'])) {
+				$model->image = $_POST['Banner']['image'];
+				if ($model->validate(array('image'))) {
+					$model->image = CUploadedFile::getInstance($model, 'image');
+				} else {
+					$model->image = '';
+				}
+				$model->image->saveAs($path.$model->image);
+			}
+// 			$model->image = $path.'/'.$model->image;
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -87,13 +104,34 @@ class BannerController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-
+		$oldimage = $model->image;
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
 		if(isset($_POST['Banner']))
 		{
 			$model->attributes=$_POST['Banner'];
+			
+			$path = Yii::app()->basePath.'/../resource/banner/';
+			if (!is_dir($path)) {
+				mkdir($path);
+			}
+		// Upload image
+			if (!empty($_FILES['Banner']['name']['image']))
+			{
+				$model->image = $_POST['Banner']['image'];
+				if ($model->validate(array('image')))
+				{
+					$model->image = CUploadedFile::getInstance($model, 'image');
+					$model->image->saveAs($path.$model->image);
+					$model->image = $model->image;
+				}
+			}
+			else {
+				$model->image = $oldimage;
+			}
+			
+			
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

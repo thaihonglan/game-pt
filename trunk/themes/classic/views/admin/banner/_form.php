@@ -25,9 +25,14 @@
 		<?php echo $form->error($model,'product_id'); ?>
 	</div>
 
+<?php
+		if($model->isNewRecord != '1')
+		echo CHtml::image('/resource/banner/'.$model->image, $model->image, array("width"=>200));
+?>
+	
 	<div class="row">
 		<?php echo $form->labelEx($model,'image'); ?>
-		<?php echo $form->textField($model,'image',array('size'=>60,'maxlength'=>128)); ?>
+		<?php echo $form->fileField($model,'image'); ?>
 		<?php echo $form->error($model,'image'); ?>
 	</div>
 

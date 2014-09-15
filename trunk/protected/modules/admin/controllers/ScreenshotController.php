@@ -71,8 +71,6 @@ class ScreenshotController extends Controller
 		{
 			$model->attributes=$_POST['Screenshot'];
 			
-			$max_id = Yii::app()->db->createCommand()->select('max(id) as max')->from('screenshot')->queryScalar();
-			$id = $max_id + 1;
 			$path = Yii::app()->basePath.'/../resource/'.$model->product_id;
 			if (!is_dir($path)) {
 				mkdir($path);
