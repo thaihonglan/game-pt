@@ -24,13 +24,16 @@ class HomeController extends Controller
 		$monthlyTopProducts = Product::model()->homeList()->hot()->findAll(); // @todo change conditions
 
 		$productTypes = ProductType::model()->findAll();
-
+		
+		$banners = Banner::model()->findAll();
+		
 		$this->render('index', array(
 			'hotProducts' => $hotProducts,
 			'recentlyProducts' => $recentlyProducts,
 			'recommendProducts' => $recommendProducts,
 			'monthlyTopProducts' => $monthlyTopProducts,
 			'productTypes' => $productTypes,
+			'banners' => $banners,
 		));
 	}
 

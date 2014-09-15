@@ -4,8 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo CHtml::encode($this->pageTitle); ?></title>
-<meta name="description" content="PP助手安卓网-提供最全最好玩的安卓游戏、安卓Android手机游戏、安卓软件、 安卓手机主题、安卓刷机Rom，APK游戏软件等资源的免费下载！"/>
-<meta name="keywords" content="安卓游戏、好玩的安卓游戏，25PP安卓网"/>
+<meta name="description" content="Game Portal"/>
+<meta name="keywords" content="Game Portal"/>
 <base href="/themes/classic/" />
 <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 <link type="text/css" rel="stylesheet" href="css/base.css?<?php echo time() ?>" />
@@ -29,8 +29,8 @@
 	<div class="topbar">
 		<div class="wrap clearfix">
 			<div id="userLogin" class="login fl">
-				<a href="https://u.25pp.com/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="Login">Login</a> |
-				<a href="https://u.25pp.com/user/regist/?url=http%3A%2F%2Fandroid.25pp.com%2F" title="Register">Register</a>
+				<a href="game-pt.com/home/home/" title="Login">Login</a> |
+				<a href="game-pt.com/home/home/" title="Register">Register</a>
 			</div>
 			<ul class="topMenu">
 				<li><a href="javascript:void(0)" target="_blank">Home</a>|</li>
@@ -47,31 +47,31 @@
 	-->
 
 	<div class="wrap">
-		<div id="logo"><a href="http://android.25pp.com/" ><img src="/static/images/logo.jpg" alt="PP助手安卓网" title="免费安卓游戏软件下载" /></a></div>
+		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/static/images/logo.jpg" alt="Game Portal" title="GAME PORTAL" /></a></div>
 		<div id="searchRight" class="mt25">
 			<!-- <div class="search">
 				<div id="searchTypeIco">
 					<i class="soft"></i>
 				</div>
 				<ul class="typebox">
-					<li><i class="soft"></i><p>软件游戏</p></li>
-								<li><i class="bell"></i><p>铃声</p></li>
-								<li><i class="wallpaper"></i><p>壁纸</p></li>
-								<li><i class="news"></i><p>资讯</p></li>
+					<li><i class="soft"></i><p>Software</p></li>
+								<li><i class="bell"></i><p>Ringtone</p></li>
+								<li><i class="wallpaper"></i><p>Wallpaper</p></li>
+								<li><i class="news"></i><p>News</p></li>
 				</ul>
-							<input name="" type="text" class="input" value="搜索资源"/>
-							<a href="http://android.25pp.com/search"></a>
+							<input name="" type="text" class="input" value="Search"/>
+							<a href="game-pt.com/home/home/"></a>
 			</div> -->
-			<input name="" type="text" id="btn_search" searchbox="android" defaulttype="soft" class="seachInput" value="" />
+<!-- 			<input name="" type="text" id="btn_search" searchbox="android" defaulttype="soft" class="seachInput" value="" /> -->
 
-			<p>热词：<a href="http://android.25pp.com/search/PP助手">PP助手</a><a href="http://android.25pp.com/search/QQ">QQ</a><a href="http://android.25pp.com/search/UC">UC</a><a href="http://android.25pp.com/search/淘宝">淘宝</a></p>
+<!-- 			<p>keyword：<a href="game-pt.com/home/home/search/Game Portal">Game Portal</a><a href="http://android.25pp.com/search/QQ">QQ</a><a href="http://android.25pp.com/search/UC">UC</a><a href="http://android.25pp.com/search/淘宝">淘宝</a></p> -->
 		</div>
 	</div>
 	<div id="nav">
 		<?php $this->widget('zii.widgets.CMenu', array(
 			'items' => array(
 				array('label' => 'Home'    , 'url'=>array('/home/home/index')),
-				array('label' => 'Game'    , 'url'=>array('/home/game/index')),
+				array('label' => 'Game'    , 'url'=>array('/home/home')),
 			),
 			'htmlOptions' => array('class' => 'navList'),
 			'activeCssClass' => 'on'
@@ -87,26 +87,32 @@
 <div id="footer">
 	<ul class="main">
 		<li>
-			<h5>Sản phẩm</h5>
-			<a href="http://pro.25pp.com/ppwin" target="_blank" rel="nofollow">PP助手(电脑)</a>
-			<a href="http://pro.25pp.com/pp_iphone_zb" target="_blank" rel="nofollow">PP助手(未越狱)</a>
-			<a href="http://pro.25pp.com/ppios" target="_blank" rel="nofollow">PP助手(越狱)</a>
-			<a href="http://pro.25pp.com/pp_android" target="_blank" rel="nofollow">PP助手(安卓)</a>
+			<h5>Đời sống & Pháp luật</h5>
+			<a href="http://www.doisongphapluat.com/" target="_blank" rel="nofollow">Trang chủ</a>
+			<a href="http://www.doisongphapluat.com/xa-hoi/" target="_blank" rel="nofollow">Xã hội</a>
+			<a href="http://www.doisongphapluat.com/tin-tuc-24h" target="_blank" rel="nofollow">Tin Tức 24H</a>
+			<a href="http://www.doisongphapluat.com/cong-nghe/" target="_blank" rel="nofollow">Công nghệ</a>
 		</li>
 		<li>
-			<h5>Download</h5>
-			<a href="http://android.25pp.com/game/" rel="nofollow">Game</a><a href="http://android.25pp.com/software/" rel="nofollow">软件资源</a>
-			<a href="http://android.25pp.com/special/" rel="nofollow">Chuyên đề</a><a href="http://android.25pp.com/bizhi/" rel="nofollow">精美壁纸</a>
+			<h5>Giải trí</h5>
+			<a href="http://www.doisongphapluat.com/giai-tri/ngoi-sao/" rel="nofollow">Ngôi sao</a>
+			<a href="http://www.doisongphapluat.com/giai-tri/am-nhac/" rel="nofollow">Âm nhạc</a>
+			<a href="http://www.doisongphapluat.com/giai-tri/phim/" rel="nofollow">Phim ảnh</a>
+			<a href="http://www.doisongphapluat.com/giai-tri/truyen-hinh/" rel="nofollow">Truyền hình</a>
 		</li>
 		<li>
-			<h5>Khu Jailbreak</h5>
-			<a href="http://www.25pp.com/jailbreak/iphone4syueyu/" rel="nofollow">Hướng dẫn Jailbreak</a><a href="http://www.25pp.com/jailbreak/unlock.html" rel="nofollow">解锁教程</a>
-			<a href="http://jailbreak.25pp.com/gujian/" rel="nofollow">Firmware</a><a href="http://www.25pp.com/jailbreak/errorcode.html" rel="nofollow">常见错误</a>
+			<h5>Thể thao</h5>
+			<a href="http://www.doisongphapluat.com/the-thao/bong-da/" rel="nofollow">Bóng đá</a>
+			<a href="http://www.doisongphapluat.com/the-thao/quan-vot/" rel="nofollow">Tennis</a>
+			<a href="http://www.doisongphapluat.com/golf/" rel="nofollow">Golf</a>
+			<a href="http://www.doisongphapluat.com/the-thao/world-cup-2014/" rel="nofollow">Worldcup 2014</a>
 		</li>
 		<li class="noPadding">
-			<h5>About</h5>
-			<a href="http://www.25pp.com/aboutus.html" rel="nofollow">Công ty</a><a href="http://www.25pp.com/aboutus.html#zhaopin" rel="nofollow">诚聘英才</a>
-			<a href="http://pro.25pp.com/feedback.html" rel="nofollow">Feedback</a><a href="http://www.25pp.com/aboutus.html#contact" rel="nofollow">联系我们</a>
+			<h5>Công nghệ</h5>
+			<a href="http://www.techz.vn" rel="nofollow">TechZ</a>
+			<a href="http://tinhte.vn" rel="">Tinh Tế</a>
+			<a href="http://five.vn" rel="nofollow">5 Giây</a>
+			<a href="http://www.chomobi.com" rel="nofollow">Chợ Mobi</a>
 		</li>
 	</ul>
 
@@ -117,7 +123,7 @@
 				<!--</div>-->
 	<!--</div>-->
 
-	<p>Copyright © 2014 by HTLM Group
+	<p>Bản quyền thuộc sở hữu công ty ABC
 	<br/>Giấy phép số xyz - <a href="game-pt.com/home/home" class="sitemap">Sitemap</a>
 	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5855645'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5855645%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 	</p>
