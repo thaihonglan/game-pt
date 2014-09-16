@@ -16,10 +16,13 @@ class GameController extends Controller
 
 		$productScreenshots = Screenshot::model()->findAllByAttributes(array('product_id' => $productDetail->id));
 
+		$productTypes = ProductType::model()->findAll();
+		
 		$this->render('detail', array(
 			'productDetail' => $productDetail,
 			'productResource' => $productResource,
 			'productScreenshots' => $productScreenshots,
+			'productTypes' => $productTypes,
 		));
 	}
 
