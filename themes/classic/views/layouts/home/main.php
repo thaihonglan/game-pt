@@ -47,7 +47,7 @@
 	-->
 
 	<div class="wrap">
-		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/static/images/logo.jpg" alt="Game Portal" title="GAME PORTAL" /></a></div>
+		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/resource/logo/vqg.png" alt="Game Portal" title="GAME PORTAL" /></a></div>
 		<div id="searchRight" class="mt25">
 			<!-- <div class="search">
 				<div id="searchTypeIco">
