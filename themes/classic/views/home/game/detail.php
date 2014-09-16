@@ -54,18 +54,18 @@
 			</div>
 
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="800" applicationComplete="init()"
-                 codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
-                    <param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
-                    <param name="quality" value="high" />
-                    <param name="bgcolor" value="#869ca7" />
-                    <param name="allowScriptAccess" value="sameDomain" />
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+					<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#869ca7" />
+					<param name="allowScriptAccess" value="sameDomain" />
 
-                    <embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#869ca7" width="640" height="500" name="Myflash" align="middle"
-                           play="true" loop="false" quality="high" allowScriptAccess="sameDomain"
-                           type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-                    </embed>
-                </object>
-                
+					<embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#869ca7" width="640" height="500" name="Myflash" align="middle"
+						play="true" loop="false" quality="high" allowScriptAccess="sameDomain"
+						type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+					</embed>
+				</object>
+
 
 
 			<!-- Introduction begin-->
@@ -105,6 +105,10 @@
 			<!-- Game picture end -->
 
 		</div>
+	</div>
+
+	<div class="gameRank gameBorder">
+		Hinh de day
 	</div>
 </div>
 
