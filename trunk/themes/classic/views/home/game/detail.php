@@ -2,27 +2,7 @@
 /* @var $this GameController */
 ?>
 ﻿
-	<div id="wrapper">
-	<!-- Menu -->
-	<div id="menu" class="mt20">
 
-<?php foreach ($productTypes as $index => $productType): ?>
-	<?php if (($index % 8) == 0): ?>
-	<dl>
-		<dt<?php if (($index / 8) >= 1): ?> class="cBorderB"<?php endif; ?>>
-			<h2>GAME</h2>
-			<span>Category</span>
-		</dt>
-		<dd<?php if (($index / 8) >= 1): ?> class="cBorderB aheight"<?php endif; ?>>
-		<?php endif; ?>
-			<?php if (($index % 8) != 0): ?>|<?php endif; ?>
-			<a href="javascript:void(0)"><?php echo $productType->name; ?></a>
-		<?php if (($index % 8) == 7): ?>
-		</dd>
-	</dl>
-	<?php endif; ?>
-<?php endforeach; ?>
-</div>
 
 <div id="wrapper">
 	<div class="location">
