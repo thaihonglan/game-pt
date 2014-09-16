@@ -87,11 +87,11 @@
 <div id="footer">
 	<ul class="main">
 		<li>
-			<h5>Đời sống & Pháp luật</h5>
-			<a href="http://www.doisongphapluat.com/" target="_blank" rel="nofollow">Trang chủ</a>
+			<h5>Tin tức</h5>
+			<a href="http://www.doisongphapluat.com/the-gioi/" target="_blank" rel="nofollow">Thế giới</a>
 			<a href="http://www.doisongphapluat.com/xa-hoi/" target="_blank" rel="nofollow">Xã hội</a>
 			<a href="http://www.doisongphapluat.com/tin-tuc-24h" target="_blank" rel="nofollow">Tin Tức 24H</a>
-			<a href="http://www.doisongphapluat.com/cong-nghe/" target="_blank" rel="nofollow">Công nghệ</a>
+			<a href="http://www.doisongphapluat.com/giao-duc/" target="_blank" rel="nofollow">Giáo dục</a>
 		</li>
 		<li>
 			<h5>Giải trí</h5>
@@ -124,8 +124,8 @@
 	<!--</div>-->
 
 	<p>Bản quyền thuộc sở hữu công ty ABC
-	<br/>Giấy phép số xyz - <a href="game-pt.com/home/home" class="sitemap">Sitemap</a>
-	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5855645'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D5855645%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+	<br/>Giấy phép số xyz - <a href="http://game-pt.com/home/home" class="sitemap">Sitemap</a>
+	
 	</p>
 </div>
 <!-- footer end   -->
