@@ -1,20 +1,9 @@
 
-/*!
- *  Item: android_applist 25pp资源站安卓分站-基础样式、reset样式
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
- *  Update: camille(2013.07.12)
- */
 html{overflow-x:hidden}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;outline:none}table{border-collapse:collapse;border-spacing:0}fieldset,img,iframe{border:0
 none}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul,li{list-style:none}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}a,img{display:inline-block}a{text-decoration:none}.f12{font-size:12px}.f13{font-size:13px}.f14{font-size:14px}.f16{font-size:16px}.f20{font-size:20px}.fb{font-weight:700}.fn{font-weight:400}.fi{font-style:italic}.t2{text-indent:2em}.unl{text-decoration:underline}.no_unl{text-decoration:none}.tl{text-align:left}.tc{text-align:center}.tr{text-align:right}.bc{margin-left:auto;margin-right:auto}.fl{float:left;display:inline}.fr{float:right;display:inline}.cb{clear:both;height:0;line-height:0;font-size:0}.cl{clear:left}.cr{clear:right}.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden}.clearfix{*height:1%}.vm{vertical-align:middle}.pr{position:relative}.pa{position:absolute}.abs-right{position:absolute;right:0}.zoom{zoom:1}.hidden{visibility:hidden}.none{display:none}.block{display:block}.iblock{display:inline-block}.w{width:100%}.h{height:100%}.m10{margin:10px}.m15{margin:15px}.m30{margin:30px}.mt5{margin-top:5px}.mt10{margin-top:10px}.mt15{margin-top:15px}.mt20{margin-top:20px}.mt25{margin-top:25px}.mt30{margin-top:30px}.mb5{margin-bottom:5px}.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}.mb30{margin-bottom:30px}.ml5{margin-left:5px}.ml10{margin-left:10px}.ml15{margin-left:15px}.ml20{margin-left:20px}.ml30{margin-left:30px}.mr5{margin-right:5px}.mr10{margin-right:10px}.mr15{margin-right:15px}.mr20{margin-right:20px}.mr30{margin-right:30px}.p10{padding:10px}.p15{padding:15px}.p30{padding:30px}.pt5{padding-top:5px}.pt10{padding-top:10px}.pt15{padding-top:15px}.pt20{padding-top:20px}.pt30{padding-top:30px}.pb5{padding-bottom:5px}.pb10{padding-bottom:10px}.pb15{padding-bottom:15px}.pb20{padding-bottom:20px}.pb30{padding-bottom:30px}.pl5{padding-left:5px}.pl10{padding-left:10px}.pl15{padding-left:15px}.pl20{padding-left:20px}.pl30{padding-left:30px}.pr5{padding-right:5px}.pr10{padding-right:10px}.pr15{padding-right:15px}.pr20{padding-right:20px}.pr30{padding-right:30px}.cBorderR{border-right:none}
-/*!
- *  Item: android_applist 25pp资源站安卓分站-公共样式表(如：首页游戏推荐、软件推荐、游戏排行榜、壁纸点击展示内页)
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
- *  Update: camille(2013.07.13)
- */
-body,input,textarea{font-family:'微软雅黑','宋体','Arial';font-size:12px;color:#838383}body{text-align:center}a:hover{color:#007215}a:active{color:#bc2931}h1,h2,h3,h4,h5,h6{font-family:'微软雅黑'}.clear{clear:both}#wrapper{width:980px;margin:0
-auto;font-family:'Arial',"宋体"}.wrap{width:980px;margin:0
+
+body,input,textarea{font-family:'Arial','Arial','Arial';font-size:12px;color:#838383}body{text-align:center}a:hover{color:#007215}a:active{color:#bc2931}h1,h2,h3,h4,h5,h6{font-family:'Arial'}.clear{clear:both}#wrapper{width:980px;margin:0
+auto;font-family:'Arial',"Arial"}.wrap{width:980px;margin:0
 auto}.location{width:100%;height:50px;line-height:50px;color:#000;text-align:left;overflow:hidden}.location
 a{color:#8a8a8a;padding:0
 3px}.location a:hover{color:#007215}.page{width:100%;height:75px}.page
@@ -35,7 +24,7 @@ ul{}#topWrap .topWrapRight
 li{width:81px;height:31px;display:block;float:left;border-right:1px solid #dedede;line-height:31px;padding-left:13px;text-indent:5px}#topWrap .topWrapRight li:hover.iso{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}#topWrap .topWrapRight
 a{color:#565656;width:81px;height:31px;display:block}#topWrap .topWrapRight a:hover{text-decoration:none}#logo{width:160px;height:36px;float:left;padding-top:34px;margin-left:5px;display:inline}#searchRight{height:67px;float:right;padding-bottom:15px;z-index:-1;margin-right:5px;display:inline}#searchRight
 p{width:360px;height:35px;line-height:35px;color:#999898;overflow:hidden;text-align:left}#searchRight p
-a{color:#999898;padding-left:7px}#searchRight p a:hover{text-decoration:none;color:#007215}#nav{height:48px;border-top:1px solid #eee;background:url(/themes/classic/images/nav-bg.jpg) repeat-x 0 45px;clear:both;font-family:'微软雅黑';font-size:14px}#nav
+a{color:#999898;padding-left:7px}#searchRight p a:hover{text-decoration:none;color:#007215}#nav{height:48px;border-top:1px solid #eee;background:url(/themes/classic/images/nav-bg.jpg) repeat-x 0 45px;clear:both;font-family:'Arial';font-size:14px}#nav
 ul{width:980px;height:45px;margin:0
 auto}#nav
 li{width:115px;height:45px;display:block;float:left;line-height:45px;margin-right:1px;color:#000}#nav li
@@ -68,7 +57,7 @@ b{padding:0
 15px;font-weight:400}#footer
 .main{width:970px;height:100px;border-bottom:1px solid #ebebeb;margin:0
 auto;padding:40px
-5px 30px 5px;text-align:left;font-family:'微软雅黑'}#footer .main
+5px 30px 5px;text-align:left;font-family:'Arial'}#footer .main
 li{width:186px;float:left;padding-right:75px}#footer .main
 li.noPadding{padding-right:0}#footer .main
 h5{width:186px;height:28px;border-bottom:1px solid #ebebeb;color:#000;font-weight:bold;font-size:14px}#footer .main
@@ -77,7 +66,7 @@ a{width:93px;height:15px;padding-top:10px;display:block;float:left;color:#575757
 .cBorderR{border-right:none}.home-title
 h2{width:140px;height:46px;float:left;margin-left:15px;color:#525252;font-size:18px;font-weight:lighter;text-align:right;line-height:46px;display:inline}.home-title
 a.more{width:45px;height:45px;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;float:right}.home-title a.more:hover{background:url(/themes/classic/images/public-ico.png) no-repeat 0 -362px}.home-title
-ul{float:right;font-family:'微软雅黑';padding:11px
+ul{float:right;font-family:'Arial';padding:11px
 15px 0 0}.home-title
 li{width:96px;height:35px;float:left;line-height:35px;font-size:14px}.home-title li
 span{width:96px;height:35px;display:block;color:#777;cursor:pointer}.home-title li span:hover,.home-title li.on,.home-title li.on
@@ -115,13 +104,13 @@ a{color:#88ba91;text-decoration:underline;padding-right:10px}.recommend .reList 
 dl.hover{background-color:#fbfbfa}.recommend .reList dl.hover dt
 .cover{background:url(/themes/classic/images/cover-bg.png) no-repeat 0 -223px}.gameRank{width:260px;float:right;background:#fff}.gameBorder{border:1px
 solid #eee;border-top:none;overflow:auto}.gameRank
-.title{width:260px;height:46px;border-bottom:1px solid #e2e2e2;font-family:'微软雅黑'}.gameRank .title a,.gameRank .title
+.title{width:260px;height:46px;border-bottom:1px solid #e2e2e2;font-family:'Arial'}.gameRank .title a,.gameRank .title
 span{width:130px;height:46px;display:block;float:left;text-align:center;line-height:46px;color:#777;font-size:14px;border-bottom:1px solid #e2e2e2}.gameRank
-.rankTitle{height:49px;font-family:'微软雅黑';width:259px;overflow:hidden;margin-left:-1px}.gameRank .rankTitle
+.rankTitle{height:49px;font-family:'Arial';width:259px;overflow:hidden;margin-left:-1px}.gameRank .rankTitle
 span{width:128px;height:47px;display:block;float:left;line-height:47px;text-align:center;font-size:14px;color:#666;border:1px
 solid #ececec;border-right:none;cursor:pointer}.gameRank .rankTitle span:hover,.gameRank .rankTitle
 .on{width:129px;height:47px;display:block;border-top:1px solid #5ac46d;border-bottom:none;color:#41ae54;text-decoration:none}.gameRank
-.softTitle{width:260px;height:46px;border-bottom:1px solid #e2e2e2;text-align:left;font-family:'微软雅黑'}.gameRank .softTitle
+.softTitle{width:260px;height:46px;border-bottom:1px solid #e2e2e2;text-align:left;font-family:'Arial'}.gameRank .softTitle
 h3{width:73px;height:46px;border-bottom:1px solid #5ac46d;font-weight:lighter;line-height:46px;color:#41ae54;font-size:14px}.gameRank .title span:hover,.gameRank .title
 .on{width:110px;height:46px;display:block;text-decoration:none;color:#41ae54;border-bottom:1px solid #5ac46d;text-align:left}.gameRank
 ul{}.gameRank
@@ -137,7 +126,7 @@ a{display:inline-block;position:relative;padding:1px}.gameRank .detailTxt .pic
 .cover{width:52px;height:52px;background:url(/themes/classic/images/cover-bg.png) no-repeat -98px -212px;cursor:pointer;left:0;position:absolute;top:0}.gameRank .detailTxt .pic
 img{width:50px;height:50px}.gameRank .detailTxt
 .txt{width:152px;height:43px;float:right;padding-top:7px;display:inline}.gameRank .detailTxt .txt
-h4{width:147px;height:25px;font-weight:lighter;font-family:"宋体";color:#000;font-size:14px;line-height:22px;overflow:hidden}.gameRank .detailTxt .txt
+h4{width:147px;height:25px;font-weight:lighter;font-family:"Arial";color:#000;font-size:14px;line-height:22px;overflow:hidden}.gameRank .detailTxt .txt
 a{color:#000}.gameRank .detailTxt .txt a:hover{text-decoration:none}.gameRank .detailTxt .txt
 .dowBtn{width:60px;height:24px;display:block;background:url(/themes/classic/images/public-ico.png) no-repeat -30px -64px;text-indent:3px;padding-left:20px;color:#59c46c;line-height:24px}.gameRank .detailTxt .txt .dowBtn:hover{width:60px;height:24px;display:block;background:#59c46c url(/themes/classic/images/public-ico.png) no-repeat -28px -87px;padding:0;color:#fff;padding-left:20px;line-height:24px;text-decoration:none;text-indent:3px}.gameRank .detailTxt
 p{width:224px;height:30px;line-height:30px;position:relative;padding-top:4px}.gameRank .detailTxt p .game-good{background:url(/themes/classic/images/public-ico.png) no-repeat -92px -527px;display:inline;margin-left:12px;padding-left:20px;float:left;color:#969696}.gameRank .detailTxt p
@@ -153,17 +142,17 @@ solid #ececec;border-bottom:2px solid #59c46c;background:#FFF;padding:0
 15px}.choosenav
 .icon{width:25px;height:44px;background:url(/themes/classic/images/resultnav_icon.gif) no-repeat;display:block;float:left}.choosenav
 h3{height:44px;line-height:44px;color:#525252;float:left;font-size:16px;padding-left:7px;font-weight:normal}.choosenav
-.wallpaerR{height:35px;float:right;padding-top:10px;font-family:"微软雅黑"}.choosenav .wallpaerR
+.wallpaerR{height:35px;float:right;padding-top:10px;font-family:"Arial"}.choosenav .wallpaerR
 a{padding:0
 20px;height:35px;display:block;float:left;line-height:35px;color:#777;margin-left:1px}.choosenav .wallpaerR a:hover,.choosenav .wallpaerR
 a.on{background:#59c46c;color:#fff}.choosenav
 .sorting{float:right;padding-top:9px}.choosenav .sort_ul
-li{font-family:"微软雅黑";margin-left:12px;float:left}.choosenav .sort_ul
+li{font-family:"Arial";margin-left:12px;float:left}.choosenav .sort_ul
 a{color:#aaa;padding:0
 10px;height:24px;line-height:24px;display:inline-block}.choosenav .sort_ul .current
 a{color:#FFF;background:#59c46c;border-radius:2px 2px 2px 2px}.choosenav .sort_ul a:hover{color:#FFF;background:#59c46c;border-radius:2px 2px 2px 2px}.choosenav
 b{color:#51b463}.choosenav
-.more{width:40px;height:45px;float:right;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;;display:block}.choosenav .more:hover{background-position:0 -362px}.loading{width:175px;height:45px;line-height:45px;text-align:center;padding-left:35px;font-size:14px;font-family:"微软雅黑";border:1px
+.more{width:40px;height:45px;float:right;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;;display:block}.choosenav .more:hover{background-position:0 -362px}.loading{width:175px;height:45px;line-height:45px;text-align:center;padding-left:35px;font-size:14px;font-family:"Arial";border:1px
 solid #EEE;background:url(/themes/classic/images/loading_bnt.gif) no-repeat 20px 10px;margin:15px
 auto 0}.pagearea{width:auto;height:42px;position:relative;left:50%;float:left;padding:0;margin:20px
 0}.pagearea
@@ -230,26 +219,21 @@ solid #dbdbdb;border-radius:3px;position:relative}.keyBox{width:81px;height:35px
 none;outline:none;overflow:hidden}.btn-seach{width:43px;height:35px;background:url(/themes/classic/images/ico_seach.jpg) no-repeat center 10px;float:right;cursor:pointer}.typebox{width:88px;position:absolute;top:36px;left:0;border-left:1px solid #ebebeb;border-right:1px solid #ebebeb;color:#999898;font-size:12px;z-index:999;background-color:#fff;clear:both;text-align:left}.typebox
 li{line-height:30px;border-bottom:1px solid #ebebeb;cursor:pointer;padding-left:10px}.typebox li:hover{color:#000}.header{position:relative;height:200px}.topbar{background:#f3f3f3;height:39px;border-bottom:1px solid #dfdfdf;line-height:39px;font-size:12px}.topbar
 .topline{display:inline-block;width:1px;height:10px;margin:6px
-6px 0;background-color:#d7d7d7}.login{font-size:12px;font-family:'宋体';color:#848484}.login
+6px 0;background-color:#d7d7d7}.login{font-size:12px;font-family:'Arial';color:#848484}.login
 a{color:#848484}.webMenu{width:85px;text-indent:13px;color:#848484;cursor:pointer;background:url(/themes/classic/images/ico_jt1.jpg) no-repeat 68px 17px;text-align:left}.topbar
 .webMenu{background:url(/themes/classic/images/ico_jt1.jpg) no-repeat 68px 17px;padding-bottom:1px;border-left:1px solid #F3F3F3;border-right:1px solid #F3F3F3;_position:relative;_margin-bottom:-1px}.topbar
 .webMenu.current{background:#fff url(/themes/classic/images/ico_jt2.jpg) no-repeat 68px 17px;padding-bottom:1px;border-left:1px solid #e0e0e0;border-right:1px solid #e0e0e0;_position:relative;_margin-bottom:-1px;position:relative}.webMenuBox{width:100%;background-color:#fff;height:153px;position:absolute;left:0;top:40px;z-index:9999;display:none}.webMenuList{width:980px;overflow:hidden;margin:0
 auto;line-height:26px}.webMenuList
 li{width:133px;height:153px;border-left:1px solid #eee;padding-left:20px;float:left;text-align:left}.webMenuList
 h2{width:100%;height:30px;line-height:30px;font-size:14px;color:#000;padding-top:10px;font-weight:400}.webMenuList
-a{width:65px;display:inline-block;float:left;font-size:12px;color:#959595;font-family:'宋体'}.webMenuList a:hover{color:#000}.webMenuList
+a{width:65px;display:inline-block;float:left;font-size:12px;color:#959595;font-family:'Arial'}.webMenuList a:hover{color:#000}.webMenuList
 li.first{width:210px;padding:0;border:0
 none}.webMenuList li.first
 a{width:105px}.topMenu{float:right;color:#848484;margin-right:-3px}.topMenu
 li{display:inline-block;float:left}.topMenu
 a{padding:0
 5px;color:#848484}.topMenu a:hover{color:#000}.backtoTop{display:none;width:50px;height:50px;background:url(/themes/classic/images/bg_totop.png) no-repeat 0 -50px;position:fixed;bottom:100px;cursor:pointer;text-indent:-999em;_position:absolute;_bottom:auto}.backtoTop-hover{background-position:0 0}
-/*!
- *  Item: android_applist 25pp资源站安卓分站-应用详情页
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
- *  Update: camille(2013.07.12)
- */
+
 html{-webkit-text-size-adjust:none}.detail-l{width:700px;float:left}.gradeStar2{width:99px;height:16px;position:absolute;right:0;top:55px}.gradeStar2
 .star2{width:99px;height:16px;display:inline-block;background:url(/themes/classic/images/star2.png) no-repeat;position:absolute;left:0;top:0}.gradeStar2
 .gray{background-position:0 -17px}.gradeStar2
@@ -274,7 +258,7 @@ span{padding-left:20px;width:60px;height:34px;cursor:pointer;display:block;float
 .share{width:240px;height:40px;float:left;margin-top:10px}.bMunber .share
 span{float:left;line-height:28px}.bMunber .share
 span{display:block;float:left}.bMunber
-.downMunber{width:210px;height:40px;float:right;font-family:'Century Cothic','微软雅黑';text-align:right}.bMunber .downMunber
+.downMunber{width:210px;height:40px;float:right;font-family:'Century Cothic','Arial';text-align:right}.bMunber .downMunber
 ul{float:right}.bMunber .downMunber
 li{height:32px;float:left;text-align:center;font-size:12px;padding:0
 10px;line-height:18px}.bMunber .downMunber li
@@ -286,7 +270,7 @@ span{color:#1ab235;font-size:14px}.bMunber
 15px 0 15px;margin:0
 24px;overflow:auto;position:relative}.aboutIntr
 .aoubtL{width:136px;height:300px;float:left;text-align:center}.aboutIntr .aoubtL
-a{width:136px;height:38px;background:url(/themes/classic/images/btn-down.jpg) no-repeat 0 -38px;display:block;font-size:16px;line-height:38px;font-weight:bold;color:#fff;font-family:'微软雅黑';text-indent:42px;margin-bottom:22px;text-align:left}.aboutIntr .aoubtL a:hover{background-position:0 0;text-decoration:none}.aboutIntr .aoubtL
+a{width:136px;height:38px;background:url(/themes/classic/images/btn-down.jpg) no-repeat 0 -38px;display:block;font-size:16px;line-height:38px;font-weight:bold;color:#fff;font-family:'Arial';text-indent:42px;margin-bottom:22px;text-align:left}.aboutIntr .aoubtL a:hover{background-position:0 0;text-decoration:none}.aboutIntr .aoubtL
 img{width:135px;height:135px;overflow:hidden}.aboutIntr .aoubtL
 span{height:35px;line-height:35px;color:#545454;text-align:center}.aboutIntr .aoubtL
 .more{width:136px;color:#909090;cursor:pointer;font-size:14px;font-weight:700}.aboutIntr .aoubtL .more:hover{color:#59C46C}.bg_mask{width:100%;top:0;left:0;position:absolute;opacity:0.6;filter:alpha(opacity=60);display:none;background:#000;z-index:998;display:none}.versionList,.versionCode{width:480px;height:258px;position:absolute;background:#fff;z-index:999;text-align:left;display:none}.versionCode{text-align:center}.versionCode
@@ -303,9 +287,10 @@ li{width:440px;height:35px;line-height:35px;color:#9a9a9a;padding-left:20px;back
 li.hover{background:url(/themes/classic/images/ico_appsDetail.jpg) no-repeat 0 0}.versionList li
 span{display:inline-block;margin-right:12px}.versionList
 a.more{width:61px;height:20px;display:block;background:url(/themes/classic/images/choose_more.gif);position:absolute;left:210px;bottom:0}.aboutIntr
-.aoubtTxt{width:450px;float:right;color:#838383;line-height:20px}.aboutIntr .aoubtTxt
+.aoubtTxt{width:620px;float:left;color:#838383;line-height:20px}.aboutIntr .aoubtTxt
+.player{width:690px;text-align:center;margin-bottom:12px}.player
 .conTxt{margin-bottom:35px;font-family:'Arial';word-break:break-all;text-align:justify;line-height:22px;overflow:hidden}.aboutIntr .aoubtTxt
-h2{height:20px;display:block;color:#000;font-family:'微软雅黑';font-size:14px;margin-bottom:15px;overflow:hidden}.aboutIntr .aoubtTxt h2
+h2{height:20px;display:block;color:#000;font-family:'Arial';font-size:14px;margin-bottom:15px;overflow:hidden}.aboutIntr .aoubtTxt h2
 span{width:0px;height:0px;overflow:hidden;display:block}.aboutIntr
 a.more{width:61px;height:20px;display:block;background:url(/themes/classic/images/choose_more.gif);position:absolute;left:270px;bottom:0}.aboutIntr
 a.off{background:url(/themes/classic/images/choose_more2.gif) no-repeat}.detailContent
@@ -372,7 +357,7 @@ span{background:url(/themes/classic/images/public-ico.png) no-repeat -92px -534p
 span{background:url(/themes/classic/images/public-ico.png) no-repeat -92px -571px;padding:0
 0 8px 20px;height:16px;line-height:16px;display:block;color:#9b9b9b}.userLike dl dd.app_downl
 .bnt_dl{float:right}.userLike dl dd.app_downl .bnt_dl
-a{width:60px;height:33px;border-left:1px solid #ececec;display:block;color:#000;font-family:"微软雅黑";text-align:center}.userLike dl dd.app_downl .bnt_dl a:hover{border-left:none;color:#FFF;background:#59c46c}.userLike dl dd.app_downl .good .addAnimate,.userLike dl dd.app_downl .bad
+a{width:60px;height:33px;border-left:1px solid #ececec;display:block;color:#000;font-family:"Arial";text-align:center}.userLike dl dd.app_downl .bnt_dl a:hover{border-left:none;color:#FFF;background:#59c46c}.userLike dl dd.app_downl .good .addAnimate,.userLike dl dd.app_downl .bad
 .addAnimate{background:none;display:none;color:#f90}.topicReco{width:258px;border:1px
 solid #eee;background:#fff;overflow:auto}.topicReco
 .topTitle{width:258px;height:41px;border-bottom:1px solid #59c46c}.topicReco

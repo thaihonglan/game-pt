@@ -18,11 +18,17 @@ class GameController extends Controller
 
 		$productTypes = ProductType::model()->findAll();
 		
+		$monthlyTopProducts = Product::model()->homeList()->hot()->findAll();
+		
+		$similar = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => $productDetail->product_type_id));
+		
 		$this->render('detail', array(
 			'productDetail' => $productDetail,
 			'productResource' => $productResource,
 			'productScreenshots' => $productScreenshots,
 			'productTypes' => $productTypes,
+			'similar' => $similar,
+			'monthlyTopProducts' => $monthlyTopProducts,
 		));
 	}
 
