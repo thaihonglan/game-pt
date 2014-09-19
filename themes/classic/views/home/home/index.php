@@ -9,8 +9,8 @@
 	<?php if (($index % 8) == 0): ?>
 	<dl>
 		<dt<?php if (($index / 8) >= 1): ?> class="cBorderB"<?php endif; ?>>
-			<h2>GAME</h2>
-			<span>Category</span>
+			<h2>Danh mục</h2>
+<!-- 			<span>Category</span> -->
 		</dt>
 		<dd<?php if (($index / 8) >= 1): ?> class="cBorderB aheight"<?php endif; ?>>
 		<?php endif; ?>
@@ -29,7 +29,7 @@
 	<?php foreach ($banners as $index => $banner): ?>
 	<li>
 		<a href="javascript:void(0)">
-			<img height="200" src="<?=BANNER_URL.$banner->image?>" alt="" amount="1"/>
+			<img height="300" src="<?=BANNER_URL.$banner->image?>" alt="" amount="1"/>
 		</a> <!--<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i>-->
 		<!--  begin -->
 		<div class="bannerDetail">

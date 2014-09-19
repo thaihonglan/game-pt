@@ -4,8 +4,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-	<meta name="description" content="Game Portal"/>
-	<meta name="keywords" content="Game Portal"/>
+	<meta name="description" content="Vương Quốc Game"/>
+	<meta name="keywords" content="Vương Quốc Game"/>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<link type="text/css" rel="stylesheet" href="<?php echo THEME_URL; ?>css/home.css?<?php echo time() ?>" />
 
@@ -41,7 +41,7 @@
 	-->
 
 	<div class="wrap">
-		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/resource/logo/vqg.png" alt="Game Portal" title="GAME PORTAL" /></a></div>
+		<div id="logo"><a href="http://game-pt.com/" ><img src="/resource/logo/vqg.png" alt="Vương Quốc Game" title="Vương Quốc Game" /></a></div>
 		
 <!-- 		<div id="searchRight" class="mt20"> -->
 			<!-- <div class="search">
@@ -121,7 +121,7 @@
 	<!--</div>-->
 
 	<p>Bản quyền thuộc sở hữu công ty ABC
-	<br/>Giấy phép số xyz - <a href="http://game-pt.com/home/home" class="sitemap">Sitemap</a>
+	<br/>Giấy phép số xyz - <a href="http://game-pt.com/" class="sitemap">Sitemap</a>
 
 	</p>
 </div>
