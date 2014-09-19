@@ -29,17 +29,13 @@
 	<div class="topbar">
 		<div class="wrap clearfix">
 			<div id="userLogin" class="login fl">
-				<a href="game-pt.com/home/home/" title="Login">Login</a> |
-				<a href="game-pt.com/home/home/" title="Register">Register</a>
+				<a href="javascript:void(0)" title="Login">Login</a> |
+				<a href="javascript:void(0)" title="Register">Register</a>
 			</div>
 			<ul class="topMenu">
 				<li><a href="javascript:void(0)" target="_blank">Home</a>|</li>
-				<li><a href="javascript:void(0)" target="_blank">iOS</a>|</li>
-				<li><a href="javascript:void(0)" target="_blank">Android</a>|</li>
 				<li><a href="javascript:void(0)" target="_blank">News</a>|</li>
 				<li><a href="javascript:void(0)" target="_blank">Forum</a>|</li>
-				<li><a href="javascript:void(0)" target="_blank">Product</a>|</li>
-				<li><a href="javascript:void(0)" target="_blank">iOS Jailbreak</a>|</li>
 				<li><a href="javascript:void(0)" target="_blank">Payment</a>|</li>
 			</ul>
 		</div>
@@ -48,6 +44,7 @@
 
 	<div class="wrap">
 		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/resource/logo/vqg.png" alt="Game Portal" title="GAME PORTAL" /></a></div>
+		
 		<div id="searchRight" class="mt25">
 			<!-- <div class="search">
 				<div id="searchTypeIco">
@@ -60,22 +57,24 @@
 								<li><i class="news"></i><p>News</p></li>
 				</ul>
 							<input name="" type="text" class="input" value="Search"/>
-							<a href="game-pt.com/home/home/"></a>
+							<a href="javascript:void(0)"></a>
 			</div> -->
 <!-- 			<input name="" type="text" id="btn_search" searchbox="android" defaulttype="soft" class="seachInput" value="" /> -->
 
-<!-- 			<p>keyword：<a href="game-pt.com/home/home/search/Game Portal">Game Portal</a><a href="http://android.25pp.com/search/QQ">QQ</a><a href="http://android.25pp.com/search/UC">UC</a><a href="http://android.25pp.com/search/淘宝">淘宝</a></p> -->
+<!-- 			<p>keyword：<a href="javascript:void(0)">Game Portal</a><a href="javascript:void(0)">Flash</a><a href="javascript:void(0)">UC</a><a href="javascript:void(0)">Game</a></p> -->
 		</div>
 	</div>
-	<div id="nav">
-		<?php $this->widget('zii.widgets.CMenu', array(
-			'items' => array(
-				array('label' => 'Home'    , 'url'=>array('/home/home/index')),
-				array('label' => 'Game'    , 'url'=>array('/home/home')),
-			),
-			'htmlOptions' => array('class' => 'navList'),
-			'activeCssClass' => 'on'
-		)); ?>
+	
+<!-- 	<div id="nav"> -->
+	 	<?php 
+// 			$this->widget('zii.widgets.CMenu', array(
+// 			'items' => array(
+// 				array('label' => 'Home'    , 'url'=>array('/home/home/index')),
+// 				array('label' => 'Game'    , 'url'=>array('/home/home')),
+// 			),
+// 			'htmlOptions' => array('class' => 'navList'),
+// 			'activeCssClass' => 'on'
+// 		)); ?>
 	</div>
 </div>
 <!--Header end  -->

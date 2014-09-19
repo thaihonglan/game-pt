@@ -1,6 +1,7 @@
 <?php
 /* @var $this HomeController */
 ?>
+
 <div id="wrapper">
 	<!-- Menu -->
 	<div id="menu" class="mt20">
@@ -28,15 +29,15 @@
 <ul>
 	<?php foreach ($banners as $index => $banner): ?>
 	<li>
-		<a href="http://android.25pp.com/special_175.html">
-			<img src="<?=BANNER_URL.$banner->image?>" alt="" amount="1"/>
+		<a href="javascript:void(0)">
+			<img height="200" src="<?=BANNER_URL.$banner->image?>" alt="" amount="1"/>
 		</a> <!--<i class="i1"></i><i class="i2"></i><i class="i3"></i><i class="i4"></i>-->
 		<!--  begin -->
 		<div class="bannerDetail">
 			<a href="javascript:void(0)" target="_blank" class="hrefBox">
-				<h3><?php echo $banner->image?></h3>
+				<h3><?php echo $banner->name?></h3>
 				<p><?php echo $banner->description?></p>
-				<em class="goin">Detail&rarr;</em>
+				<em class="goin">Xem &rarr;</em>
 			</a>
 		</div>
 		<!-- end  -->
@@ -76,7 +77,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$hotProduct->download?> lần tải</p>
+					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -112,7 +113,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recentlyProduct->download?> lần tải</p>
+					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -148,7 +149,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recommendProduct->download?> lần tải</p>
+					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -179,7 +180,7 @@
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
 					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
-					<span><?=$monthlyTopProduct->download?> lần tải</span>
+					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
@@ -195,7 +196,7 @@
 					</div>
 					<p class="clear" style="position:relative">
 						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
-						<span><?=$monthlyTopProduct->download?> lần tải</span>
+						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -212,7 +213,7 @@
 	<!--Game recomment begin  -->
 	<div class="recommend">
 		<div class="home-title">
-			<h2 class="game-ico">Nhập Vai</h2>
+			<h2 class="game-ico">Hành Động</h2>
 			<ul class="game_choose_p2">
 				<li><h3 title="Hot nhất"><span>Hot nhất</span></h3></li>
 				<li><h3 title="Mới nhất"><span>Mới nhất</span></h3></li>
@@ -221,7 +222,7 @@
 		</div>
 
 		<div class="reList gcp2" style="display:block">
-		<?php foreach ($hotProducts as $index => $hotProduct): ?>
+		<?php foreach ($hotProductsCate1 as $index => $hotProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank">
@@ -237,7 +238,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$hotProduct->download?> lần tải</p>
+					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -257,7 +258,7 @@
 		</div>
 
 		<div class="reList gcp2">
-		<?php foreach ($recentlyProducts as $index => $recentlyProduct): ?>
+		<?php foreach ($recentlyProductsCate1 as $index => $recentlyProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank">
@@ -273,7 +274,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recentlyProduct->download?> lần tải</p>
+					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -293,7 +294,7 @@
 		</div>
 
 		<div class="reList gcp2">
-		<?php foreach ($recommendProducts as $index => $recommendProduct): ?>
+		<?php foreach ($recommendProductsCate1 as $index => $recommendProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank">
@@ -309,7 +310,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recommendProduct->download?> lần tải</p>
+					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -335,12 +336,12 @@
 			<span class="on">Bảng xếp hạng</span>
 		</div>
 		<ul>
-			<?php foreach ($monthlyTopProducts as $index => $monthlyTopProduct): ?>
+			<?php foreach ($monthlyTopProductsCate1 as $index => $monthlyTopProduct): ?>
 			<li>
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
 					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
-					<span><?=$monthlyTopProduct->download?> lần tải</span>
+					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
@@ -356,7 +357,7 @@
 					</div>
 					<p class="clear" style="position:relative">
 						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
-						<span><?=$monthlyTopProduct->download?> lần tải</span>
+						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -368,12 +369,12 @@
 </div> <!-- Game Category 1 end  -->
 
 
-<!-- Game Category 1 -->
+<!-- Game Category 2 -->
 <div class="part-c mt20">
 	<!--Game recomment begin  -->
 	<div class="recommend">
 		<div class="home-title">
-			<h2 class="game-ico">Hành Động</h2>
+			<h2 class="game-ico">Trí Tuệ</h2>
 			<ul class="game_choose_p3">
 				<li><h3 title="Hot nhất"><span>Hot nhất</span></h3></li>
 				<li><h3 title="Mới nhất"><span>Mới nhất</span></h3></li>
@@ -382,7 +383,7 @@
 		</div>
 
 		<div class="reList gcp3" style="display:block">
-		<?php foreach ($hotProducts as $index => $hotProduct): ?>
+		<?php foreach ($hotProductsCate2 as $index => $hotProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank">
@@ -398,7 +399,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$hotProduct->download?> lần tải</p>
+					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -418,7 +419,7 @@
 		</div>
 
 		<div class="reList gcp3">
-		<?php foreach ($recentlyProducts as $index => $recentlyProduct): ?>
+		<?php foreach ($recentlyProductsCate2 as $index => $recentlyProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank">
@@ -434,7 +435,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recentlyProduct->download?> lần tải</p>
+					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -454,7 +455,7 @@
 		</div>
 
 		<div class="reList gcp3">
-		<?php foreach ($recommendProducts as $index => $recommendProduct): ?>
+		<?php foreach ($recommendProductsCate2 as $index => $recommendProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
 					<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank">
@@ -470,7 +471,7 @@
 						<span class="star1 gray"></span>
 						<span class="star1 orange" style="width:72px;"></span>
 					</div>
-					<p><?=$recommendProduct->download?> lần tải</p>
+					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
 
 				<div class="softIntr">
@@ -496,12 +497,12 @@
 			<span class="on">Bảng xếp hạng</span>
 		</div>
 		<ul>
-			<?php foreach ($monthlyTopProducts as $index => $monthlyTopProduct): ?>
+			<?php foreach ($monthlyTopProductsCate2 as $index => $monthlyTopProduct): ?>
 			<li>
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
 					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
-					<span><?=$monthlyTopProduct->download?> lần tải</span>
+					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
@@ -517,7 +518,7 @@
 					</div>
 					<p class="clear" style="position:relative">
 						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
-						<span><?=$monthlyTopProduct->download?> lần tải</span>
+						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -526,4 +527,5 @@
 		</ul>
 	</div> <!-- Top game end -->
 	<div class="clear"></div>
-</div> <!-- Game Category 1 end  -->
+</div> <!-- Game Category 2 end  -->
+</div>

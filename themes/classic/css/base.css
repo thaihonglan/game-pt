@@ -1,25 +1,26 @@
 
 /*!
- *  Item: android_applist 25ppèµ„æº�ç«™å®‰å�“åˆ†ç«™-åŸºç¡€æ ·å¼�ã€�resetæ ·å¼�
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
  *  Update: camille(2013.07.12)
  */
 html{overflow-x:hidden}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;outline:none}table{border-collapse:collapse;border-spacing:0}fieldset,img,iframe{border:0
 none}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:400}ol,ul,li{list-style:none}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}q:before,q:after{content:''}a,img{display:inline-block}a{text-decoration:none}.f12{font-size:12px}.f13{font-size:13px}.f14{font-size:14px}.f16{font-size:16px}.f20{font-size:20px}.fb{font-weight:700}.fn{font-weight:400}.fi{font-style:italic}.t2{text-indent:2em}.unl{text-decoration:underline}.no_unl{text-decoration:none}.tl{text-align:left}.tc{text-align:center}.tr{text-align:right}.bc{margin-left:auto;margin-right:auto}.fl{float:left;display:inline}.fr{float:right;display:inline}.cb{clear:both;height:0;line-height:0;font-size:0}.cl{clear:left}.cr{clear:right}.clearfix:after{content:'';display:block;height:0;clear:both;visibility:hidden}.clearfix{*height:1%}.vm{vertical-align:middle}.pr{position:relative}.pa{position:absolute}.abs-right{position:absolute;right:0}.zoom{zoom:1}.hidden{visibility:hidden}.none{display:none}.block{display:block}.iblock{display:inline-block}.w{width:100%}.h{height:100%}.m10{margin:10px}.m15{margin:15px}.m30{margin:30px}.mt5{margin-top:5px}.mt10{margin-top:10px}.mt15{margin-top:15px}.mt20{margin-top:20px}.mt25{margin-top:25px}.mt30{margin-top:30px}.mb5{margin-bottom:5px}.mb10{margin-bottom:10px}.mb15{margin-bottom:15px}.mb20{margin-bottom:20px}.mb30{margin-bottom:30px}.ml5{margin-left:5px}.ml10{margin-left:10px}.ml15{margin-left:15px}.ml20{margin-left:20px}.ml30{margin-left:30px}.mr5{margin-right:5px}.mr10{margin-right:10px}.mr15{margin-right:15px}.mr20{margin-right:20px}.mr30{margin-right:30px}.p10{padding:10px}.p15{padding:15px}.p30{padding:30px}.pt5{padding-top:5px}.pt10{padding-top:10px}.pt15{padding-top:15px}.pt20{padding-top:20px}.pt30{padding-top:30px}.pb5{padding-bottom:5px}.pb10{padding-bottom:10px}.pb15{padding-bottom:15px}.pb20{padding-bottom:20px}.pb30{padding-bottom:30px}.pl5{padding-left:5px}.pl10{padding-left:10px}.pl15{padding-left:15px}.pl20{padding-left:20px}.pl30{padding-left:30px}.pr5{padding-right:5px}.pr10{padding-right:10px}.pr15{padding-right:15px}.pr20{padding-right:20px}.pr30{padding-right:30px}.cBorderR{border-right:none}
 /*!
- *  Item: android_applist 25ppèµ„æº�ç«™å®‰å�“åˆ†ç«™-å…¬å…±æ ·å¼�è¡¨(å¦‚ï¼šé¦–é¡µæ¸¸æˆ�æŽ¨è��ã€�è½¯ä»¶æŽ¨è��ã€�æ¸¸æˆ�æŽ’è¡Œæ¦œã€�å£�çº¸ç‚¹å‡»å±•ç¤ºå†…é¡µ)
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
  *  Update: camille(2013.07.13)
  */
-body,input,textarea{font-family:'å¾®è½¯é›…é»‘','å®‹ä½“','Arial';font-size:12px;color:#838383}body{text-align:center}a:hover{color:#007215}a:active{color:#bc2931}h1,h2,h3,h4,h5,h6{font-family:'å¾®è½¯é›…é»‘'}.clear{clear:both}#wrapper{width:980px;margin:0
-auto;font-family:'Arial',"å®‹ä½“"}.wrap{width:980px;margin:0
-auto}.location{width:100%;height:50px;line-height:50px;color:#000;text-align:left;overflow:hidden}.location
-a{color:#8a8a8a;padding:0
-3px}.location a:hover{color:#007215}.page{width:100%;height:75px}.page
-a{color:#999}.page a:hover{color:#fff}.borderAll{border:1px
-solid #ececec}.iso{background:url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}.iso_on{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}.android{background:url(/themes/classic/images/public-ico.png) no-repeat 13px -19px}.android_on{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px -19px;padding-bottom:1px}#topWrap .topWrapRight .android_on
+body,input,textarea{font-family:'Arial';font-size:12px;color:#838383}
+body{text-align:center}
+a:hover{color:#007215}
+a:active{color:#bc2931}
+h1,h2,h3,h4,h5,h6{font-family:'Aria'}.clear{clear:both}
+#wrapper{width:980px;margin:0 auto;font-family:'Arial'}
+.wrap{width:980px;margin:0 auto}
+.location{width:100%;height:50px;line-height:50px;color:#000;text-align:left;overflow:hidden}.location
+a{color:#8a8a8a;padding:0 3px}.location a:hover{color:#007215}.page{width:100%;height:75px}.page
+a{color:#999}.page a:hover{color:#fff}.borderAll{border:1px solid #ececec}
+.iso{background:url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}
+.iso_on{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}
+.android{background:url(/themes/classic/images/public-ico.png) no-repeat 13px -19px}
+.android_on{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px -19px;padding-bottom:1px}#topWrap .topWrapRight .android_on
 a{color:#4bb65e}.star{width:96px;height:14px;background:url(/themes/classic/images/public-ico.png) no-repeat;position:absolute;left:0;top:0;margin:5px
 0 0 10px}.gray{background-position:-57px -972px}.orange{background-position:-57px -986px}.gradeStar1{width:77px;height:12px;position:relative;margin-bottom:5px}.gradeStar1
 .star1{width:77px;height:12px;display:inline-block;background:url(/themes/classic/images/star1.png) no-repeat;position:absolute;left:0;top:0}.gradeStar1
@@ -35,7 +36,7 @@ ul{}#topWrap .topWrapRight
 li{width:81px;height:31px;display:block;float:left;border-right:1px solid #dedede;line-height:31px;padding-left:13px;text-indent:5px}#topWrap .topWrapRight li:hover.iso{background:#fff url(/themes/classic/images/public-ico.png) no-repeat 13px 6px}#topWrap .topWrapRight
 a{color:#565656;width:81px;height:31px;display:block}#topWrap .topWrapRight a:hover{text-decoration:none}#logo{width:160px;height:36px;float:left;padding-top:34px;margin-left:5px;display:inline}#searchRight{height:67px;float:right;padding-bottom:15px;z-index:-1;margin-right:5px;display:inline}#searchRight
 p{width:360px;height:35px;line-height:35px;color:#999898;overflow:hidden;text-align:left}#searchRight p
-a{color:#999898;padding-left:7px}#searchRight p a:hover{text-decoration:none;color:#007215}#nav{height:48px;border-top:1px solid #eee;background:url(/themes/classic/images/nav-bg.jpg) repeat-x 0 45px;clear:both;font-family:'å¾®è½¯é›…é»‘';font-size:14px}#nav
+a{color:#999898;padding-left:7px}#searchRight p a:hover{text-decoration:none;color:#007215}#nav{height:48px;border-top:1px solid #eee;background:url(/themes/classic/images/nav-bg.jpg) repeat-x 0 45px;clear:both;font-family:'Aria';font-size:14px}#nav
 ul{width:980px;height:45px;margin:0
 auto}#nav
 li{width:115px;height:45px;display:block;float:left;line-height:45px;margin-right:1px;color:#000}#nav li
@@ -68,7 +69,7 @@ b{padding:0
 15px;font-weight:400}#footer
 .main{width:970px;height:100px;border-bottom:1px solid #ebebeb;margin:0
 auto;padding:40px
-5px 30px 5px;text-align:left;font-family:'å¾®è½¯é›…é»‘'}#footer .main
+5px 30px 5px;text-align:left;font-family:'Aria'}#footer .main
 li{width:186px;float:left;padding-right:75px}#footer .main
 li.noPadding{padding-right:0}#footer .main
 h5{width:186px;height:28px;border-bottom:1px solid #ebebeb;color:#000;font-weight:bold;font-size:14px}#footer .main
@@ -77,7 +78,7 @@ a{width:93px;height:15px;padding-top:10px;display:block;float:left;color:#575757
 .cBorderR{border-right:none}.home-title
 h2{width:140px;height:46px;float:left;margin-left:15px;color:#525252;font-size:18px;font-weight:lighter;text-align:right;line-height:46px;display:inline}.home-title
 a.more{width:45px;height:45px;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;float:right}.home-title a.more:hover{background:url(/themes/classic/images/public-ico.png) no-repeat 0 -362px}.home-title
-ul{float:right;font-family:'å¾®è½¯é›…é»‘';padding:11px
+ul{float:right;font-family:'Aria';padding:11px
 15px 0 0}.home-title
 li{width:96px;height:35px;float:left;line-height:35px;font-size:14px}.home-title li
 span{width:96px;height:35px;display:block;color:#777;cursor:pointer}.home-title li span:hover,.home-title li.on,.home-title li.on
@@ -115,13 +116,13 @@ a{color:#88ba91;text-decoration:underline;padding-right:10px}.recommend .reList 
 dl.hover{background-color:#fbfbfa}.recommend .reList dl.hover dt
 .cover{background:url(/themes/classic/images/cover-bg.png) no-repeat 0 -223px}.gameRank{width:260px;float:right;background:#fff}.gameBorder{border:1px
 solid #eee;border-top:none;overflow:auto}.gameRank
-.title{width:260px;height:46px;border-bottom:1px solid #e2e2e2;font-family:'å¾®è½¯é›…é»‘'}.gameRank .title a,.gameRank .title
+.title{width:260px;height:46px;border-bottom:1px solid #e2e2e2;font-family:'Aria'}.gameRank .title a,.gameRank .title
 span{width:130px;height:46px;display:block;float:left;text-align:center;line-height:46px;color:#777;font-size:14px;border-bottom:1px solid #e2e2e2}.gameRank
-.rankTitle{height:49px;font-family:'å¾®è½¯é›…é»‘';width:259px;overflow:hidden;margin-left:-1px}.gameRank .rankTitle
+.rankTitle{height:49px;font-family:'Aria';width:259px;overflow:hidden;margin-left:-1px}.gameRank .rankTitle
 span{width:128px;height:47px;display:block;float:left;line-height:47px;text-align:center;font-size:14px;color:#666;border:1px
 solid #ececec;border-right:none;cursor:pointer}.gameRank .rankTitle span:hover,.gameRank .rankTitle
 .on{width:129px;height:47px;display:block;border-top:1px solid #5ac46d;border-bottom:none;color:#41ae54;text-decoration:none}.gameRank
-.softTitle{width:260px;height:46px;border-bottom:1px solid #e2e2e2;text-align:left;font-family:'å¾®è½¯é›…é»‘'}.gameRank .softTitle
+.softTitle{width:260px;height:46px;border-bottom:1px solid #e2e2e2;text-align:left;font-family:'Aria'}.gameRank .softTitle
 h3{width:73px;height:46px;border-bottom:1px solid #5ac46d;font-weight:lighter;line-height:46px;color:#41ae54;font-size:14px}.gameRank .title span:hover,.gameRank .title
 .on{width:110px;height:46px;display:block;text-decoration:none;color:#41ae54;border-bottom:1px solid #5ac46d;text-align:left}.gameRank
 ul{}.gameRank
@@ -153,17 +154,17 @@ solid #ececec;border-bottom:2px solid #59c46c;background:#FFF;padding:0
 15px}.choosenav
 .icon{width:25px;height:44px;background:url(/themes/classic/images/resultnav_icon.gif) no-repeat;display:block;float:left}.choosenav
 h3{height:44px;line-height:44px;color:#525252;float:left;font-size:16px;padding-left:7px;font-weight:normal}.choosenav
-.wallpaerR{height:35px;float:right;padding-top:10px;font-family:"å¾®è½¯é›…é»‘"}.choosenav .wallpaerR
+.wallpaerR{height:35px;float:right;padding-top:10px;font-family:"Aria"}.choosenav .wallpaerR
 a{padding:0
 20px;height:35px;display:block;float:left;line-height:35px;color:#777;margin-left:1px}.choosenav .wallpaerR a:hover,.choosenav .wallpaerR
 a.on{background:#59c46c;color:#fff}.choosenav
 .sorting{float:right;padding-top:9px}.choosenav .sort_ul
-li{font-family:"å¾®è½¯é›…é»‘";margin-left:12px;float:left}.choosenav .sort_ul
+li{font-family:"Aria";margin-left:12px;float:left}.choosenav .sort_ul
 a{color:#aaa;padding:0
 10px;height:24px;line-height:24px;display:inline-block}.choosenav .sort_ul .current
 a{color:#FFF;background:#59c46c;border-radius:2px 2px 2px 2px}.choosenav .sort_ul a:hover{color:#FFF;background:#59c46c;border-radius:2px 2px 2px 2px}.choosenav
 b{color:#51b463}.choosenav
-.more{width:40px;height:45px;float:right;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;;display:block}.choosenav .more:hover{background-position:0 -362px}.loading{width:175px;height:45px;line-height:45px;text-align:center;padding-left:35px;font-size:14px;font-family:"å¾®è½¯é›…é»‘";border:1px
+.more{width:40px;height:45px;float:right;background:url(/themes/classic/images/public-ico.png) no-repeat 0 -395px;;display:block}.choosenav .more:hover{background-position:0 -362px}.loading{width:175px;height:45px;line-height:45px;text-align:center;padding-left:35px;font-size:14px;font-family:"Aria";border:1px
 solid #EEE;background:url(/themes/classic/images/loading_bnt.gif) no-repeat 20px 10px;margin:15px
 auto 0}.pagearea{width:auto;height:42px;position:relative;left:50%;float:left;padding:0;margin:20px
 0}.pagearea
@@ -245,15 +246,12 @@ li{display:inline-block;float:left}.topMenu
 a{padding:0
 5px;color:#848484}.topMenu a:hover{color:#000}.backtoTop{display:none;width:50px;height:50px;background:url(/themes/classic/images/bg_totop.png) no-repeat 0 -50px;position:fixed;bottom:100px;cursor:pointer;text-indent:-999em;_position:absolute;_bottom:auto}.backtoTop-hover{background-position:0 0}
 /*!
- *  Item: android_applist 25ppèµ„æº�ç«™å®‰å�“åˆ†ç«™-é¦–é¡µä¸“å±žæ ·å¼�è¡¨
- *  Copyright:  Teiron Network Technology Co.,Ltd
- *  Author: camille
  *  Update: camille(2013.07.12)
  */
 #menu{width:978px;background:#fff;border-radius:2px;border:1px
 solid #efefef;border-bottom-width:2px;text-align:left;overflow:auto}#menu
 dl{float:left;position:relative;border-bottom:1px solid #e6e6e6;width:100%}#menu
-dt{width:115px;height:48px;text-align:center;float:left;font-family:'å¾®è½¯é›…é»‘'}#menu dt
+dt{width:115px;height:48px;text-align:center;float:left;font-family:'Aria'}#menu dt
 h2{font-size:14px;font-weight:lighter;color:#54bb67;padding-top:6px}#menu dt
 span{font-size:10px;color:#bbb;padding-bottom:5px;display:block}#menu
 dd{width:764px;float:left;color:#d1d1d1;border-left:1px solid #efefef;word-break:break-all;padding:12px
@@ -261,12 +259,12 @@ dd{width:764px;float:left;color:#d1d1d1;border-left:1px solid #efefef;word-break
 a{padding:0
 17px;color:#858585;white-space:nowrap}#menu dd a:hover{color:#007215;text-decoration:none}#menu dd
 a.more{width:46px;height:20px;color:#54bb67;padding:0;background:url(/themes/classic/images/public-ico.png) no-repeat 33px -110px;position:absolute;right:20px;top:15px;line-height:20px}#menu dt.cBorderB,#menu
-dd.cBorderB{border-bottom:none}.aheight{height:18px}#banner{width:978px;height:338px;background:#fff;overflow:hidden;border:1px
+dd.cBorderB{border-bottom:none}.aheight{height:18px}#banner{width:978px;height:200px;background:#fff;overflow:hidden;border:1px
 solid #ececec;margin:18px
 auto;position:relative}#banner
 ul{position:relative;padding:0
 4px;z-index:0}#banner
-li{height:320px;float:left;position:relative;overflow:hidden;margin:9px
+li{height:200px;float:left;position:relative;overflow:hidden;margin:9px
 5px;display:inline}#banner li
 img{display:block}#banner li
 i{position:absolute;overflow:hidden;background:#000;filter:alpha(opacity=40);opacity:0.4;margin:0}#banner li
@@ -275,9 +273,9 @@ i{position:absolute;overflow:hidden;background:#000;filter:alpha(opacity=40);opa
 .i3{bottom:0;left:0;width:100%;height:5px}#banner li
 .i4{top:5px;left:0;width:5px;height:310px}#banner
 span{display:block;position:absolute;left:0;top:0;cursor:pointer}#banner
-.bannerDetail{width:100%;background:#fff;height:320px;position:absolute;left:0;top:320px}#banner .bannerDetail
-a.hrefBox{width:100%;height:320px;display:block;cursor:pointer;z-index:2}#banner .bannerDetail
-h3{width:96%;height:60px;background:#59c46c;font-weight:lighter;line-height:60px;text-align:center;color:#fff;padding:0
+.bannerDetail{width:100%;background:#fff;height:200px;position:absolute;left:0;top:200px}#banner .bannerDetail
+a.hrefBox{width:100%;height:200px;display:block;cursor:pointer;z-index:2}#banner .bannerDetail
+h3{width:96%;height:30px;background:#59c46c;font-weight:lighter;line-height:30px;text-align:center;color:#fff;padding:0
 2%}#banner .bannerDetail
 p{width:90%;height:170px;padding:8px
 5% 0 5%;line-height:24px;color:#8d8d8d;text-align:justify;overflow:hidden}#banner .bannerDetail
@@ -300,7 +298,7 @@ p{color:#999;line-height:24px;text-align:left;text-indent:2em}.newsInfo .Rtxt p
 a{color:#3c7800;float:right;text-decoration:none}.newsInfo .Rtxt
 .newsTab{width:455px;height:180px;margin-top:10px}.newsInfo .Rtxt .newsTab
 .title{width:100%;height:30px;border:1px
-solid #eee;background:#fcfcfc;border-bottom:none;border-right:none;font-family:'å¾®è½¯é›…é»‘';overflow:hidden}.newsInfo .Rtxt .newsTab .title
+solid #eee;background:#fcfcfc;border-bottom:none;border-right:none;font-family:'Arial';overflow:hidden}.newsInfo .Rtxt .newsTab .title
 span{width:151px;height:29px;display:block;float:left;border-right:1px solid #eee;border-bottom:1px solid #f0f0f0;font-size:14px;line-height:29px;color:#646464}.newsInfo .Rtxt .newsTab .title span:hover,.newsInfo .Rtxt .newsTab .title
 .on{width:150px;height:29px;display:block;border-bottom:1px solid #fff;background:#fff;color:#2ebe48;text-decoration:none;cursor:pointer}.newsInfo .Rtxt .newsTab
 ul{text-align:left;padding-top:8px;list-style-type:square}.newsInfo .Rtxt .newsTab
@@ -308,7 +306,7 @@ li{width:100%;height:30px;line-height:30px}.newsInfo .Rtxt .newsTab li
 span{color:#75ac4f;font-size:30px;_font-size:17px;line-height:30px;float:left;padding-right:10px}.newsInfo .Rtxt .newsTab li
 a{width:330px;height:30px;color:#8d8d8d;float:left;overflow:hidden}.newsInfo .Rtxt .newsTab li a:hover{color:#007215;text-decoration:none}.newsInfo .Rtxt .newsTab li
 i{float:right;color:#d2d2d2;font-size:12px;margin:0;font-style:normal}.specialTopic{width:260px;height:455px;float:right}.specialTopic
-.title{height:48px;font-family:'å¾®è½¯é›…é»‘'}.specialTopic .title
+.title{height:48px;font-family:'Aria'}.specialTopic .title
 a{width:129px;height:47px;display:block;float:left;line-height:47px;text-align:center;font-size:14px;color:#666;border-left:1px solid #ececec;border-bottom:1px solid #ececec}.specialTopic .title a:hover,.specialTopic .title
 .on{width:129px;height:47px;display:block;border-top:1px solid #5ac46d;border-bottom:none;color:#41ae54;text-decoration:none}.specialTopic
 ul{padding-right:10px}.specialTopic
@@ -321,7 +319,7 @@ li.cBorderB{border-bottom:none}.specialTopic
 10px;overflow:hidden}.specialTopic .pic
 img{width:79px}.specialTopic
 .nameDown{width:144px;height:43px;float:right;text-align:left;overflow:hidden}.specialTopic .nameDown
-b{height:20px;line-height:20px;font-weight:lighter;font-family:'å¾®è½¯é›…é»‘';width:136px;overflow:hidden;display:block}.specialTopic .nameDown b
+b{height:20px;line-height:20px;font-weight:lighter;font-family:'Aria';width:136px;overflow:hidden;display:block}.specialTopic .nameDown b
 a{color:#292929}.specialTopic .nameDown b a:hover{color:#2ebe48}.specialTopic .nameDown
 span{color:#aaa;margin-top:8px;display:block}.specialTopic .nameDown
 i{padding:0
@@ -375,3 +373,4 @@ li{width:226px;height:127px;float:left;margin:15px
 7px 0 8px;display:inline;overflow:hidden}.picDown
 img{width:226px}.picDown img:hover{filter:alpha(opacity=60);opacity:0.6}.gameRank .detailTxt p
 span.addAnimate{color:#f90}
+div:after{display: block; position: relative; background:url(/themes/classic/images/bg_top.jpg) 0px 0px no-repeat; position: absolute; z-index: -1;}
