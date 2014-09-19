@@ -2,24 +2,22 @@
 <html lang="en-us">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo CHtml::encode($this->pageTitle); ?></title>
-<meta name="description" content="Game Portal"/>
-<meta name="keywords" content="Game Portal"/>
-<base href="/themes/classic/" />
-<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-<link type="text/css" rel="stylesheet" href="css/base.css?<?php echo time() ?>" />
-<link type="text/css" rel="stylesheet" href="css/appDetail.css?<?php echo time() ?>" />
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery-comment.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript">
-	var currentPageImagesPath = "/static/";
-	currentPageImagesPath = location.protocol == "http:" ? currentPageImagesPath : "";
-</script>
-<!--[if lt IE 7]>
-<link href="/static/css/ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<meta name="description" content="Game Portal"/>
+	<meta name="keywords" content="Game Portal"/>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link type="text/css" rel="stylesheet" href="<?php echo THEME_URL; ?>css/home.css?<?php echo time() ?>" />
+
+	<script type="text/javascript" src="<?php echo THEME_URL; ?>js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="<?php echo THEME_URL; ?>js/home.js"></script>
+	<script type="text/javascript">
+		var currentPageImagesPath = "/static/";
+		currentPageImagesPath = location.protocol == "http:" ? currentPageImagesPath : "";
+	</script>
+	<!--[if lt IE 7]>
+	<link href="/static/css/ie6.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
 </head>
 <body>
 
@@ -124,7 +122,7 @@
 
 	<p>Bản quyền thuộc sở hữu công ty ABC
 	<br/>Giấy phép số xyz - <a href="http://game-pt.com/home/home" class="sitemap">Sitemap</a>
-	
+
 	</p>
 </div>
 <!-- footer end   -->

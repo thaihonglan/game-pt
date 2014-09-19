@@ -24,9 +24,9 @@ class HomeController extends Controller
 		$monthlyTopProducts = Product::model()->homeList()->hot()->findAll(); // @todo change conditions
 
 		$productTypes = ProductType::model()->findAll();
-		
+
 		$banners = Banner::model()->findAll();
-		
+
 		$hotProductsCate1 = Product::model()->homeDislay()->hot()->findAllByAttributes(array('product_type_id' => 2));
 		
 		$recentlyProductsCate1 = Product::model()->homeDislay()->recently()->findAllByAttributes(array('product_type_id' => 2));
