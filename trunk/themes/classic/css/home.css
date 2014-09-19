@@ -306,7 +306,7 @@ body, input, textarea {
 }
 body {
 	text-align: center;
-	background: url(/themes/classic/images/bg_mid.jpg) no-repeat;
+	background: url(/themes/classic/images/Princess_V5.jpg) no-repeat;
 	background-attachment: fixed
 }
 a:hover {
@@ -332,10 +332,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .location {
 	width: 100%;
-	height: 40px;
-	line-height: 50px;
+	height: 30px;
+	line-height: 30px;
 	color: #000;
 	text-align: left;
+	font-weight: bold;
 	overflow: hidden
 }
 .location
@@ -481,9 +482,9 @@ a {
 }
 #logo {
 	width: 160px;
-	height: 36px;
+	height: 57px;
 	float: left;
-	padding-top: 24px;
+	padding-top: 14px;
 	margin-left: 5px;
 	display: inline
 }
@@ -625,7 +626,9 @@ a {
 #footer {
 	background: #fff;
 	border-top: 1px solid #ebebeb;
-	margin-top: 25px
+	margin-top: 25px;
+	width: 980px;
+	margin: 0px auto
 }
 #footer
 p {
@@ -699,15 +702,15 @@ b {
 	height: 100px;
 	border-bottom: 1px solid #ebebeb;
 	margin: 0 auto;
-	padding: 40px 5px 30px 5px;
+	padding: 20px 5px 20px 5px;
 	text-align: left;
 	font-family: 'Arial'
 }
 #footer .main
 li {
-	width: 186px;
+	width: 210px;
 	float: left;
-	padding-right: 75px
+	padding-right: 40px
 }
 #footer .main
 li.noPadding {
@@ -715,7 +718,7 @@ li.noPadding {
 }
 #footer .main
 h5 {
-	width: 186px;
+	width: 210px;
 	height: 28px;
 	border-bottom: 1px solid #ebebeb;
 	color: #000;
@@ -724,7 +727,7 @@ h5 {
 }
 #footer .main
 a {
-	width: 93px;
+	width: 105px;
 	height: 15px;
 	padding-top: 10px;
 	display: block;
@@ -1132,13 +1135,14 @@ h3 {
 }
 .gameRank .title span:hover, .gameRank .title
 .on {
-	width: 110px;
+	width: 260px;
 	height: 46px;
 	display: block;
 	text-decoration: none;
 	color: #41ae54;
 	border-bottom: 1px solid #5ac46d;
-	text-align: left
+	text-align: center;
+	font-weight: bold
 }
 .gameRank
 ul {
@@ -2191,11 +2195,11 @@ a {
 #menu {
 	width: 978px;
 	background: #fff;
-	border-radius: 2px;
+	border-radius: 5px;
 	border: 1px solid #efefef;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 	text-align: left;
-	overflow: auto
+	overflow: hidden
 }
 #menu
 dl {
@@ -2214,16 +2218,16 @@ dt {
 }
 #menu dt
 h2 {
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: lighter;
 	color: #54bb67;
-	padding-top: 6px
+	padding-top: 8px
 }
 #menu dt
 span {
 	font-size: 10px;
 	color: #bbb;
-	padding-bottom: 5px;
+	padding-bottom: 6px;
 	display: block
 }
 #menu
@@ -2269,8 +2273,8 @@ dd.cBorderB {
 }
 #banner {
 	width: 978px;
-	height: 200px;
-	background: #fff;
+	height: 317px;
+/*	background: #fff; */
 	overflow: hidden;
 	border: 1px solid #ececec;
 	margin: 18px auto;
@@ -2284,7 +2288,7 @@ ul {
 }
 #banner
 li {
-	height: 200px;
+	height: 300px;
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -2344,15 +2348,15 @@ span {
 .bannerDetail {
 	width: 100%;
 	background: #fff;
-	height: 200px;
+	height: 300px;
 	position: absolute;
 	left: 0;
-	top: 200px
+	top: 300px
 }
 #banner .bannerDetail
 a.hrefBox {
 	width: 100%;
-	height: 200px;
+	height: 300px;
 	display: block;
 	cursor: pointer;
 	z-index: 2
@@ -3675,7 +3679,7 @@ html {
 	width: 698px;
 	border: 1px solid #ececec;
 	background: #fff;
-	padding-top: 28px;
+	padding-top: 15px;
 	text-align: left
 }
 .detailContent .title-stat {
