@@ -8,6 +8,18 @@ class GameController extends Controller
 	 */
 	public $layout='//layouts/home/main';
 
+	public function actionList() {
+
+		$productList = Product::model()->productList()->findAll();
+
+		$productTypes = ProductType::model()->findAll();
+
+		$this->render('list', array(
+			'productList' => $productList,
+			'productTypes' => $productTypes,
+		));
+	}
+
 	public function actionDetail($pid)
 	{
 		$productDetail = Product::model()->findByPk($pid);
@@ -17,11 +29,11 @@ class GameController extends Controller
 		$productScreenshots = Screenshot::model()->findAllByAttributes(array('product_id' => $productDetail->id));
 
 		$productTypes = ProductType::model()->findAll();
-		
+
 		$monthlyTopProducts = Product::model()->homeList()->hot()->findAll();
-		
+
 		$similar = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => $productDetail->product_type_id));
-		
+
 		$this->render('detail', array(
 			'productDetail' => $productDetail,
 			'productResource' => $productResource,

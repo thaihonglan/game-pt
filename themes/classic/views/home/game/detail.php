@@ -1,17 +1,16 @@
 <?php
 /* @var $this GameController */
 ?>
-﻿
-
 
 <div id="wrapper">
 	<div class="location">
 		Location：
-		<a href="/home/home/">Home</a> &gt;
-		<a href="/home/game/detail?pid=<?php echo $productDetail->id; ?>"><?php echo $productDetail->name; ?></a>
+		<a href="/">Trang chủ</a> &gt;
+		<a href="<?php echo $this->createUrl('game/list'); ?>">Danh mục</a> &gt;
+		<a href="<?php echo $this->createUrl('game/detail', array('pid' => $productDetail->id)); ?>"><?php echo $productDetail->name; ?></a>
 	</div>
-			
-				
+
+
 	<div class="detail-l">
 		<div class="detailContent">
 		<div align="center" style="margin-bottom: 20px;">
@@ -28,7 +27,7 @@
 					</embed>
 			</object>
 		</div>
-		
+
 			<div class="title-stat">
 				<div class="pic">
 					<img src="<?php echo IMAGE_URL . $productDetail->avatar; ?>" alt="">
@@ -143,7 +142,7 @@
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	
+
 	<div class="gameRank">
 		<div class="title">
 			<span class="on">Chơi nhiều nhất</span>
