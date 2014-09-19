@@ -43,7 +43,7 @@
 	<div class="wrap">
 		<div id="logo"><a href="http://game-pt.com/home/home/" ><img src="/resource/logo/vqg.png" alt="Game Portal" title="GAME PORTAL" /></a></div>
 		
-		<div id="searchRight" class="mt25">
+<!-- 		<div id="searchRight" class="mt20"> -->
 			<!-- <div class="search">
 				<div id="searchTypeIco">
 					<i class="soft"></i>
