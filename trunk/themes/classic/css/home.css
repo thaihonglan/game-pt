@@ -2,7 +2,7 @@
 
 
 /*!
- *  Item: android_applist 25pp资源站安卓分站-基础样式、reset样式
+ *  Item: android_applist
  */
 html {
 	overflow-x: hidden
@@ -300,12 +300,14 @@ a {
  *  Item: android_applist
  */
 body, input, textarea {
-	font-family: '微软雅黑', '宋体', 'Arial';
+	font-family: 'Arial';
 	font-size: 12px;
 	color: #838383
 }
 body {
-	text-align: center
+	text-align: center;
+	background: url(/themes/classic/images/bg_mid.jpg) no-repeat;
+	background-attachment: fixed
 }
 a:hover {
 	color: #007215
@@ -314,7 +316,7 @@ a:active {
 	color: #bc2931
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: '微软雅黑'
+	font-family: 'Arial'
 }
 .clear {
 	clear: both
@@ -322,7 +324,7 @@ h1, h2, h3, h4, h5, h6 {
 #wrapper {
 	width: 980px;
 	margin: 0 auto;
-	font-family: 'Arial', "宋体"
+	font-family: 'Arial'
 }
 .wrap {
 	width: 980px;
@@ -330,7 +332,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .location {
 	width: 100%;
-	height: 50px;
+	height: 40px;
 	line-height: 50px;
 	color: #000;
 	text-align: left;
@@ -481,7 +483,7 @@ a {
 	width: 160px;
 	height: 36px;
 	float: left;
-	padding-top: 34px;
+	padding-top: 24px;
 	margin-left: 5px;
 	display: inline
 }
@@ -516,7 +518,7 @@ a {
 	border-top: 1px solid #eee;
 	background: url(/themes/classic/images/nav-bg.jpg) repeat-x 0 45px;
 	clear: both;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	font-size: 14px
 }
 #nav
@@ -699,7 +701,7 @@ b {
 	margin: 0 auto;
 	padding: 40px 5px 30px 5px;
 	text-align: left;
-	font-family: '微软雅黑'
+	font-family: 'Arial'
 }
 #footer .main
 li {
@@ -781,7 +783,7 @@ a.more {
 .home-title
 ul {
 	float: right;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	padding: 11px15px 0 0
 }
 .home-title
@@ -798,13 +800,15 @@ span {
 	height: 35px;
 	display: block;
 	color: #777;
-	cursor: pointer
+	cursor: pointer;
+	text-align: center
 }
 .home-title li span:hover, .home-title li.on, .home-title li.on
 span {
 	background: #59c46c;
 	color: #fff;
-	text-decoration: none
+	text-decoration: none;
+	text-align: center
 }
 .game-ico {
 	background: url(/themes/classic/images/public-ico.png) no-repeat 0 -123px
@@ -1062,7 +1066,7 @@ dl.hover {
 	width: 260px;
 	height: 46px;
 	border-bottom: 1px solid #e2e2e2;
-	font-family: '微软雅黑'
+	font-family: 'Arial'
 }
 .gameRank .title a, .gameRank .title
 span {
@@ -1079,7 +1083,7 @@ span {
 .gameRank
 .rankTitle {
 	height: 49px;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	width: 259px;
 	overflow: hidden;
 	margin-left: -1px
@@ -1114,7 +1118,7 @@ span {
 	height: 46px;
 	border-bottom: 1px solid #e2e2e2;
 	text-align: left;
-	font-family: '微软雅黑'
+	font-family: 'Arial'
 }
 .gameRank .softTitle
 h3 {
@@ -1226,7 +1230,7 @@ h4 {
 	width: 147px;
 	height: 25px;
 	font-weight: lighter;
-	font-family: "宋体";
+	font-family: "Arial";
 	color: #000;
 	font-size: 14px;
 	line-height: 22px;
@@ -1466,7 +1470,7 @@ h3 {
 	height: 35px;
 	float: right;
 	padding-top: 10px;
-	font-family: "微软雅黑"
+	font-family: "Arial"
 }
 .choosenav .wallpaerR
 a {
@@ -1490,7 +1494,7 @@ a.on {
 }
 .choosenav .sort_ul
 li {
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	margin-left: 12px;
 	float: left
 }
@@ -1535,7 +1539,7 @@ b {
 	text-align: center;
 	padding-left: 35px;
 	font-size: 14px;
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	border: 1px solid #EEE;
 	background: url(/themes/classic/images/loading_bnt.gif) no-repeat 20px 10px;
 	margin: 15px auto 0;
@@ -2035,7 +2039,7 @@ li {
 }
 .header {
 	position: relative;
-	height: 200px
+	height: 0px
 }
 .topbar {
 	background: #f3f3f3;
@@ -2054,7 +2058,7 @@ li {
 }
 .login {
 	font-size: 12px;
-	font-family: '宋体';
+	font-family: 'Arial';
 	color: #848484
 }
 .login
@@ -2130,7 +2134,7 @@ a {
 	float: left;
 	font-size: 12px;
 	color: #959595;
-	font-family: '宋体'
+	font-family: 'Arial'
 }
 .webMenuList a:hover {
 	color: #000
@@ -2206,7 +2210,7 @@ dt {
 	height: 48px;
 	text-align: center;
 	float: left;
-	font-family: 'å¾®è½¯é›…é»‘'
+	font-family: 'Arial'
 }
 #menu dt
 h2 {
@@ -2265,7 +2269,7 @@ dd.cBorderB {
 }
 #banner {
 	width: 978px;
-	height: 338px;
+	height: 200px;
 	background: #fff;
 	overflow: hidden;
 	border: 1px solid #ececec;
@@ -2280,7 +2284,7 @@ ul {
 }
 #banner
 li {
-	height: 320px;
+	height: 200px;
 	float: left;
 	position: relative;
 	overflow: hidden;
@@ -2340,15 +2344,15 @@ span {
 .bannerDetail {
 	width: 100%;
 	background: #fff;
-	height: 320px;
+	height: 200px;
 	position: absolute;
 	left: 0;
-	top: 320px
+	top: 200px
 }
 #banner .bannerDetail
 a.hrefBox {
 	width: 100%;
-	height: 320px;
+	height: 200px;
 	display: block;
 	cursor: pointer;
 	z-index: 2
@@ -2356,10 +2360,10 @@ a.hrefBox {
 #banner .bannerDetail
 h3 {
 	width: 96%;
-	height: 60px;
+	height: 40px;
 	background: #59c46c;
 	font-weight: lighter;
-	line-height: 60px;
+	line-height: 40px;
 	text-align: center;
 	color: #fff;
 	padding: 02%
@@ -2509,7 +2513,7 @@ a {
 	background: #fcfcfc;
 	border-bottom: none;
 	border-right: none;
-	font-family: 'å¾®è½¯é›…é»‘';
+	font-family: 'Arial';
 	overflow: hidden
 }
 .newsInfo .Rtxt .newsTab .title
@@ -2584,7 +2588,7 @@ i {
 .specialTopic
 .title {
 	height: 48px;
-	font-family: 'å¾®è½¯é›…é»‘'
+	font-family: 'Arial'
 }
 .specialTopic .title
 a {
@@ -2651,7 +2655,7 @@ b {
 	height: 20px;
 	line-height: 20px;
 	font-weight: lighter;
-	font-family: 'å¾®è½¯é›…é»‘';
+	font-family: 'Arial';
 	width: 136px;
 	overflow: hidden;
 	display: block
@@ -3014,7 +3018,7 @@ a:hover {
 }
 #wrapper {
 	text-align: left;
-	font: 12px/2 Arial, "宋体";
+	font: 12px/2 Arial, "Arial";
 	padding: 05px
 }
 .choose {
@@ -3023,7 +3027,7 @@ a:hover {
 	border: 1px solid #ececec;
 	background: #FFF;
 	padding: 10px 20px 0;
-	font-family: "微软雅黑"
+	font-family: "Arial"
 }
 .choose
 .choose_list {
@@ -3292,7 +3296,7 @@ li {
 	border-left: 1px solid #ececec;
 	display: block;
 	color: #000;
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	text-align: center
 }
 .thelist .app_downl .dl_a:hover {
@@ -3424,7 +3428,7 @@ h4 {
 	border-left: 1px solid #ececec;
 	display: block;
 	color: #39b64f;
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	text-align: center
 }
 .thelist .wp_downl .dlbnt_a:hover {
@@ -3614,7 +3618,7 @@ dd {
 	width: 320px;
 	height: 160px;
 	float: left;
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	padding: 30px0 0 30px
 }
 .searchNone dl dd
@@ -3799,7 +3803,7 @@ span {
 	width: 210px;
 	height: 40px;
 	float: right;
-	font-family: 'Century Cothic', '微软雅黑';
+	font-family: 'Century Cothic', 'Arial';
 	text-align: right
 }
 .bMunber .downMunber
@@ -3872,7 +3876,7 @@ a {
 	line-height: 38px;
 	font-weight: bold;
 	color: #fff;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	text-indent: 42px;
 	margin-bottom: 22px;
 	text-align: left
@@ -4025,7 +4029,7 @@ a.more {
 }
 .aboutIntr
 .aoubtTxt {
-	width: 450px;
+	width: 600px;
 	float: right;
 	color: #838383;
 	line-height: 20px
@@ -4044,7 +4048,7 @@ h2 {
 	height: 20px;
 	display: block;
 	color: #000;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	font-size: 14px;
 	margin-bottom: 15px;
 	overflow: hidden
@@ -4435,7 +4439,7 @@ a {
 	border-left: 1px solid #ececec;
 	display: block;
 	color: #000;
-	font-family: "微软雅黑";
+	font-family: "Arial";
 	text-align: center
 }
 .userLike dl dd.app_downl .bnt_dl a:hover {
