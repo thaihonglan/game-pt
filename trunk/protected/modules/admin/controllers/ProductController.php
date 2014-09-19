@@ -64,6 +64,7 @@ class ProductController extends Controller
 	{
 		$model=new Product;
 		$model->create_date = date('Y-m-d H:i:s');
+		$model->lastup_date = date('Y-m-d H:i:s');
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

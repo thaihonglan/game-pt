@@ -27,6 +27,22 @@ class HomeController extends Controller
 		
 		$banners = Banner::model()->findAll();
 		
+		$hotProductsCate1 = Product::model()->homeDislay()->hot()->findAllByAttributes(array('product_type_id' => 2));
+		
+		$recentlyProductsCate1 = Product::model()->homeDislay()->recently()->findAllByAttributes(array('product_type_id' => 2));
+		
+		$recommendProductsCate1 = Product::model()->homeDislay()->recommend()->findAllByAttributes(array('product_type_id' => 2));
+		
+		$monthlyTopProductsCate1 = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => 2));
+		
+		$hotProductsCate2 = Product::model()->homeDislay()->hot()->findAllByAttributes(array('product_type_id' => 7));
+		
+		$recentlyProductsCate2 = Product::model()->homeDislay()->recently()->findAllByAttributes(array('product_type_id' => 7));
+		
+		$recommendProductsCate2 = Product::model()->homeDislay()->recommend()->findAllByAttributes(array('product_type_id' => 7));
+		
+		$monthlyTopProductsCate2 = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => 7));
+		
 		$this->render('index', array(
 			'hotProducts' => $hotProducts,
 			'recentlyProducts' => $recentlyProducts,
@@ -34,6 +50,14 @@ class HomeController extends Controller
 			'monthlyTopProducts' => $monthlyTopProducts,
 			'productTypes' => $productTypes,
 			'banners' => $banners,
+			'hotProductsCate1' => $hotProductsCate1,
+			'recentlyProductsCate1' => $recentlyProductsCate1,
+			'recommendProductsCate1' => $recommendProductsCate1,
+			'monthlyTopProductsCate1' => $monthlyTopProductsCate1,
+			'hotProductsCate2' => $hotProductsCate2,
+			'recentlyProductsCate2' => $recentlyProductsCate2,
+			'recommendProductsCate2' => $recommendProductsCate2,
+			'monthlyTopProductsCate2' => $monthlyTopProductsCate2,
 		));
 	}
 
