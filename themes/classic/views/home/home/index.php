@@ -1,7 +1,6 @@
 <?php
 /* @var $this HomeController */
 ?>
-
 <div id="wrapper">
 	<!-- Menu -->
 	<div id="menu" class="mt20">
@@ -64,14 +63,14 @@
 		<?php foreach ($hotProducts as $index => $hotProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank">
 						<img alt="<?=$hotProduct->name?>" src="<?=IMAGE_URL.$hotProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -83,7 +82,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
@@ -100,14 +99,14 @@
 		<?php foreach ($recentlyProducts as $index => $recentlyProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recentlyProduct->name?>" src="<?=IMAGE_URL.$recentlyProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -119,7 +118,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
@@ -136,14 +135,14 @@
 		<?php foreach ($recommendProducts as $index => $recommendProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recommendProduct->name?>" src="<?=IMAGE_URL.$recommendProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -155,7 +154,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h5>
 					<p>简介：<?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
@@ -179,19 +178,19 @@
 			<li>
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
-					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>"><?=$monthlyTopProduct->name?></a>
 					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
-						<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
 							<img alt="<?=$monthlyTopProduct->name?>" src="<?=IMAGE_URL.$monthlyTopProduct->avatar?>"/>
 							<span class="cover"></span>
 						</a>
 					</div>
 					<div class="txt">
 						<h4>
-							<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
+							<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">
@@ -225,14 +224,14 @@
 		<?php foreach ($hotProductsCate1 as $index => $hotProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank">
 						<img alt="<?=$hotProduct->name?>" src="<?=IMAGE_URL.$hotProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -244,7 +243,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
@@ -261,14 +260,14 @@
 		<?php foreach ($recentlyProductsCate1 as $index => $recentlyProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recentlyProduct->name?>" src="<?=IMAGE_URL.$recentlyProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -280,7 +279,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
@@ -297,14 +296,14 @@
 		<?php foreach ($recommendProductsCate1 as $index => $recommendProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recommendProduct->name?>" src="<?=IMAGE_URL.$recommendProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -316,7 +315,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
@@ -340,19 +339,19 @@
 			<li>
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
-					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>"><?=$monthlyTopProduct->name?></a>
 					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
-						<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
 							<img alt="<?=$monthlyTopProduct->name?>" src="<?=IMAGE_URL.$monthlyTopProduct->avatar?>"/>
 							<span class="cover"></span>
 						</a>
 					</div>
 					<div class="txt">
 						<h4>
-							<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
+							<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">
@@ -386,14 +385,14 @@
 		<?php foreach ($hotProductsCate2 as $index => $hotProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank">
 						<img alt="<?=$hotProduct->name?>" src="<?=IMAGE_URL.$hotProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -405,7 +404,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$hotProduct->id?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $hotProduct->id)); ?>" target="_blank" title="<?=$hotProduct->name?>"><?=$hotProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
@@ -422,14 +421,14 @@
 		<?php foreach ($recentlyProductsCate2 as $index => $recentlyProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recentlyProduct->name?>" src="<?=IMAGE_URL.$recentlyProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -441,7 +440,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recentlyProduct->id?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recentlyProduct->id)); ?>" target="_blank" title="<?=$recentlyProduct->name?>"><?=$recentlyProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
@@ -458,14 +457,14 @@
 		<?php foreach ($recommendProductsCate2 as $index => $recommendProduct): ?>
 			<dl class="setHover<?php if ($index == 0): ?> zIndex<?php endif;?>">
 				<dt>
-					<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank">
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank">
 						<img alt="<?=$recommendProduct->name?>" src="<?=IMAGE_URL.$recommendProduct->avatar?>"/>
 						<span class="cover"></span>
 					</a>
 				</dt>
 				<dd>
 					<h4>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
@@ -477,7 +476,7 @@
 				<div class="softIntr">
 					<span class="sIco"></span>
 					<h5>
-						<a href="/home/game/detail?pid=<?=$recommendProduct->id?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $recommendProduct->id)); ?>" target="_blank" title="<?=$recommendProduct->name?>"><?=$recommendProduct->name?></a>
 					</h5>
 					<p>Mô tả: <?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
@@ -501,19 +500,19 @@
 			<li>
 				<span class="listIco listIco-<?=($index + 1)?>"></span>
 				<div class="nameDown">
-					<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>"><?=$monthlyTopProduct->name?></a>
+					<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>"><?=$monthlyTopProduct->name?></a>
 					<span><?=$monthlyTopProduct->download?> lần chơi</span>
 				</div>
 				<div class="detailTxt">
 					<div class="pic">
-						<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
+						<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>">
 							<img alt="<?=$monthlyTopProduct->name?>" src="<?=IMAGE_URL.$monthlyTopProduct->avatar?>"/>
 							<span class="cover"></span>
 						</a>
 					</div>
 					<div class="txt">
 						<h4>
-							<a href="/home/game/detail?pid=<?=$monthlyTopProduct->id?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
+							<a href="<?php echo $this->createUrl('game/detail', array('pid' => $monthlyTopProduct->id)); ?>" target="_blank" title="<?=$monthlyTopProduct->name?>"><?=$monthlyTopProduct->name?></a>
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">

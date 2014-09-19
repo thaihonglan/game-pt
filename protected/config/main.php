@@ -2,8 +2,8 @@
 
 // define core config
 define('THEME', 'classic');
-define('THEME_URL', 'themes'.DS.THEME.DS);
-define('PLUGIN_URL', 'themes'.DS.'plugins'.DS);
+define('THEME_URL', '/themes/'.THEME.'/');
+define('PLUGIN_URL', '/themes/plugins/');
 define('IMAGE_URL', '/resource/');
 define('BANNER_URL', '/resource/banner/');
 
@@ -53,9 +53,11 @@ $configures = array(
 			'urlFormat'=>'path',
 			'showScriptName'=>false,
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+				'' => 'home/home/index',
+				'admin/<controller:\w+>/<id:\d+>' => 'admin/<controller>/view',
+				'admin/<controller:\w+>/<action:\w+>/<id:\d+>' => 'admin/<controller>/<action>',
+				'admin/<controller:\w+>/<action:\w+>' => 'admin/<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/*' => 'home/<controller>/<action>/*',
 			),
 		),
 
