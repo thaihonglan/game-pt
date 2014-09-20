@@ -624,11 +624,11 @@ a {
 	color: #fff
 }
 #footer {
-	background: #fff;
+	background:  none repeat scroll 0% 0% rgba(255, 255, 255, 0.8);
 	border-top: 1px solid #ebebeb;
 	margin-top: 25px;
 	width: 980px;
-	margin: 0px auto
+	margin: 10px auto
 }
 #footer
 p {
@@ -1057,7 +1057,7 @@ dl.hover {
 .gameRank {
 	width: 260px;
 	float: right;
-	background: #fff
+/*	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8) */  
 }
 .gameBorder {
 	border: 1px solid #eee;
@@ -2194,7 +2194,7 @@ a {
  */
 #menu {
 	width: 978px;
-	background: #fff;
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8);
 	border-radius: 5px;
 	border: 1px solid #efefef;
 	border-bottom-width: 1px;
@@ -2391,15 +2391,15 @@ em.goin {
 }
 .part-a {
 	border: 1px solid #ececec;
-	background: #fff
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8)
 }
 .part-b {
 	border: 1px solid #ececec;
-	background: #fff
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8)
 }
 .part-c {
 	border: 1px solid #ececec;
-	background: #fff
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8)
 }
 .newsInfo {
 	width: 699px;
@@ -3029,7 +3029,7 @@ a:hover {
 	width: 938px;
 	height: auto;
 	border: 1px solid #ececec;
-	background: #FFF;
+	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8);
 	padding: 10px 20px 0;
 	font-family: "Arial"
 }
@@ -4042,7 +4042,7 @@ a.more {
 .conTxt {
 	margin-bottom: 35px;
 	font-family: 'Arial';
-	word-break: break-all;
+/*	word-break: break-all; */
 	text-align: justify;
 	line-height: 22px;
 	overflow: hidden
