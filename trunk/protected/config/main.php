@@ -35,7 +35,44 @@ $configures = array(
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
 		'home',
-		'admin'
+		'admin',
+		'hybridauth' => array(
+			'baseUrl' => 'http://'. $_SERVER['SERVER_NAME'] . '/hybridauth',
+			'withYiiUser' => false, // Set to true if using yii-user
+			"providers" => array (
+				"openid" => array (
+					"enabled" => false
+				),
+
+				"yahoo" => array (
+					"enabled" => false
+				),
+
+				"google" => array (
+					"enabled" => true,
+					"keys"    => array(
+						"id" => "224290354895-2e5l2t294tl352d48rgk7fcpn4o6a324.apps.googleusercontent.com",
+						"secret" => "79EDOZGx4EP3IZBmo1doBUdk"
+					),
+					"scope"   => ""
+				),
+
+				"facebook" => array (
+					"enabled" => true,
+					"keys"    => array (
+						"id" => "706464812776081",
+						"secret" => "193bc4a5a4b7c788a19ddf8eaedf0caf"
+					),
+					"scope"   => "email,publish_stream",
+					"display" => ""
+				),
+
+				"twitter" => array (
+					"enabled" => false,
+					"keys"    => array ( "key" => "", "secret" => "" )
+				)
+			)
+		),
 	),
 
 	// THEME
@@ -54,6 +91,8 @@ $configures = array(
 			'showScriptName'=>false,
 			'rules'=>array(
 				'' => 'home/home/index',
+				'gii/<controller:\w+>/<action:\w+>/*' => 'gii/<controller>/<action>/*',
+				'hybridauth/<controller:\w+>/<action:\w+>/*' => 'hybridauth/<controller>/<action>/*',
 				'admin/<controller:\w+>/<id:\d+>' => 'admin/<controller>/view',
 				'admin/<controller:\w+>/<action:\w+>/<id:\d+>' => 'admin/<controller>/<action>',
 				'admin/<controller:\w+>/<action:\w+>' => 'admin/<controller>/<action>',
