@@ -488,6 +488,33 @@ a {
 	margin-left: 5px;
 	display: inline
 }
+#fb-root {
+	float: right;
+	padding-top: 8px;
+	margin-right: 5px;
+	display: inline
+}
+.fb_reset {
+	width: 120px;
+
+}
+#Ads-top {
+	width: 600px;
+	height: 110px;
+	float: left;
+	padding-top: 5px;
+	margin-left: 80px;
+	display: inline
+}
+#Ads-mid {
+	width: 260px;
+	float: right;
+}
+#Ads-bottom {
+	width: 680px;
+	float: left;
+	padding-top: 15px;
+}
 #searchRight {
 	height: 67px;
 	float: right;
