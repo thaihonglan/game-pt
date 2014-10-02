@@ -15,6 +15,9 @@ class HomeController extends Controller
 
 	public function actionIndex()
 	{
+// 		$ha = Yii::app()->getModule('hybridauth')->getHybridAuth();
+// 		$google = $ha->getAdapter('google');
+// 		print_r($google); exit;
 		$hotProducts = Product::model()->homeDislay()->hot()->findAll();
 
 		$recentlyProducts = Product::model()->homeDislay()->recently()->findAll();
@@ -28,21 +31,21 @@ class HomeController extends Controller
 		$banners = Banner::model()->findAll();
 
 		$hotProductsCate1 = Product::model()->homeDislay()->hot()->findAllByAttributes(array('product_type_id' => 2));
-		
+
 		$recentlyProductsCate1 = Product::model()->homeDislay()->recently()->findAllByAttributes(array('product_type_id' => 2));
-		
+
 		$recommendProductsCate1 = Product::model()->homeDislay()->recommend()->findAllByAttributes(array('product_type_id' => 2));
-		
+
 		$monthlyTopProductsCate1 = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => 2));
-		
+
 		$hotProductsCate2 = Product::model()->homeDislay()->hot()->findAllByAttributes(array('product_type_id' => 7));
-		
+
 		$recentlyProductsCate2 = Product::model()->homeDislay()->recently()->findAllByAttributes(array('product_type_id' => 7));
-		
+
 		$recommendProductsCate2 = Product::model()->homeDislay()->recommend()->findAllByAttributes(array('product_type_id' => 7));
-		
+
 		$monthlyTopProductsCate2 = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => 7));
-		
+
 		$this->render('index', array(
 			'hotProducts' => $hotProducts,
 			'recentlyProducts' => $recentlyProducts,

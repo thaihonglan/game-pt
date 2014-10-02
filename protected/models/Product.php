@@ -149,9 +149,6 @@ class Product extends CActiveRecord
 			'homeList' => array(
 				'limit' => 10,
 			),
-			'productList' => array(
-				'limit' => 30,
-			),
 			'hot' => array(
 				'order' => '`download` DESC',
 			),

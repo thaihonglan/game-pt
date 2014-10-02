@@ -1084,7 +1084,7 @@ dl.hover {
 .gameRank {
 	width: 260px;
 	float: right;
-/*	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8) */  
+/*	background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8) */
 }
 .gameBorder {
 	border: 1px solid #eee;
@@ -1584,27 +1584,28 @@ b {
 	padding: 0;
 	margin: 20px0
 }
-.pagearea
-a {
+.pagearea li {
 	width: auto;
 	height: 30px;
-	line-height: 30px;
-	padding: 0 10px;
+	margin-left: -1px;
+	position: relative;
 	display: block;
 	float: left;
+	line-height: 30px;
+	left: -50%
+}
+.pagearea li a {
+	padding: 0 10px;
 	border: 1px solid #ececec;
-	margin-left: -1px;
 	color: #999;
 	background: #FFF;
-	position: relative;
-	left: -50%
+
 }
 .pagearea a:hover {
 	background: #59c46c;
 	color: #FFF
 }
-.pagearea
-.abovepage {
+.pagearea .abovepage {
 	width: 36px;
 	height: 32px;
 	margin-right: 5px;
@@ -1614,21 +1615,18 @@ a {
 	padding: 0;
 	border: none
 }
-.pagearea .abovepage:hover {
+.pagearea .abovepage a:hover {
 	background: url(/themes/classic/images/btn-public.png) no-repeat -60px -295px
 }
-.pagearea
-a.onepage {
+.pagearea li.onepage a {
 	border: 1px solid #ececec;
 	margin-right: 5px
 }
-.pagearea
-a.current {
+.pagearea li.current a {
 	background: #59c46c;
 	color: #FFF
 }
-.pagearea
-a.nextpage {
+.pagearea li.nextpage a {
 	width: 36px;
 	height: 32px;
 	margin-left: 5px;
@@ -1638,11 +1636,10 @@ a.nextpage {
 	padding: 0;
 	border: none
 }
-.pagearea a.nextpage:hover {
+.pagearea li.nextpage a:hover {
 	background: url(/themes/classic/images/btn-public.png) no-repeat -69px -197px
 }
-.pagearea
-a.lastpage {
+.pagearea li.lastpage a {
 	border: 1px solid #ececec;
 	margin-left: 5px
 }
