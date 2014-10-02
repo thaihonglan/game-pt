@@ -107,53 +107,6 @@
 		</div>
 	</div>
 
-	<div class="detail-l detailContent">
-		<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
-			<div class="title">
-				<h2 class="comment-ico">发表您的看法</h2>
-			</div>
-			<div id="scoreArea" class="score" style="display: block;">
-				<h3>评个分吧！</h3>
-				<span id="txtScoreMsg" class="scoreMsg"></span>
-				<p>
-					<span class="val setHover" val="1">1分</span>
-					<span class="val setHover" val="2">2分</span>
-					<span class="val setHover" val="3">3分</span>
-					<span class="val setHover" val="4">4分</span>
-					<span class="val setHover on" val="5">5分</span>
-					<b><span id="txtAverage" class="num">5</span>分</b>
-				</p>
-			</div>
-			<div id="commentArea">
-				<div id="loginText"></div>
-				<div id="commentBox" style="display: block;">
-					<div class="userName clear">
-						<input type="text" class="ipt_nickname" value="PP用户" readonly="readonly" style="color: rgb(51, 51, 51);">
-						<span>请文明发言，PP有你更精彩！</span>
-					</div>
-					<textarea class="ipt_content"></textarea>
-					<div class="btnBottom">
-						<!--<input type="text" class="ipt_checkcode" value="验证码" maxlength="4" />
-						<div class="yzmPic"><img class="img_checkcode" title="看不清图片？点击更换" /></div>-->
-						<span class="txt_msg" style="display: none;">评论发表成功，谢谢您的参与！</span> <span class="btn_submit setHover">发表评论</span> </div>
-					</div>
-				</div>
-				<ul id="commentListArea">
-					<li>
-						<p class="nameDate">
-							<span class="name"><b>kietminh</b>　</span>
-							<span class="stars">评分：5.0</span>
-							<span class="date">2014-10-03 01:04:42</span>
-						</p>
-						<div class="replayBox" uplink="0" c_id="10169305"></div>
-						<p class="contTxt">真好玩！</p>
-					</li>
-				</ul>
-				<div class="page clearfix"><div class="pagearea" id="pages"></div>
-			</div>
-		</div>
-	</div>
-
 	<div class="gameRank">
 		<div class="title">
 			<span class="on">Game tương tự</span>
@@ -223,6 +176,53 @@
 			<?php endforeach; ?>
 		</ul>
 	</div> <!-- Top game end -->
+
+	<div class="detail-l detailContent">
+		<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
+			<div class="title">
+				<h2 class="comment-ico">发表您的看法</h2>
+			</div>
+			<div id="scoreArea" class="score" style="display: block;">
+				<h3>评个分吧！</h3>
+				<span id="txtScoreMsg" class="scoreMsg"></span>
+				<p>
+					<span class="val setHover" val="1">1分</span>
+					<span class="val setHover" val="2">2分</span>
+					<span class="val setHover" val="3">3分</span>
+					<span class="val setHover" val="4">4分</span>
+					<span class="val setHover on" val="5">5分</span>
+					<b><span id="txtAverage" class="num">5</span>分</b>
+				</p>
+			</div>
+			<div id="commentArea">
+				<div id="loginText"></div>
+				<div id="commentBox" style="display: block;">
+					<div class="userName clear">
+						<input type="text" class="ipt_nickname" value="PP用户" readonly="readonly" style="color: rgb(51, 51, 51);">
+						<span>请文明发言，PP有你更精彩！</span>
+					</div>
+					<textarea class="ipt_content"></textarea>
+					<div class="btnBottom">
+						<!--<input type="text" class="ipt_checkcode" value="验证码" maxlength="4" />
+						<div class="yzmPic"><img class="img_checkcode" title="看不清图片？点击更换" /></div>-->
+						<span class="txt_msg" style="display: none;">评论发表成功，谢谢您的参与！</span> <span class="btn_submit setHover">发表评论</span> </div>
+					</div>
+				</div>
+				<ul id="commentListArea">
+					<li>
+						<p class="nameDate">
+							<span class="name"><b>kietminh</b>　</span>
+							<span class="stars">评分：5.0</span>
+							<span class="date">2014-10-03 01:04:42</span>
+						</p>
+						<div class="replayBox" uplink="0" c_id="10169305"></div>
+						<p class="contTxt">真好玩！</p>
+					</li>
+				</ul>
+				<div class="page clearfix"><div class="pagearea" id="pages"></div>
+			</div>
+		</div>
+	</div>
 
 </div>
 
