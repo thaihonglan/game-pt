@@ -13,9 +13,9 @@
 		<div class="choose_list">
 			<h3 class="clist_name">Phân loại：</h3>
 			<dl class="clisr_dl">
-				<dt class="current"><a href="javascript:void(0)">Toàn bộ</a></dt>
+				<dt<?php if (!isset($_GET['tid'])): ?> class="current"<?php endif;?>><a href="<?php echo $this->createUrl('game/list'); ?>">Toàn bộ</a></dt>
 				<?php foreach ($productTypes as $productType): ?>
-				<dd ><a href="javascript:void(0)"><?php echo $productType->name; ?></a></dd>
+				<dd<?php if (isset($_GET['tid']) && ($_GET['tid'] == $productType->id)): ?> class="current"<?php endif;?>><a href="<?php echo $this->createUrl('game/list', array('tid' => $productType->id)); ?>"><?php echo $productType->name; ?></a></dd>
 				<?php endforeach; ?>
 			</dl>
 		</div>
@@ -66,14 +66,23 @@
 	</div>
 
 	<div class="page">
-		<div class="pagearea">
-			<a class="onepage" href="javascript:void(0)">Trang đầu</a>
-			<a class="abovepage" href="javascript:void(0)">Trang trước</a>
-			<a class="current" href="javascript:void(0)">1</a>
-			<a href="javascript:void(0)">2</a>
-			<a class="nextpage" href="javascript:void(0)">Trang sau</a>
-			<a class="lastpage" href="javascript:void(0)">Trang cuối</a>
-		</div>
+		<?php $this->widget('CLinkPager', array(
+			'pages'  => $pages,
+			'htmlOptions' => array(
+				'class' => 'pagearea',
+			),
+			'header' => '',
+			'internalPageCssClass' => '',
+			'firstPageCssClass'    => 'onepage',
+			'previousPageCssClass' => 'abovepage',
+			'selectedPageCssClass' => 'current',
+			'nextPageCssClass'     => 'nextpage',
+			'lastPageCssClass'     => 'lastpage',
+			'firstPageLabel' => 'Trang đầu',
+			'prevPageLabel'  => 'Trang trước',
+			'nextPageLabel'  => 'Trang sau',
+			'lastPageLabel'  => 'Trang cuối',
+		)) ?>
 	</div>
 </div>
 

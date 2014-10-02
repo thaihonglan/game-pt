@@ -15,7 +15,7 @@
 		<dd<?php if (($index / 8) >= 1): ?> class="cBorderB aheight"<?php endif; ?>>
 		<?php endif; ?>
 			<?php if (($index % 8) != 0): ?>|<?php endif; ?>
-			<a href="javascript:void(0)"><?php echo $productType->name; ?></a>
+			<a href="<?php echo $this->createUrl('game/list', array('tid' => $productType->id)); ?>"><?php echo $productType->name; ?></a>
 		<?php if (($index % 8) == 7): ?>
 		</dd>
 	</dl>

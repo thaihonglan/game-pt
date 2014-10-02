@@ -10,13 +10,27 @@ class GameController extends Controller
 
 	public function actionList() {
 
-		$productList = Product::model()->productList()->findAll();
+		$criteria = new CDbCriteria;
+
+		if (isset($_GET['tid']) && ((int) $_GET['tid'] != 0)) {
+			$criteria->compare('product_type_id', $_GET['tid']);
+		}
+
+		$count = Product::model()->count($criteria);
+		$pages = new CPagination($count);
+
+		$pages->pageSize = 3;
+		$pages->applyLimit($criteria);
+		$models = Product::model()->findAll($criteria);
+
+		$productList = Product::model()->findAll($criteria);
 
 		$productTypes = ProductType::model()->findAll();
 
 		$this->render('list', array(
 			'productList' => $productList,
 			'productTypes' => $productTypes,
+			'pages' => $pages,
 		));
 	}
 
