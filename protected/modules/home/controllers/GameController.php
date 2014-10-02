@@ -19,7 +19,7 @@ class GameController extends Controller
 		$count = Product::model()->count($criteria);
 		$pages = new CPagination($count);
 
-		$pages->pageSize = 3;
+		$pages->pageSize = 30;
 		$pages->applyLimit($criteria);
 		$models = Product::model()->findAll($criteria);
 
