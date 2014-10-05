@@ -4,14 +4,14 @@
 ﻿
 <div id="wrapper">
 	<div class="location">
-		Location：
-		<a href="/">Trang chủ</a> &gt;
-		<a href="<?php echo $this->createUrl('game/list'); ?>">Danh mục</a>
+<!-- 		Location： -->
+<!-- 		<a href="/">Trang chủ</a> &gt; -->
+<!-- 		<a href="<?php // echo $this->createUrl('game/list'); ?>">Danh mục</a> -->
 	</div>
 
 	<div class="choose" openall="true">
 		<div class="choose_list">
-			<h3 class="clist_name">Phân loại：</h3>
+			<h3 class="clist_name">Danh mục</h3>
 			<dl class="clisr_dl">
 				<dt<?php if (!isset($_GET['tid'])): ?> class="current"<?php endif;?>><a href="<?php echo $this->createUrl('game/list'); ?>">Toàn bộ</a></dt>
 				<?php foreach ($productTypes as $productType): ?>
