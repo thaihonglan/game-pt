@@ -7,12 +7,12 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 
 
 <div id="wrapper">
-	<div class="location">
-		Location：
-		<a href="/">Trang chủ</a> &gt;
-		<a href="<?php echo $this->createUrl('game/list'); ?>">Danh mục</a> &gt;
-		<a href="<?php echo $this->createUrl('game/detail', array('pid' => $productDetail->id)); ?>"><?php echo $productDetail->name; ?></a>
-	</div>
+<!-- 	<div class="location"> -->
+<!-- 		Location： -->
+<!-- 		<a href="/">Trang chủ</a> &gt; -->
+<!--  		<a href="<?php //echo $this->createUrl('game/list'); ?>">Danh mục</a> &gt; -->
+<!--		<a href="<?php //echo $this->createUrl('game/detail', array('pid' => $productDetail->id)); ?>"><?php //echo $productDetail->name; ?></a> -->
+<!-- 	</div> -->
 			
 				
 	<div class="detail-l">
@@ -50,6 +50,15 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 						<!--li class="w-450">Tag
 							<a href='' target='_blank'></a>
 						</li-->
+						<li></li><li></li>
+						<li>
+							<div
+  								class="fb-like"
+ 								data-share="true"
+  								data-width="450"
+  								data-show-faces="true">
+							</div>
+						</li>
 					</ul>
 				</div>
 				<div class="bMunber clear">
@@ -93,9 +102,54 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 
 
 		</div>
+				<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
+			<div class="title">
+				<h2 class="comment-ico">Bình luận</h2>
+			</div>
+			<div id="scoreArea" class="score" style="display: block;">
+				<h3>Mời bạn đánh giá</h3>
+				<span id="txtScoreMsg" class="scoreMsg"></span>
+				<p>
+					<span class="val setHover" val="1">1 điểm</span>
+					<span class="val setHover" val="2">2 điểm</span>
+					<span class="val setHover" val="3">3 điểm</span>
+					<span class="val setHover" val="4">4 điểm</span>
+					<span class="val setHover on" val="5">5 điểm</span>
+					<b><span id="txtAverage" class="num">5</span> điểm</b>
+				</p>
+			</div>
+			<div id="commentArea">
+				<div id="loginText"></div>
+				<div id="commentBox" style="display: block;">
+					<div class="userName clear">
+						<input type="text" class="ipt_nickname" value="Hồng Lão" readonly="" style="color: rgb(51, 51, 51);">
+						<span>Mời bạn tham gia bình luận</span>
+					</div>
+					<textarea class="ipt_content"></textarea>
+					<div class="btnBottom">
+						<!--<input type="text" class="ipt_checkcode" value="Mã xác nhận" maxlength="4" />
+						<div class="yzmPic"><img class="img_checkcode" title="Hình không rõ, click vào đây để lấy hình khác!" /></div>-->
+						<span class="txt_msg" style="display: none;">Cám ơn bạn đã bình luận</span> <span class="btn_submit setHover">Gửi bình luận</span> </div>
+					</div>
+				</div>
+				<ul id="commentListArea">
+					<li>
+						<p class="nameDate">
+							<span class="name"><b>Hồng Lão</b>　</span>
+							<span class="stars">Trung binh: 5.0</span>
+							<span class="date">2014-10-03 01:04:42</span>
+						</p>
+						<div class="replayBox" uplink="0" c_id="10169305"></div>
+						<p class="contTxt">Hay quá !</p>
+					</li>
+				</ul>
+				<div class="page clearfix"><div class="pagearea" id="pages"></div>
+			</div>
+		</div>
 	</div>
 
 	<div id="Ads-mid">
+		<img src="/resource/banner/adsense_250x250.png">
 		<img src="/resource/banner/adsense_250x250.png">
 	</div>
 	
@@ -169,52 +223,6 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 		</ul>
 	</div> <!-- Top game end -->
 	
-	<div class="detail-l detailContent">
-		<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
-			<div class="title">
-				<h2 class="comment-ico">Ý kiến</h2>
-			</div>
-			<div id="scoreArea" class="score" style="display: block;">
-				<h3>Mời bạn đánh giá</h3>
-				<span id="txtScoreMsg" class="scoreMsg"></span>
-				<p>
-					<span class="val setHover" val="1">1 điểm</span>
-					<span class="val setHover" val="2">2 điểm</span>
-					<span class="val setHover" val="3">3 điểm</span>
-					<span class="val setHover" val="4">4 điểm</span>
-					<span class="val setHover on" val="5">5 điểm</span>
-					<b><span id="txtAverage" class="num">5</span> điểm</b>
-				</p>
-			</div>
-			<div id="commentArea">
-				<div id="loginText"></div>
-				<div id="commentBox" style="display: block;">
-					<div class="userName clear">
-						<input type="text" class="ipt_nickname" value="người dùng" readonly="readonly" style="color: rgb(51, 51, 51);">
-						<span>Cám ơn bạn đã tham gia Vương Quốc Game</span>
-					</div>
-					<textarea class="ipt_content"></textarea>
-					<div class="btnBottom">
-						<!--<input type="text" class="ipt_checkcode" value="验证码" maxlength="4" />
-						<div class="yzmPic"><img class="img_checkcode" title="看不清图片？点击更换" /></div>-->
-						<span class="txt_msg" style="display: none;">Cám ơn bạn đã bình luận</span> <span class="btn_submit setHover">Gửi bình luận</span> </div>
-					</div>
-				</div>
-				<ul id="commentListArea">
-					<li>
-						<p class="nameDate">
-							<span class="name"><b>kietminh</b>　</span>
-							<span class="stars">Trung binh: 5.0</span>
-							<span class="date">2014-10-03 01:04:42</span>
-						</p>
-						<div class="replayBox" uplink="0" c_id="10169305"></div>
-						<p class="contTxt">Hay quá !</p>
-					</li>
-				</ul>
-				<div class="page clearfix"><div class="pagearea" id="pages"></div>
-			</div>
-		</div>
-	</div>
 </div>
 
 <div class="clear"></div>

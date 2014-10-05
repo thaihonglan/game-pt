@@ -511,7 +511,7 @@ a {
 	float: right;
 }
 #Ads-bottom {
-	width: 680px;
+	width: 700px;
 	float: left;
 	padding-top: 15px;
 }
@@ -4621,10 +4621,10 @@ a {
 }
 
 .comment {
-	width: 698px;
+	width: 700px;
 	background: #fff;
 	float: left;
-	font-family: 'lentury Conthic'
+	font-family: 'Arial'
 }
 .comment .title {
 	width: 100%;
@@ -4690,7 +4690,7 @@ a {
 	float: right;
 	color: #808080;
 	font-size: 16px;
-	font-family: '微软雅黑'
+	font-family: 'Arial'
 }
 .comment .score .num {
 	color: #f90;
@@ -4908,7 +4908,7 @@ li
 	width: 50px;
 	text-align: right;
 	float: right;
-	font-family: '微软雅黑';
+	font-family: 'Arial';
 	font-size: 14px;
 	color: #808080
 }

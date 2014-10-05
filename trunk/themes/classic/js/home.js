@@ -1227,12 +1227,8 @@ function gameChoose() {
 		});
 		aheight.children("a.more").one("click", function() {
 			var p = $("#menu"), q = p.height();
-			aheight.animate({
-				height : "36px"
-			}, "normal", "easeOutExpo");
-			p.animate({
-				height : q + 18 + "px"
-			}, "normal", "easeOutExpo")
+			aheight.animate({height : "36px"}, "normal", "easeOutExpo");
+			p.animate({	height : q + 18 + "px"}, "normal", "easeOutExpo")
 		})
 	}
 	function e(l) {

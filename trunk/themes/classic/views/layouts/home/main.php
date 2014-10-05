@@ -76,7 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <!-- 			<a href="https://www.facebook.com/dialog/oauth?client_id=560122764114956&redirect_uri=http://game-pt.com/callback.php"> -->
 <!-- 			<img width="140" src="/themes/classic/images/LoginWithFacebook.png"/></a> -->
-   
+
 
 <script>
   function statusChangeCallback(response) {
@@ -201,7 +201,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div id="wrapper">
 	<div id="Ads-bottom">
 			<a href="http://game-pt.com/">
-			<img src="/resource/banner/banner_1.jpg" width="680" height="150" title="Quảng cáo" /></a>
+			<img src="/resource/banner/banner_1.jpg" width="700" height="150" title="Quảng cáo" /></a>
 	</div>
 </div>
 
