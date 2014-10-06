@@ -1,10 +1,7 @@
 <?php
 /* @var $this GameController */
 $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
-
 ?>
-﻿
-
 
 <div id="wrapper">
 <!-- 	<div class="location"> -->
@@ -13,25 +10,25 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 <!--  		<a href="<?php //echo $this->createUrl('game/list'); ?>">Danh mục</a> &gt; -->
 <!--		<a href="<?php //echo $this->createUrl('game/detail', array('pid' => $productDetail->id)); ?>"><?php //echo $productDetail->name; ?></a> -->
 <!-- 	</div> -->
-			
-				
+
+
 	<div class="detail-l">
 		<div class="detailContent">
-		<div align="center" style="margin-bottom: 20px;">
-			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="690" applicationComplete="init()"
-				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
-					<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
-					<param name="quality" value="high" />
-<!-- 					<param name="bgcolor" value="#869ca7" /> -->
-					<param name="allowScriptAccess" value="sameDomain" />
+			<div align="center" style="margin-bottom: 20px;">
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="690" applicationComplete="init()"
+					codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+						<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
+						<param name="quality" value="high" />
+	<!-- 					<param name="bgcolor" value="#869ca7" /> -->
+						<param name="allowScriptAccess" value="sameDomain" />
 
-					<embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#ffffff" width="690" height="520" name="Myflash" align="middle"
-						play="true" loop="false" quality="high" allowScriptAccess="sameDomain"
-						type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-					</embed>
-			</object>
-		</div>
-		
+						<embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#ffffff" width="690" height="520" name="Myflash" align="middle"
+							play="true" loop="false" quality="high" allowScriptAccess="sameDomain"
+							type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+						</embed>
+				</object>
+			</div>
+
 			<div class="title-stat">
 				<div class="pic">
 					<img src="<?php echo IMAGE_URL . $productDetail->avatar; ?>" alt="">
@@ -98,9 +95,6 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 				<a href="javascript:;" class="more"></a>
 			</div>
 			<!-- Introduction end  -->
-
-
-
 		</div>
 				<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
 			<div class="title">
@@ -152,7 +146,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 		<img src="/resource/banner/adsense_250x250.png">
 		<img src="/resource/banner/adsense_250x250.png">
 	</div>
-	
+
 	<div class="gameRank">
 		<div class="title">
 			<span class="on">Game tương tự</span>
@@ -187,7 +181,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 			<?php endforeach; ?>
 		</ul>
 	</div>
-	
+
 	<div class="gameRank">
 		<div class="title">
 			<span class="on">Chơi nhiều nhất</span>
@@ -222,7 +216,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 			<?php endforeach; ?>
 		</ul>
 	</div> <!-- Top game end -->
-	
+
 </div>
 
 <div class="clear"></div>

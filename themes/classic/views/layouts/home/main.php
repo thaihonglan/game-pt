@@ -25,12 +25,12 @@
 <body>
 
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-55109706-1', 'auto');
-  ga('send', 'pageview');
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-55109706-1', 'auto');
+ga('send', 'pageview');
 </script>
 
 	<!-- Google Tag Manager -->
@@ -78,72 +78,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- 			<img width="140" src="/themes/classic/images/LoginWithFacebook.png"/></a> -->
 
 
-<script>
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    if (response.status === 'connected') {
-        
-      testAPI();
+
+<!--script>
+function statusChangeCallback(response) {
+	console.log('statusChangeCallback');
+	console.log(response);
+	if (response.status === 'connected') {
+
+	testAPI();
 
 
-      
-    } else if (response.status === 'not_authorized') {
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.';
-    } else {
-      // The person is not logged into Facebook, so we're not sure if
-      // they are logged into this app or not.
-      document.getElementById('status').innerHTML = 'Please log ' +
-        'into Facebook.';
-    }
-  }
 
-  function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
+	} else if (response.status === 'not_authorized') {
+	document.getElementById('status').innerHTML = 'Please log ' +
+		'into this app.';
+	} else {
+	// The person is not logged into Facebook, so we're not sure if
+	// they are logged into this app or not.
+	document.getElementById('status').innerHTML = 'Please log ' +
+		'into Facebook.';
+	}
+}
 
-  window.fbAsyncInit = function() {
-  FB.init({
-    appId      : '560122764114956',
-    cookie     : true, 
-    xfbml      : true,  // parse social plugins on this page
-    version    : 'v2.1' // use version 2.1
-  });
+function checkLoginState() {
+	FB.getLoginStatus(function(response) {
+	statusChangeCallback(response);
+	});
+}
 
-  FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-  });
+window.fbAsyncInit = function() {
+FB.init({
+	appId      : '560122764114956',
+	cookie     : true,
+	xfbml      : true,  // parse social plugins on this page
+	version    : 'v2.1' // use version 2.1
+});
 
- };
+FB.getLoginStatus(function(response) {
+	statusChangeCallback(response);
+});
 
-  // Load the SDK asynchronously
+};
+
+// Load the SDK asynchronously
 
 (function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=845597502125970&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=845597502125970&version=v2.0";
+fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
- 
-  function testAPI() {
-    console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name);
+
+function testAPI() {
+	console.log('Welcome!  Fetching your information.... ');
+	FB.api('/me', function(response) {
+	console.log('Successful login for: ' + response.name);
 //      document.getElementById('status').innerHTML =
 //       'Thanks for logging in, ' + response.name + '!';
-    });
-  }
-</script>
+	});
+}
+</script-->
 
 <!-- <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div> -->
 
-<div id="fb-root">
+<!--div id="fb-root">
 <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
-</div>
+</div-->
 
 <!-- <br /> -->
 <!-- <div -->
@@ -153,13 +154,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!--   data-show-faces="true"> -->
 <!-- </div> -->
 
+<?php
 
+if ($this->authData) {
+	echo $this->authData['providerUser']['displayName'];
+} else {
+	$providers = array(
+	// 	'facebook',
+		'google'
+	);
+	foreach ($providers as $provider){
+		echo CHtml::link('<img src="/images/login_icons/'.$provider.'.png" alt="'.$provider.'" title="'.$provider.'" />',array('/auth/authenticatewith/provider/'.$provider));
+	}
+}
+?>
 
 
 
 <div id="status">
-</div>			
-			
+</div>
+
 			<!-- 		<div id="searchRight" class="mt20"> -->
 			<!-- <div class="search">
 				<div id="searchTypeIco">
@@ -181,7 +195,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	</div>
 
 	<!-- 	<div id="nav"> -->
-	 	<?php 
+		<?php
 // 			$this->widget('zii.widgets.CMenu', array(
 // 			'items' => array(
 // 				array('label' => 'Home'    , 'url'=>array('/home/home/index')),
@@ -208,7 +222,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="clear"></div>
 	<!--footer begin -->
 	<div id="footer">
-		
+
 		<ul class="main">
 			<li>
 				<h5>Tin tức</h5> <a href="http://www.doisongphapluat.com/the-gioi/"
