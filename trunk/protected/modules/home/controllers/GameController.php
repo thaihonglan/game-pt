@@ -48,6 +48,12 @@ class GameController extends Controller
 
 		$similar = Product::model()->homeList()->hot()->findAllByAttributes(array('product_type_id' => $productDetail->product_type_id));
 
+		$comments = null;
+		if ($this->authData != null) {
+// 			$comments = Comment::model()->findAllByAttributes(array('comment_user_id' => $this->authData['user']['id']));
+// 			exit;
+		}
+
 		$this->render('detail', array(
 			'productDetail' => $productDetail,
 			'productResource' => $productResource,
