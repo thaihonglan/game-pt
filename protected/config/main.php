@@ -34,42 +34,105 @@ $configures = array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		'home',
+		'home' => array(
+			'userClass'=>'User', //the name of your Userclass
+			'config'=>array(
+				'base_url' => 'http://'. $_SERVER['SERVER_NAME'] . '/hybridauth',
+				"providers" => array(
+					"Google" => array(
+						"enabled" => true,
+						"keys"    => array(
+							"id"     => "224290354895-2e5l2t294tl352d48rgk7fcpn4o6a324.apps.googleusercontent.com",
+							"secret" => "79EDOZGx4EP3IZBmo1doBUdk"
+						),
+						"scope"   => ""
+					),
+
+					"Facebook" => array(
+						"enabled" => true,
+						"keys"    => array(
+							"id"     => "706464812776081",
+							"secret" => "193bc4a5a4b7c788a19ddf8eaedf0caf"
+						),
+						// A comma-separated list of permissions you want to request from the user. See the Facebook docs for a full list of available permissions: http://developers.facebook.com/docs/reference/api/permissions.
+						"scope"   => "",
+						// The display context to show the authentication page. Options are: page, popup, iframe, touch and wap. Read the Facebook docs for more details: http://developers.facebook.com/docs/reference/dialogs#display. Default: page
+						"display" => "page"
+					),
+
+					"OpenID"     => array("enabled" => false),
+					"Yahoo"      => array("enabled" => false),
+					"AOL"        => array("enabled" => false),
+					"Twitter"    => array("enabled" => false),
+					"Live"       => array("enabled" => false),
+					"MySpace"    => array("enabled" => false),
+					"LinkedIn"   => array("enabled" => false),
+					"Foursquare" => array("enabled" => false),
+				)
+			)
+		),
 		'admin',
-		'hybridauth' => array(
-			'baseUrl' => 'http://'. $_SERVER['SERVER_NAME'] . '/hybridauth',
-			'withYiiUser' => false, // Set to true if using yii-user
-			"providers" => array (
-				"openid" => array (
-					"enabled" => false
-				),
-
-				"yahoo" => array (
-					"enabled" => false
-				),
-
-				"google" => array (
-					"enabled" => true,
-					"keys"    => array(
-						"id" => "224290354895-2e5l2t294tl352d48rgk7fcpn4o6a324.apps.googleusercontent.com",
-						"secret" => "79EDOZGx4EP3IZBmo1doBUdk"
+		'yiiauth' => array(
+			'userClass'=>'User', //the name of your Userclass
+			'config'=>array(
+				'base_url' => 'http://'. $_SERVER['SERVER_NAME'] . '/hybridauth',
+				"providers" => array (
+					"OpenID" => array (
+						"enabled" => true
 					),
-					"scope"   => ""
-				),
 
-				"facebook" => array (
-					"enabled" => true,
-					"keys"    => array (
-						"id" => "706464812776081",
-						"secret" => "193bc4a5a4b7c788a19ddf8eaedf0caf"
+					"Yahoo" => array (
+						"enabled" => true
 					),
-					"scope"   => "email,publish_stream",
-					"display" => ""
-				),
 
-				"twitter" => array (
-					"enabled" => false,
-					"keys"    => array ( "key" => "", "secret" => "" )
+					"AOL"  => array (
+						"enabled" => true
+					),
+
+					"Google" => array (
+						"enabled" => true,
+						"keys"    => array(
+							"id" => "224290354895-2e5l2t294tl352d48rgk7fcpn4o6a324.apps.googleusercontent.com",
+							"secret" => "79EDOZGx4EP3IZBmo1doBUdk"
+						),
+						"scope"   => ""
+					),
+
+					"Facebook" => array (
+						"enabled" => true,
+						"keys"    => array (
+							"id" => "706464812776081",
+							"secret" => "193bc4a5a4b7c788a19ddf8eaedf0caf"
+						),
+						// A comma-separated list of permissions you want to request from the user. See the Facebook docs for a full list of available permissions: http://developers.facebook.com/docs/reference/api/permissions.
+						"scope"   => "",
+						// The display context to show the authentication page. Options are: page, popup, iframe, touch and wap. Read the Facebook docs for more details: http://developers.facebook.com/docs/reference/dialogs#display. Default: page
+						"display" => "page"
+					),
+					"Twitter" => array (
+						"enabled" => false,
+						"keys"    => array (
+							"key" => "rPmGEE1Wvsf56BSyQaWXw",
+							"secret" => "V4SK09O0cPOgkabsxR5AruBSNrc0b1tzoBeWkL7ew0"
+						)
+					),
+					// windows live
+					"Live" => array (
+						"enabled" => true,
+						"keys"    => array ( "id" => "", "secret" => "" )
+					),
+					"MySpace" => array (
+						"enabled" => false,
+						"keys"    => array ( "key" => "", "secret" => "" )
+					),
+					"LinkedIn" => array (
+						"enabled" => true,
+						"keys"    => array ( "key" => "", "secret" => "" )
+					),
+					"Foursquare" => array (
+						"enabled" => false,
+						"keys"    => array ( "id" => "", "secret" => "" )
+					),
 				)
 			)
 		),
@@ -92,7 +155,7 @@ $configures = array(
 			'rules'=>array(
 				'' => 'home/home/index',
 				'gii/<controller:\w+>/<action:\w+>/*' => 'gii/<controller>/<action>/*',
-				'hybridauth/<controller:\w+>/<action:\w+>/*' => 'hybridauth/<controller>/<action>/*',
+				'yiiauth/<controller:\w+>/<action:\w+>/*' => 'yiiauth/<controller>/<action>/*',
 				'admin/<controller:\w+>/<id:\d+>' => 'admin/<controller>/view',
 				'admin/<controller:\w+>/<action:\w+>/<id:\d+>' => 'admin/<controller>/<action>',
 				'admin/<controller:\w+>/<action:\w+>' => 'admin/<controller>/<action>',

@@ -1,28 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "user".
+ * This is the model class for table "comment".
  *
- * The followings are the available columns in table 'user':
+ * The followings are the available columns in table 'comment':
  * @property string $id
- * @property string $facebook_login_id
- * @property string $gmail_login_id
- * @property string $username
- * @property string $name
- * @property string $avatar
- * @property string $location
- * @property string $working
+ * @property string $content
+ * @property string $comment_user_id
  * @property string $create_date
- * @property integer $disable
  */
-class User extends CActiveRecord
+class Comment extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'user';
+		return 'comment';
 	}
 
 	/**
@@ -33,13 +27,12 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('disable', 'numerical', 'integerOnly'=>true),
-			array('facebook_login_id, gmail_login_id, username, name, avatar', 'length', 'max'=>128),
-			array('location, working', 'length', 'max'=>255),
+			array('content', 'required'),
+			array('comment_user_id', 'length', 'max'=>20),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, facebook_login_id, gmail_login_id, name, avatar, location, working, create_date, disable', 'safe', 'on'=>'search'),
+			array('id, content, comment_user_id, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,15 +54,9 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'facebook_login_id' => 'Facebook Login',
-			'gmail_login_id' => 'Gmail Login',
-			'username' => 'Login ID',
-			'name' => 'Name',
-			'avatar' => 'Avatar',
-			'location' => 'Location',
-			'working' => 'Working',
+			'content' => 'Content',
+			'comment_user_id' => 'Comment User',
 			'create_date' => 'Create Date',
-			'disable' => 'Disable',
 		);
 	}
 
@@ -92,15 +79,9 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('facebook_login_id',$this->facebook_login_id,true);
-		$criteria->compare('gmail_login_id',$this->gmail_login_id,true);
-		$criteria->compare('username',$this->login_id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('avatar',$this->avatar,true);
-		$criteria->compare('location',$this->location,true);
-		$criteria->compare('working',$this->working,true);
+		$criteria->compare('content',$this->content,true);
+		$criteria->compare('comment_user_id',$this->comment_user_id,true);
 		$criteria->compare('create_date',$this->create_date,true);
-		$criteria->compare('disable',$this->disable);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -111,7 +92,7 @@ class User extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return User the static model class
+	 * @return Comment the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
