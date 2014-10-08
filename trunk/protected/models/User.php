@@ -5,14 +5,12 @@
  *
  * The followings are the available columns in table 'user':
  * @property string $id
- * @property string $facebook_login_id
- * @property string $gmail_login_id
  * @property string $username
- * @property string $name
- * @property string $avatar
- * @property string $location
- * @property string $working
+ * @property string $password
+ * @property string $provider
+ * @property string $provider_user
  * @property string $create_date
+ * @property string $last_activity
  * @property integer $disable
  */
 class User extends CActiveRecord
@@ -34,12 +32,13 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('disable', 'numerical', 'integerOnly'=>true),
-			array('facebook_login_id, gmail_login_id, username, name, avatar', 'length', 'max'=>128),
-			array('location, working', 'length', 'max'=>255),
-			array('create_date', 'safe'),
+			array('username, password', 'length', 'max'=>128),
+			array('provider', 'length', 'max'=>50),
+			array('provider_user', 'length', 'max'=>250),
+			array('create_date, last_activity', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, facebook_login_id, gmail_login_id, name, avatar, location, working, create_date, disable', 'safe', 'on'=>'search'),
+			array('id, username, password, provider, provider_user, create_date, last_activity, disable', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,14 +60,12 @@ class User extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'facebook_login_id' => 'Facebook Login',
-			'gmail_login_id' => 'Gmail Login',
-			'username' => 'Login ID',
-			'name' => 'Name',
-			'avatar' => 'Avatar',
-			'location' => 'Location',
-			'working' => 'Working',
+			'username' => 'Username',
+			'password' => 'Password',
+			'provider' => 'Provider',
+			'provider_user' => 'Provider User',
 			'create_date' => 'Create Date',
+			'last_activity' => 'Last Activity',
 			'disable' => 'Disable',
 		);
 	}
@@ -92,14 +89,12 @@ class User extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id,true);
-		$criteria->compare('facebook_login_id',$this->facebook_login_id,true);
-		$criteria->compare('gmail_login_id',$this->gmail_login_id,true);
-		$criteria->compare('username',$this->login_id,true);
-		$criteria->compare('name',$this->name,true);
-		$criteria->compare('avatar',$this->avatar,true);
-		$criteria->compare('location',$this->location,true);
-		$criteria->compare('working',$this->working,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
+		$criteria->compare('provider',$this->provider,true);
+		$criteria->compare('provider_user',$this->provider_user,true);
 		$criteria->compare('create_date',$this->create_date,true);
+		$criteria->compare('last_activity',$this->last_activity,true);
 		$criteria->compare('disable',$this->disable);
 
 		return new CActiveDataProvider($this, array(
