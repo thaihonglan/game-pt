@@ -50,10 +50,10 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 						<li></li><li></li>
 						<li>
 							<div
-  								class="fb-like"
- 								data-share="true"
-  								data-width="450"
-  								data-show-faces="true">
+								class="fb-like"
+								data-share="true"
+								data-width="450"
+								data-show-faces="true">
 							</div>
 						</li>
 					</ul>
@@ -96,7 +96,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 			</div>
 			<!-- Introduction end  -->
 		</div>
-				<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
+		<div id="mainBox" class="comment" app_id="5208297" appver_id="200002320">
 			<div class="title">
 				<h2 class="comment-ico">Bình luận</h2>
 			</div>
@@ -116,7 +116,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 				<div id="loginText"></div>
 				<div id="commentBox" style="display: block;">
 					<div class="userName clear">
-						<input type="text" class="ipt_nickname" value="Hồng Lão" readonly="" style="color: rgb(51, 51, 51);">
+						<input type="text" class="ipt_nickname" value="<?php echo $this->authData['displayName']; ?>" readonly="" style="color: rgb(51, 51, 51);">
 						<span>Mời bạn tham gia bình luận</span>
 					</div>
 					<textarea class="ipt_content"></textarea>
@@ -127,6 +127,8 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 					</div>
 				</div>
 				<ul id="commentListArea">
+			<?php if ($comments): ?>
+				<?php foreach ($comments as $comment): ?>
 					<li>
 						<p class="nameDate">
 							<span class="name"><b>Hồng Lão</b>　</span>
@@ -136,6 +138,8 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 						<div class="replayBox" uplink="0" c_id="10169305"></div>
 						<p class="contTxt">Hay quá !</p>
 					</li>
+				<?php endforeach; ?>
+			<?php endif; ?>
 				</ul>
 				<div class="page clearfix"><div class="pagearea" id="pages"></div>
 			</div>

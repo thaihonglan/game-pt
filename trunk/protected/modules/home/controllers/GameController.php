@@ -51,7 +51,7 @@ class GameController extends Controller
 		$comments = null;
 		if ($this->authData != null) {
 			$comments = Comment::model()->findAllByAttributes(array(
-				'user_id' => $this->authData['user']->id,
+				'user_id' => $this->authData['userId'],
 				'product_id' => $pid,
 			));
 		}
