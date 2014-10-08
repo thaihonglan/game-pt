@@ -20,42 +20,6 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'facebook_login_id'); ?>
-		<?php echo $form->textField($model,'facebook_login_id',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'facebook_login_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'gmail_login_id'); ?>
-		<?php echo $form->textField($model,'gmail_login_id',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'gmail_login_id'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'name'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'avatar'); ?>
-		<?php echo $form->textField($model,'avatar',array('size'=>60,'maxlength'=>128)); ?>
-		<?php echo $form->error($model,'avatar'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'location'); ?>
-		<?php echo $form->textField($model,'location',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'location'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'working'); ?>
-		<?php echo $form->textField($model,'working',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'working'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'create_date'); ?>
 		<?php echo $form->textField($model,'create_date'); ?>
 		<?php echo $form->error($model,'create_date'); ?>

@@ -61,11 +61,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'id',
-		'facebook_login_id',
-		'gmail_login_id',
-		'name',
-		'avatar',
-		'location',
+		'username',
+		'provider',
+		'provider_user',
 		/*
 		'working',
 		'create_date',

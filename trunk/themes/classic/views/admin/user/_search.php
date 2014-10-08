@@ -17,43 +17,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'facebook_login_id'); ?>
-		<?php echo $form->textField($model,'facebook_login_id',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'gmail_login_id'); ?>
-		<?php echo $form->textField($model,'gmail_login_id',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'name'); ?>
-		<?php echo $form->textField($model,'name',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'avatar'); ?>
-		<?php echo $form->textField($model,'avatar',array('size'=>60,'maxlength'=>128)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'location'); ?>
-		<?php echo $form->textField($model,'location',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'working'); ?>
-		<?php echo $form->textField($model,'working',array('size'=>60,'maxlength'=>255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'create_date'); ?>
-		<?php echo $form->textField($model,'create_date'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'disable'); ?>
-		<?php echo $form->textField($model,'disable'); ?>
+		<?php echo $form->label($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>128)); ?>
 	</div>
 
 	<div class="row buttons">
