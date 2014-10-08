@@ -78,7 +78,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- 			<img width="140" src="/themes/classic/images/LoginWithFacebook.png"/></a> -->
 
 
-
 <!--script>
 function statusChangeCallback(response) {
 	console.log('statusChangeCallback');
@@ -155,13 +154,16 @@ function testAPI() {
 <!-- </div> -->
 
 <?php
-
 if ($this->authData) {
-	echo $this->authData['providerUser']['displayName'];
+	echo CHtml::image($this->authData['photoURL'], $this->authData['displayName'], array('height' => 60, 'width' => 60))
+	. '<br>'
+	. $this->authData['displayName']
+	. '<br>'
+	. CHtml::link('Logout', array('/auth/logout'));
 } else {
 	$providers = array(
-	// 	'facebook',
-		'google'
+// 		'facebook',
+		'google',
 	);
 	foreach ($providers as $provider){
 		echo CHtml::link('<img src="/images/login_icons/'.$provider.'.png" alt="'.$provider.'" title="'.$provider.'" />',array('/auth/authenticatewith/provider/'.$provider));
@@ -215,7 +217,7 @@ if ($this->authData) {
 <div id="wrapper">
 	<div id="Ads-bottom">
 			<a href="http://game-pt.com/">
-			<img src="/resource/banner/banner_1.jpg" width="700" height="150" title="Quảng cáo" /></a>
+			<img src="/resource/banner/banner_1.jpg" width="680" height="150" title="Quảng cáo" /></a>
 	</div>
 </div>
 
