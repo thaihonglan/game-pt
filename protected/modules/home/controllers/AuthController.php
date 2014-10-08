@@ -6,7 +6,7 @@ class AuthController extends Controller
 		$this->renderPartial('index');
 	}
 
-	public function actionauthenticatewith( $provider="" ) {
+	public function actionAuthenticatewith( $provider="" ) {
 
 		$hybridauth_config = Yiiauth::hybridAuthConfig();
 
@@ -23,12 +23,14 @@ class AuthController extends Controller
 				$adapter = $hybridauth->authenticate($provider, array( "openid_identifier" => $_GET['openid'] ) );
 			} else {
 				$adapter = $hybridauth->authenticate($provider);
+				print_r($adapter);
 			}
 
 			// grab the user profile
 			$user_profile = $adapter->getUserProfile();
 		}
 		catch( Exception $e ){
+
 			// Display the recived error
 			switch( $e->getCode() ){
 				case 0 : $error = "Unspecified error."; break;
@@ -62,8 +64,11 @@ class AuthController extends Controller
 			if ( $this->autoLogin($user)) {
 				$authData = array(
 					'provider'     => $provider,
-					'user'         => (array) $user,
-					'providerUser' => (array) $user_profile,
+					'userId'       => $user->id,
+					'identifier'   => $user_profile->identifier,
+					'photoURL'     => $user_profile->photoURL,
+					'displayName'  => $user_profile->displayName,
+					'email'        => $user_profile->email,
 				);
 
 				Yii::app()->session['webAuth'] = $authData;
@@ -86,5 +91,21 @@ class AuthController extends Controller
 		} else {
 			echo "Something wrong with ".$provider;
 		}
+	}
+
+	public function actionLogout() {
+
+		$hybridauth_config = Yiiauth::hybridAuthConfig();
+
+		$hybridauth = new Hybrid_Auth($hybridauth_config);
+
+		$provider = Yii::app()->session['webAuth']['provider'];
+		$adapter = $hybridauth->authenticate($provider);
+
+		$adapter->logout();
+
+		unset(Yii::app()->session['webAuth']);
+
+		$this->redirect('/');
 	}
 }

@@ -27,34 +27,19 @@ class Yiiauth extends CController{
 	*/
 	public function workOnUser($provider,$provideruser) {
 
-		$userClass = Yii::app()->controller->module->userClass;
-
-		$social = Social::model()->find("provider='".$provider."' AND provideruser='".$provideruser."'");
-		if ($social) {
-			$user = $userClass::model()->find("id=".$social->yiiuser);
+		$user = User::model()->find("provider='".$provider."' AND provider_user='".$provideruser."'");
+		if ($user) {
 			return $user;
-		} else { // no user is connected to that provideruser,
-			$social = new Social; // a new relation will be needed
-			$social->provider = $provider; // what provider
-			$social->provideruser = $provideruser; // the unique user
-
-			// if a yii-user is already logged in add the provideruser to that account
-			if (!Yii::app()->user->isGuest){
-				$social->yiiuser = Yii::app()->user->id;
-				$user = $userClass::model()->findByPk(Yii::app()->user->id);
-			} else {
-			// we want to create a new $userClass
-				$user = new $userClass;
-				$user->username = $provideruser;
-
-				if ( $user->save() ){ //we get an user id
-					$social->yiiuser = $user->id;
-					}
-			}
-			if($social->save())
-				return $user;
 		}
 
+		$new_user = new User; // a new relation will be needed
+		$new_user->provider = $provider; // what provider
+		$new_user->provider_user = $provideruser; // the unique user
+		$new_user->username = $provideruser;
+
+		if ($new_user->save()) { //we get an user id
+			return $new_user;
+		}
 	}
 
 	public function autoLogin($user) {

@@ -6,7 +6,9 @@
  * The followings are the available columns in table 'comment':
  * @property string $id
  * @property string $content
- * @property string $comment_user_id
+ * @property integer $rating
+ * @property string $product_id
+ * @property string $user_id
  * @property string $create_date
  */
 class Comment extends CActiveRecord
@@ -28,11 +30,13 @@ class Comment extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('content', 'required'),
-			array('comment_user_id', 'length', 'max'=>20),
+			array('rating', 'numerical', 'integerOnly'=>true),
+			array('product_id', 'length', 'max'=>10),
+			array('user_id', 'length', 'max'=>20),
 			array('create_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, content, comment_user_id, create_date', 'safe', 'on'=>'search'),
+			array('id, content, rating, product_id, user_id, create_date', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -55,7 +59,9 @@ class Comment extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'content' => 'Content',
-			'comment_user_id' => 'Comment User',
+			'rating' => 'Rating',
+			'product_id' => 'Product',
+			'user_id' => 'User',
 			'create_date' => 'Create Date',
 		);
 	}
@@ -80,7 +86,9 @@ class Comment extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('content',$this->content,true);
-		$criteria->compare('comment_user_id',$this->comment_user_id,true);
+		$criteria->compare('rating',$this->rating);
+		$criteria->compare('product_id',$this->product_id,true);
+		$criteria->compare('user_id',$this->user_id,true);
 		$criteria->compare('create_date',$this->create_date,true);
 
 		return new CActiveDataProvider($this, array(

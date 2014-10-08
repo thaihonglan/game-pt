@@ -50,8 +50,10 @@ class GameController extends Controller
 
 		$comments = null;
 		if ($this->authData != null) {
-// 			$comments = Comment::model()->findAllByAttributes(array('comment_user_id' => $this->authData['user']['id']));
-// 			exit;
+			$comments = Comment::model()->findAllByAttributes(array(
+				'user_id' => $this->authData['user']->id,
+				'product_id' => $pid,
+			));
 		}
 
 		$this->render('detail', array(
@@ -61,8 +63,11 @@ class GameController extends Controller
 			'productTypes' => $productTypes,
 			'similar' => $similar,
 			'monthlyTopProducts' => $monthlyTopProducts,
+			'comments' => $comments,
 		));
 	}
+
+
 
 	// Uncomment the following methods and override them if needed
 	/*
