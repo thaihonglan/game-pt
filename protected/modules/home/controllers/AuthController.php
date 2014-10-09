@@ -2,9 +2,7 @@
 
 class AuthController extends Controller
 {
-	public function actionIndex(){
-		$this->renderPartial('index');
-	}
+	public $layout='//layouts/home/main';
 
 	public function actionAuthenticatewith( $provider="" ) {
 
@@ -23,14 +21,12 @@ class AuthController extends Controller
 				$adapter = $hybridauth->authenticate($provider, array( "openid_identifier" => $_GET['openid'] ) );
 			} else {
 				$adapter = $hybridauth->authenticate($provider);
-				print_r($adapter);
 			}
 
 			// grab the user profile
 			$user_profile = $adapter->getUserProfile();
 		}
 		catch( Exception $e ){
-
 			// Display the recived error
 			switch( $e->getCode() ){
 				case 0 : $error = "Unspecified error."; break;
@@ -59,7 +55,7 @@ class AuthController extends Controller
 
 		// workOnUser returns an user object
 		if (is_object($user_profile) ){
-			$user = $this->workOnUser($provider, $user_profile->identifier);
+			$user = $this->workOnUser($provider, $user_profile->identifier, $user_profile->displayName);
 
 			if ( $this->autoLogin($user)) {
 				$authData = array(
@@ -73,7 +69,7 @@ class AuthController extends Controller
 
 				Yii::app()->session['webAuth'] = $authData;
 
-				$this->redirect('/');
+				$this->redirect(Yii::app()->session['curUrl']);
 
 				//successfull login render default/profile.php
 				$this->render('profile',
@@ -86,9 +82,11 @@ class AuthController extends Controller
 				);
 			} else {
 				// this is where u go otherwise
+				$this->redirect(Yii::app()->session['curUrl']);
 				$this->render('authenticatewith',array('error'=>$error,'user_profile'=>$user_profile ) );
 			}
 		} else {
+			$this->redirect(Yii::app()->session['curUrl']);
 			echo "Something wrong with ".$provider;
 		}
 	}
@@ -106,6 +104,6 @@ class AuthController extends Controller
 
 		unset(Yii::app()->session['webAuth']);
 
-		$this->redirect('/');
+		$this->redirect(Yii::app()->session['curUrl']);
 	}
 }

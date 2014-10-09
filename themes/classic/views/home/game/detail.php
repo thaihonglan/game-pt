@@ -4,28 +4,18 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 ?>
 
 <div id="wrapper">
-<!-- 	<div class="location"> -->
-<!-- 		Location： -->
-<!-- 		<a href="/">Trang chủ</a> &gt; -->
-<!--  		<a href="<?php //echo $this->createUrl('game/list'); ?>">Danh mục</a> &gt; -->
-<!--		<a href="<?php //echo $this->createUrl('game/detail', array('pid' => $productDetail->id)); ?>"><?php //echo $productDetail->name; ?></a> -->
-<!-- 	</div> -->
-
 
 	<div class="detail-l">
 		<div class="detailContent">
 			<div align="center" style="margin-bottom: 20px;">
-				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="690" applicationComplete="init()"
-					codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
-						<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
-						<param name="quality" value="high" />
-	<!-- 					<param name="bgcolor" value="#869ca7" /> -->
-						<param name="allowScriptAccess" value="sameDomain" />
+				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="690" applicationComplete="init()" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+					<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
+					<param name="quality" value="high" />
+<!-- 					<param name="bgcolor" value="#869ca7" /> -->
+					<param name="allowScriptAccess" value="sameDomain" />
 
-						<embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#ffffff" width="690" height="520" name="Myflash" align="middle"
-							play="true" loop="false" quality="high" allowScriptAccess="sameDomain"
-							type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
-						</embed>
+					<embed src="<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?>" quality="high" bgcolor="#ffffff" width="690" height="520" name="Myflash" align="middle" play="true" loop="false" quality="high" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">
+					</embed>
 				</object>
 			</div>
 
@@ -38,7 +28,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 					<h1><?php echo $productDetail->name; ?></h1>
 					<div class="gradeStar2">
 						<span class="star2 gray"></span>
-						<span class="star2 orange" style="width:100px;"></span>
+						<span class="star2 orange" style="width:<?php echo ($productDetail->rating * 20) ?>px;"></span>
 					</div>
 					<ul>
 						<li>Version： <?php echo $productResource->version; ?></li>
@@ -61,11 +51,11 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 				<div class="bMunber clear">
 					<div class="munberBox">
 						<i class="errMsg"></i>
-						<span class="good-ico voteTarget" href="/game/app_comment/6084099/up/" title="Like" voteStyle="mode_one">
+						<span class="good-ico voteTarget" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $productDetail->id, 't' => 'like')); ?>" title="Like" voteStyle="mode_one">
 							<p><?php echo $productDetail->like; ?></p>
 							<span class="addAnimate">+1</span>
 						</span>
-						<span class="bad-ico voteTarget" href="/game/app_comment/6084099/down/" title="Dislike" voteStyle="mode_one">
+						<span class="bad-ico voteTarget" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $productDetail->id, 't' => 'dislike')); ?>" title="Dislike" voteStyle="mode_one">
 							<p><?php echo $productDetail->dislike; ?></p>
 							<span class="addAnimate">+1</span>
 						</span>
@@ -100,7 +90,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 			<div class="title">
 				<h2 class="comment-ico">Bình luận</h2>
 			</div>
-			<div id="scoreArea" class="score" style="display: block;">
+			<div id="scoreArea" class="score"<?php if (isset($this->authData)): ?> style="display: block;"<?php endif; ?>>
 				<h3>Mời bạn đánh giá</h3>
 				<span id="txtScoreMsg" class="scoreMsg"></span>
 				<p>
@@ -113,10 +103,13 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 				</p>
 			</div>
 			<div id="commentArea">
-				<div id="loginText"></div>
-				<div id="commentBox" style="display: block;">
+				<div id="loginText"<?php if (!isset($this->authData)): ?> style="display: block;"<?php endif; ?>>
+					Xin mời bạn đăng nhập trước khi bình luận.
+				</div>
+				<div id="commentBox"<?php if (isset($this->authData)): ?> style="display: block;"<?php endif; ?>>
 					<div class="userName clear">
 						<input type="text" class="ipt_nickname" value="<?php echo $this->authData['displayName']; ?>" readonly="" style="color: rgb(51, 51, 51);">
+						<input type="hidden" class="ipt_id" value="<?php echo $productDetail->id ?>">
 						<span>Mời bạn tham gia bình luận</span>
 					</div>
 					<textarea class="ipt_content"></textarea>
@@ -127,21 +120,30 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 					</div>
 				</div>
 				<ul id="commentListArea">
+					<li style="display: none">
+						<p class="nameDate">
+							<span class="name"><b></b></span>
+							<span class="stars"></span>
+							<span class="date"></span>
+						</p>
+						<div class="replayBox" uplink="0" c_id="10169305"></div>
+						<p class="contTxt"></p>
+					</li>
 			<?php if ($comments): ?>
 				<?php foreach ($comments as $comment): ?>
 					<li>
 						<p class="nameDate">
-							<span class="name"><b>Hồng Lão</b>　</span>
-							<span class="stars">Trung binh: 5.0</span>
-							<span class="date">2014-10-03 01:04:42</span>
+							<span class="name"><b><?php echo $comment->user->display_name; ?></b></span>
+							<span class="stars">Trung binh: <?php echo $comment->rating; ?></span>
+							<span class="date"><?php echo $comment->create_date; ?></span>
 						</p>
 						<div class="replayBox" uplink="0" c_id="10169305"></div>
-						<p class="contTxt">Hay quá !</p>
+						<p class="contTxt"><?php echo $comment->content; ?></p>
 					</li>
 				<?php endforeach; ?>
 			<?php endif; ?>
 				</ul>
-				<div class="page clearfix"><div class="pagearea" id="pages"></div>
+				<div class="page clearfix"><div class="pagearea" id="pages"><a href="javascript:void(0)"><< Tiep >></a></div>
 			</div>
 		</div>
 	</div>

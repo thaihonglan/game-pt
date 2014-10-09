@@ -2357,26 +2357,63 @@ var searchbox = (function($, window, document, undefined) {
 	}
 	return buildsearchBox;
 })(jQuery, window, document);
-$(document)
-		.ready(
-				function() {
-					$("input[type='text'][searchbox]")
-							.each(
-									function(key, val) {
-										var curObj = $(val), site = curObj
-												.attr('searchbox'), defaultType = curObj
-												.attr('defaulttype'), options = [];
-										if (curObj.attr('options')) {
-											options = $.parseJSON(curObj
-													.attr('options'));
-										}
-										var opt = {
-											"site" : site,
-											"defaultType" : defaultType
-										};
-										if (options.length > 0)
-											opt.type = options;
-										searchbox(curObj, opt);
-									})
-				});
+$(document).ready(function() {
+	$("input[type='text'][searchbox]").each(function(key, val) {
+		var curObj = $(val), site = curObj.attr('searchbox'), defaultType = curObj.attr('defaulttype'), options = [];
+		if (curObj.attr('options')) {
+			options = $.parseJSON(curObj.attr('options'));
+		}
+		var opt = {
+			"site" : site,
+			"defaultType" : defaultType
+		};
+		if (options.length > 0)
+			opt.type = options;
+		searchbox(curObj, opt);
+	})
+});
 
+(function() {
+	window.onload = function() {
+		$("#scoreArea span.val").click(function() {
+			$(".val.setHover").removeClass('on');
+			$(this).addClass('on');
+			$("#txtAverage").html($(this).attr('val'));
+		});
+		$(".btn_submit").click(function() {
+			$.post('/game/ajaxComment', {
+				'rate': $("#txtAverage").html(),
+				'content': $(".ipt_content").val(),
+				'product_id': $(".ipt_id").val()
+			}, function(rs){
+				if (rs.status = 200) {
+					var newComment = $("#commentListArea li:first-child").clone();
+					newComment.show();
+					newComment.find(".name b").html(rs.data.name);
+					newComment.find(".stars").html('Trung binh: ' + rs.data.rating);
+					newComment.find(".date").html(rs.data.date);
+					newComment.find(".contTxt").html(rs.data.content);
+					$("#commentListArea li:first-child").after(newComment);
+				}
+			}, 'json');
+		});
+		$("#pages").click(function() {
+			$.post('/game/ajaxExpandComment', {
+				'date': $("#commentListArea li:last-child .date").html(),
+				'product_id': $(".ipt_id").val()
+			}, function(rs){
+				if (rs.status = 200) {
+					$.each(rs.data, function( key, value ) {
+						var newComment = $("#commentListArea li:first-child").clone();
+						newComment.show();
+						newComment.find(".name b").html(value.name);
+						newComment.find(".stars").html('Trung binh: ' + value.rating);
+						newComment.find(".date").html(value.date);
+						newComment.find(".contTxt").html(value.content);
+						newComment.appendTo("#commentListArea");
+					});
+				}
+			}, 'json');
+		});
+	};
+})(jQuery);

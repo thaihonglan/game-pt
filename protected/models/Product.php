@@ -24,6 +24,9 @@
  */
 class Product extends CActiveRecord
 {
+	const TYPE_LIKE = 1;
+	const TYPE_DISLIKE = 2;
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -48,7 +51,7 @@ class Product extends CActiveRecord
 			array('bundle_id, tag', 'length', 'max'=>255),
 			array('description, video, create_date, lastup_date', 'safe'),
 			array('id, name, description, product_type_id, video, avatar, author, download, rating, rate_count, from_source, bundle_id, package_name, tag, create_date, lastup_date, disable', 'safe', 'on'=>'search'),
-			);
+		);
 	}
 
 	/**
@@ -159,5 +162,60 @@ class Product extends CActiveRecord
 				'order' => '`like` DESC',
 			),
 		);
+	}
+
+	public function like() {
+		return $this->_vote(self::TYPE_LIKE);
+	}
+
+	public function dislike() {
+		return $this->_vote(self::TYPE_DISLIKE);
+	}
+
+	private function _vote($type)
+	{
+		if (!isset(Yii::app()->session['webAuth']['userId'])) {
+			return false;
+		}
+
+		$todayLikeDislikeTruncateDate = Yii::app()->cache->get('todayLikeDislikeTruncateDate');
+		if (!$todayLikeDislikeTruncateDate || ($todayLikeDislikeTruncateDate != date('Y-m-d'))) {
+			Yii::app()->db->createCommand()->truncateTable('today_like_dislike');
+			Yii::app()->cache->set('todayLikeDislikeTruncateDate', date('Y-m-d'));
+		}
+
+		$todayLike = Yii::app()->db->createCommand()
+								->select()
+								->from('today_like_dislike')
+								->where(
+									'product_id = :productId AND user_id = :userId',
+										array(
+											':productId' => $this->id,
+											':userId' => Yii::app()->session['webAuth']['userId'],
+										)
+									)
+									->limit(1)
+									->queryRow();
+
+		if ($todayLike) {
+			return false;
+		}
+
+		if ($type == self::TYPE_LIKE) {
+			$this->like++;
+			$this->save(false, array('like'));
+		} else {
+			$this->dislike++;
+			$this->save(false, array('dislike'));
+		}
+
+		Yii::app()->db->createCommand()->insert(
+			'today_like_dislike', array(
+				'product_id' => $this->id,
+				'user_id' => Yii::app()->session['webAuth']['userId'],
+			)
+		);
+
+		return true;
 	}
 }

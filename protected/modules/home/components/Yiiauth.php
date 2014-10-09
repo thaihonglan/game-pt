@@ -25,10 +25,14 @@ class Yiiauth extends CController{
 		else if the provider user is connected to a yii user already, find that.
 		Then a user model is returned that can be logged in.
 	*/
-	public function workOnUser($provider,$provideruser) {
+	public function workOnUser($provider,$provideruser,$displayName = '') {
 
 		$user = User::model()->find("provider='".$provider."' AND provider_user='".$provideruser."'");
 		if ($user) {
+			if ($user->display_name != $displayName) {
+				$user->display_name = $displayName;
+				$user->save();
+			}
 			return $user;
 		}
 
@@ -36,6 +40,7 @@ class Yiiauth extends CController{
 		$new_user->provider = $provider; // what provider
 		$new_user->provider_user = $provideruser; // the unique user
 		$new_user->username = $provideruser;
+		$new_user->display_name = $displayName;
 
 		if ($new_user->save()) { //we get an user id
 			return $new_user;

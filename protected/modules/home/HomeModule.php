@@ -43,8 +43,11 @@ class HomeModule extends CWebModule
 			if (isset(Yii::app()->session['webAuth'])) {
 				$controller->authData = Yii::app()->session['webAuth'];
 			}
-			// this method is called before any module controller action is performed
-			// you may place customized code here
+
+			if (Yii::app()->getController()->id != 'auth') {
+				Yii::app()->session['curUrl'] = Yii::app()->request->requestUri;
+			}
+
 			return true;
 		}
 		else
