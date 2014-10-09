@@ -91,7 +91,6 @@ $configures = array(
 			'rules'=>array(
 				'' => 'home/home/index',
 				'gii/<controller:\w+>/<action:\w+>/*' => 'gii/<controller>/<action>/*',
-				'yiiauth/<controller:\w+>/<action:\w+>/*' => 'yiiauth/<controller>/<action>/*',
 				'admin/<controller:\w+>/<id:\d+>' => 'admin/<controller>/view',
 				'admin/<controller:\w+>/<action:\w+>/<id:\d+>' => 'admin/<controller>/<action>',
 				'admin/<controller:\w+>/<action:\w+>' => 'admin/<controller>/<action>',
@@ -124,6 +123,10 @@ $configures = array(
 			'charset'          => 'utf8',
 			'enableProfiling' => true,
 			'enableParamLogging' => true,
+		),
+
+		'cache'=>array(
+			'class'=>'system.caching.CFileCache',
 		),
 
 		// ERROR and LOG settings

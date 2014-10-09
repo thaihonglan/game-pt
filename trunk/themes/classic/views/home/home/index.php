@@ -74,7 +74,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($hotProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
@@ -86,8 +86,12 @@
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$hotProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$hotProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'dislike')); ?>">
+							<?=$hotProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'like')); ?>">
+							<?=$hotProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -110,7 +114,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recentlyProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
@@ -122,8 +126,12 @@
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recentlyProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recentlyProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'dislike')); ?>">
+							<?=$recentlyProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'like')); ?>">
+							<?=$recentlyProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -146,7 +154,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recommendProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
@@ -158,8 +166,12 @@
 					</h5>
 					<p>简介：<?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recommendProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recommendProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'dislike')); ?>">
+							<?=$recommendProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'like')); ?>">
+							<?=$recommendProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -194,7 +206,9 @@
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">
-						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
+						<span class="game-good voteTarget" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $monthlyTopProduct->id, 't' => 'like')); ?>" voteStyle="mode_three">
+							Like：<i><?=$monthlyTopProduct->like?></i>
+						</span>
 						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>
@@ -235,7 +249,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($hotProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
@@ -247,8 +261,12 @@
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$hotProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$hotProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'dislike')); ?>">
+							<?=$hotProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'like')); ?>">
+							<?=$hotProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -271,7 +289,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recentlyProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
@@ -283,8 +301,12 @@
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recentlyProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recentlyProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'dislike')); ?>">
+							<?=$recentlyProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'like')); ?>">
+							<?=$recentlyProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -307,7 +329,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recommendProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
@@ -319,8 +341,12 @@
 					</h5>
 					<p>Mô tả: <?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recommendProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recommendProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'dislike')); ?>">
+							<?=$recommendProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'like')); ?>">
+							<?=$recommendProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -355,7 +381,9 @@
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">
-						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
+						<span class="game-good voteTarget" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $monthlyTopProduct->id, 't' => 'like')); ?>" voteStyle="mode_three">
+							Like：<i><?=$monthlyTopProduct->like?></i>
+						</span>
 						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>
@@ -396,7 +424,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($hotProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$hotProduct->download?> lần chơi</p>
 				</dd>
@@ -408,8 +436,12 @@
 					</h5>
 					<p>Mô tả: <?=$hotProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$hotProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$hotProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'dislike')); ?>">
+							<?=$hotProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $hotProduct->id, 't' => 'like')); ?>">
+							<?=$hotProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -432,7 +464,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recentlyProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recentlyProduct->download?> lần chơi</p>
 				</dd>
@@ -444,8 +476,12 @@
 					</h5>
 					<p>Mô tả: <?=$recentlyProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recentlyProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recentlyProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'dislike')); ?>">
+							<?=$recentlyProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recentlyProduct->id, 't' => 'like')); ?>">
+							<?=$recentlyProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -468,7 +504,7 @@
 					</h4>
 					<div class="gradeStar1">
 						<span class="star1 gray"></span>
-						<span class="star1 orange" style="width:72px;"></span>
+						<span class="star1 orange" style="width:<?php echo ($recommendProduct->rating * (77 / 5)) ?>px;"></span>
 					</div>
 					<p><?=$recommendProduct->download?> lần chơi</p>
 				</dd>
@@ -480,8 +516,12 @@
 					</h5>
 					<p>Mô tả: <?=$recommendProduct->short_des?></p>
 					<p class="voteWraper">
-						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four"><?=$recommendProduct->dislike?></span>
-						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four"><?=$recommendProduct->like?></span>
+						<span class="poor-ico voteTarget" title="Dislike" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'dislike')); ?>">
+							<?=$recommendProduct->dislike?>
+						</span>
+						<span class="good-ico voteTarget" title="Like" voteStyle="mode_four" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $recommendProduct->id, 't' => 'like')); ?>">
+							<?=$recommendProduct->like?>
+						</span>
 						<span class="addAnimate">+1</span>
 					</p>
 				</div>
@@ -516,7 +556,9 @@
 						</h4>
 					</div>
 					<p class="clear" style="position:relative">
-						<span class="game-good voteTarget" href="#" voteStyle="mode_three">Like：<i>866</i></span>
+						<span class="game-good voteTarget" href="<?php echo $this->createUrl('game/ajaxVote', array('pid' => $monthlyTopProduct->id, 't' => 'like')); ?>" voteStyle="mode_three">
+							Like：<i><?=$monthlyTopProduct->like?></i>
+						</span>
 						<span><?=$monthlyTopProduct->download?> lần chơi</span>
 						<span class="addAnimate">+1</span>
 					</p>

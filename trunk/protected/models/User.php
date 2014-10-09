@@ -62,6 +62,7 @@ class User extends CActiveRecord
 			'id' => 'ID',
 			'username' => 'Username',
 			'password' => 'Password',
+			'display_name' => 'Display Name',
 			'provider' => 'Provider',
 			'provider_user' => 'Provider User',
 			'create_date' => 'Create Date',
@@ -90,7 +91,7 @@ class User extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('username',$this->username,true);
-		$criteria->compare('password',$this->password,true);
+		$criteria->compare('display_name',$this->display_name,true);
 		$criteria->compare('provider',$this->provider,true);
 		$criteria->compare('provider_user',$this->provider_user,true);
 		$criteria->compare('create_date',$this->create_date,true);

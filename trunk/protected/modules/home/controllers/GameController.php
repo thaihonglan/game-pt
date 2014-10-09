@@ -34,8 +34,8 @@ class GameController extends Controller
 		));
 	}
 
-	public function actionDetail($pid)
-	{
+	public function actionDetail($pid) {
+
 		$productDetail = Product::model()->findByPk($pid);
 
 		$productResource = SourceFile::model()->findByPk($productDetail->source_file_id, array('order' => 'id DESC', 'limit' => 1));
@@ -50,8 +50,7 @@ class GameController extends Controller
 
 		$comments = null;
 		if ($this->authData != null) {
-			$comments = Comment::model()->findAllByAttributes(array(
-				'user_id' => $this->authData['userId'],
+			$comments = Comment::model()->detailList()->with('user')->findAllByAttributes(array(
 				'product_id' => $pid,
 			));
 		}
@@ -67,7 +66,106 @@ class GameController extends Controller
 		));
 	}
 
+	public function actionAjaxVote($pid, $t) {
 
+		if (!YII_DEBUG && !Yii::app()->request->isAjaxRequest) {
+			throw new CHttpException('403', 'Forbidden access.');
+		}
+
+		if (($pid == '') || ($t == '') || (!in_array($t, array('like', 'dislike')))) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		if (!$product = Product::model()->findByPk($pid)) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		if (!$product->$t()) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		echo json_encode(array('status' => 200));
+		Yii::app()->end();
+	}
+
+	public function actionAjaxComment() {
+
+		if (!YII_DEBUG && !Yii::app()->request->isAjaxRequest) {
+			throw new CHttpException('403', 'Forbidden access.');
+		}
+
+		if (!isset($this->authData['userId'])) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		if (!isset($_POST['rate']) || !isset($_POST['content']) || !isset($_POST['product_id'])) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		$newComment = new Comment;
+		$newComment->content = $_POST['content'];
+		$newComment->rating = $_POST['rate'];
+		$newComment->user_id = $this->authData['userId'];
+		$newComment->product_id = $_POST['product_id'];
+		$newComment->create_date = date('Y-m-d h:i:s');
+
+		$newComment->save();
+
+		$product = Product::model()->findByPk($_POST['product_id']);
+		$product->rating = (($product->rating * $product->rate_count) + $_POST['rate']) / ($product->rate_count + 1);
+		$product->rate_count++;
+
+		$product->save();
+
+		echo json_encode(array(
+			'status' => 200,
+			'data' => array(
+				'name' => $this->authData['displayName'],
+				'rating' => $newComment->rating,
+				'date' => $newComment->create_date,
+				'content' => $newComment->content
+			)
+		));
+		Yii::app()->end();
+	}
+
+	public function actionAjaxExpandComment() {
+
+		if (!YII_DEBUG && !Yii::app()->request->isAjaxRequest) {
+			throw new CHttpException('403', 'Forbidden access.');
+		}
+
+		if (!isset($_POST['product_id'])) {
+			echo json_encode(array('status' => 400));
+			Yii::app()->end();
+		}
+
+		$comments = Comment::model()->detailList()->with('user')->findAll('t.product_id = :product_id AND t.create_date < :create_date', array(
+			':product_id' => $_POST['product_id'],
+			':create_date' => $_POST['date']
+		));
+
+		$data = array();
+		foreach ($comments as $comment) {
+			$data[] = array(
+				'name' => $comment->user->display_name,
+				'rating' => $comment->rating,
+				'date' => $comment->create_date,
+				'content' => $comment->content,
+			);
+		}
+
+		echo json_encode(array(
+			'status' => 200,
+			'data' => $data,
+		));
+		Yii::app()->end();
+	}
 
 	// Uncomment the following methods and override them if needed
 	/*
