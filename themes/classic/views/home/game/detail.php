@@ -3,11 +3,12 @@
 $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 ?>
 
+
 <div id="wrapper">
 
 	<div class="detail-l">
 		<div class="detailContent">
-			<div align="center" style="margin-bottom: 20px;">
+			<div align="center" style="margin-bottom: 10px;">
 				<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="Myflash" width="690" applicationComplete="init()" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
 					<param name="movie" value=<?php echo Yii::app()->request->baseUrl . '/resource/' . $productResource->path ?> />
 					<param name="quality" value="high" />
@@ -37,15 +38,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 						<!--li class="w-450">Tag
 							<a href='' target='_blank'></a>
 						</li-->
-						<li></li><li></li>
-						<li>
-							<div
-								class="fb-like"
-								data-share="true"
-								data-width="450"
-								data-show-faces="true">
-							</div>
-						</li>
+						<li></li>
 					</ul>
 				</div>
 				<div class="bMunber clear">
@@ -60,10 +53,17 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 							<span class="addAnimate">+1</span>
 						</span>
 					</div>
+					
 					<div class="downMunber">
 						<ul>
 						<li class="borderR"><span><?php echo $productDetail->download; ?></span><br> lần tải</li>
 						</ul>
+					</div>
+					<div class="share">
+						<?php echo htmlspecialchars('<a href="http' . (($_SERVER['SERVER_PORT']==443) ? "s://" : "://") . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . '"> Chơi ' . $productDetail->name . '</a>'); ?>
+					</div>
+					<div class="sharetitle">
+						Share code
 					</div>
 				</div>
 			</div>
@@ -108,7 +108,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 				</div>
 				<div id="commentBox"<?php if (isset($this->authData)): ?> style="display: block;"<?php endif; ?>>
 					<div class="userName clear">
-						<input type="text" class="ipt_nickname" value="<?php echo $this->authData['displayName']; ?>" readonly="" style="color: rgb(51, 51, 51);">
+						<input type="text" class="ipt_nickname" value="<?php echo $this->authData['displayName']; ?>" readonly="" style="color: rgb(51, 51, 51);font-weight: bold;">
 						<input type="hidden" class="ipt_id" value="<?php echo $productDetail->id ?>">
 						<span>Mời bạn tham gia bình luận</span>
 					</div>
@@ -134,7 +134,7 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 					<li>
 						<p class="nameDate">
 							<span class="name"><b><?php echo $comment->user->display_name; ?></b></span>
-							<span class="stars">Trung binh: <?php echo $comment->rating; ?></span>
+							<span class="stars">đã đánh giá : <?php echo $comment->rating; ?> điểm</span>
 							<span class="date"><?php echo $comment->create_date; ?></span>
 						</p>
 						<div class="replayBox" uplink="0" c_id="10169305"></div>
@@ -222,6 +222,12 @@ $this->pageTitle = Yii::app()->name . ' - ' . $productDetail->name;
 			<?php endforeach; ?>
 		</ul>
 	</div> <!-- Top game end -->
+
+<?php 
+	$count = 1;
+	$newcount = new CDbExpression('(`download`+:addedStock)', array(':addedStock' => $count));
+	Product::model()->updateByPk($productDetail->id, array('download' => $newcount));
+?>
 
 </div>
 

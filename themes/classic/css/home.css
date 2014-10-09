@@ -349,7 +349,7 @@ a {
 }
 .page {
 	width: 100%;
-	height: 75px
+/*	height: 75px  */
 }
 .page
 a {
@@ -497,6 +497,18 @@ a {
 .fb_reset {
 	width: 120px;
 
+}
+#category {
+	position: fixed;
+	width: 70;
+	cursor: pointer;
+	top: 0px;
+	margin-left: -142px;
+	width: 142px;
+	text-align: right;
+	overflow: hidden;
+	z-index: 1001;
+	border: 1px solid #E5E5E5;
 }
 #Ads-top {
 	width: 600px;
@@ -1577,7 +1589,7 @@ b {
 }
 .pagearea {
 	width: auto;
-	height: 42px;
+	height: 24px;
 	position: relative;
 	left: 50%;
 	float: left;
@@ -3703,14 +3715,14 @@ html {
 	width: 698px;
 	border: 1px solid #ececec;
 	background: #fff;
-	padding-top: 15px;
+	padding-top: 5px;
 	text-align: left
 }
 .detailContent .title-stat {
 	width: 650px;
 	margin: 0 24px;
 	border-bottom: 1px solid #f2f2f2;
-	padding-bottom: 20px
+	padding-bottom: 10px
 }
 .detailContent .title-stat
 .pic {
@@ -3760,6 +3772,12 @@ li {
 	float: left;
 	display: block
 }
+li2 {
+	width: 350px;
+	color: #797979;
+	float: left;
+	display: block
+}
 .title-stat .txt li
 a {
 	color: #797979;
@@ -3775,15 +3793,15 @@ a {
 .title-stat
 .bMunber {
 	width: 650px;
-	height: 40px;
+	height: 48px;
 	padding-top: 8px;
 	position: relative
 }
 .bMunber
 .munberBox {
-	width: 186px;
+	width: 176px;
 	float: left;
-	margin-top: 10px;
+	margin-top: 5px;
 	position: relative
 }
 .bMunber .munberBox
@@ -3814,7 +3832,7 @@ span {
 	width: 240px;
 	height: 40px;
 	float: left;
-	margin-top: 10px
+	margin-top: 0px
 }
 .bMunber .share
 span {
@@ -3828,11 +3846,33 @@ span {
 }
 .bMunber
 .downMunber {
-	width: 210px;
+	width: 100px;
 	height: 40px;
 	float: right;
 	font-family: 'Century Cothic', 'Arial';
 	text-align: right
+}
+.bMunber
+.share {
+	width: 285px;
+	height: 45px;
+	float: right;
+	font-family: 'Century Cothic', 'Arial';
+	text-align: left;
+	border: 2px solid #F2F2F2;
+	padding: 0px 3px;
+/*	border-left: 1px solid #F2F2F2;
+	border-right: 1px solid #F2F2F2; */
+}
+.bMunber
+.sharetitle {
+	width: 70px;
+	height: 40px;
+	float: left;
+	font-family: 'Century Cothic', 'Arial';
+	text-align: Center;
+	font-size: 12px;
+	font-weight: bold;
 }
 .bMunber .downMunber
 ul {
@@ -3882,7 +3922,7 @@ span {
 .aboutIntr {
 	width: 620px;
 	border-bottom: 1px solid #f2f2f2;
-	padding: 27px 15px 0 15px;
+	padding: 15px 15px 0 15px;
 	margin: 0 24px;
 	overflow: auto;
 	position: relative
@@ -4643,7 +4683,7 @@ a {
 }
 .comment .score {
 	width: 640px;
-	height: 104px;
+	height: 96px;
 	border: 1px solid #e5e5e5;
 	margin: 20px 28px;
 	position: relative;
@@ -4679,7 +4719,7 @@ a {
 	color: #848484;
 	text-align: center;
 	line-height: 23px;
-	margin: 10px9px 0 0
+	margin: 0px 10px 0 0
 }
 .comment .score .val:hover, .comment .score .val_hover, .comment .score .on {
 	background: #59c46c;
@@ -4690,7 +4730,8 @@ a {
 	float: right;
 	color: #808080;
 	font-size: 16px;
-	font-family: 'Arial'
+	font-family: 'Arial';
+	margin: 0px 10px 0 0
 }
 .comment .score .num {
 	color: #f90;
@@ -4748,7 +4789,7 @@ a {
 }
 .userName .ipt_nickname, .comment .replyBody .replyUserName
 .ipt_nickname {
-	width: 125px;
+	width: 200px;
 	height: 19px;
 	border: 1px solid #e5e5e5;
 	padding: 5px;
@@ -4771,10 +4812,10 @@ span {
 .btnBottom {
 	width: 640px;
 	height: 33px;
-	margin: 12px 28px 20px;
+	margin: 12px 28px 0px;
 	*margin: 12px 0 20px;
 	border-bottom: 1px dotted #dcdcdc;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 	position: relative
 }
 .btnBottom
